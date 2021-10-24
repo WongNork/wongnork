@@ -1,0 +1,53 @@
+{% block content %} {% load crispy_forms_tags %}
+
+
+<style>
+    .container {
+        margin: auto;
+        background-color: rgb(78, 163, 121);
+        padding: 30px;
+        width: 50%;
+        height: auto;
+    }
+    
+    .header {
+        padding: auto;
+        text-align: center;
+        background: #ffffff;
+        border: aqua;
+        color: rgb(0, 0, 0);
+        font-size: 20px;
+    }
+</style>
+<div class="container">
+    <div className="col-md-8 order-md-1 p-3">
+        <div class="header">
+            <h1>User Profile</h1>
+        </div>
+        <div className="row" style=" width: 100% ">
+            {{ user.username|title }}
+            <br>
+            <p className="col-md-8 border border-secondary rounded-3 mx-3" style="color:  black ">Username: {{ user.username }}</p>
+        </div>
+        <div className="row" style=" width: 100% ">
+            <p className="col-md-8 border border-secondary rounded-3 mx-3" style="color:  black ">Firstname: {{ user.firstname }}</p>
+        </div>
+        <div className="row " style=" width: 100% ">
+            <p className="col-md-8 border border-secondary rounded-3 mx-3 " style="color: black ">Lastname: {{ user.lastname }}</p>
+        </div>
+
+        <div class="header">
+            <h2>Contact</h2>
+        </div>
+        <div className="row " style=" width: 100% ">
+            <p className="col-md-8 border border-secondary rounded-3 mx-3 " style="color: black ">Email: {{ user.email }}</p>
+        </div>
+        <div className="row " style=" width: 100% ">
+            <p className="col-md-8 border border-secondary rounded-3 mx-3 " style="color: black ">Mobile: {{ user.telephone }}</p>
+            <div class="text-right">
+                <button type="button" class="btn btn-outline-primary btn-sm" data-toggle="modal" data-target="#profileModal">Edit Profile</button>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

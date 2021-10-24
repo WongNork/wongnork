@@ -15,9 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import include, path
+from wongnork.views import register_request
 
 urlpatterns = [
     path('wongnork/', include('wongnork.urls')),
     path('admin/', admin.site.urls),
-
 ]
+
+# path('register/', register_request), to only use /register in the link

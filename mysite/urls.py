@@ -14,8 +14,13 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import include, path
+
+from wongnork.views import register_request
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('wongnork/', include('wongnork.urls')),
 ]
+
+# path('register/', register_request), to only use /register in the link

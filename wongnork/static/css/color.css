@@ -1,0 +1,147 @@
+@charset 'utf-8';
+
+/*
+Theme Name: Puzzles
+Theme URI: http://puzzles.themerex.net/
+Author: themerex
+Author URI: http://themerex.net/
+Description: Description
+Version: 3.4
+License: GNU General Public License
+License URI: license.txt
+*/
+
+/* Reset
+-------------------------------------------------------------- */
+body, button, input, select, textarea {
+				font-family: 'Oxygen', sans-serif;
+			}
+		
+	
+		
+			.logo_text .logo_title {
+				font-family: 'Cabin', sans-serif;
+			}
+		
+	
+		#header_middle_inner #mainmenu li.lightblue.current-menu-item > a,
+									#header_middle_inner #mainmenu li.lightblue > a:hover,
+									#header_middle_inner #mainmenu li.lightblue.sfHover > a {
+										background-color: #00c6ff !important;
+									}
+									#header_middle_inner #mainmenu li.lightblue ul {
+										background-color: #00c6ff !important;
+									}
+								
+									#header_middle_inner #mainmenu li.lightblue.blob_over:not(.current-menu-item) > a:hover,
+									#header_middle_inner #mainmenu li.lightblue.blob_over.sfHover > a {
+										background-color: transparent !important;
+									}
+									#header_middle_inner #mainmenu li.brown.current-menu-item > a,
+									#header_middle_inner #mainmenu li.brown > a:hover,
+									#header_middle_inner #mainmenu li.brown.sfHover > a {
+										background-color: #AA8800 !important;
+									}
+									#header_middle_inner #mainmenu li.brown ul {
+										background-color: #AA8800 !important;
+									}
+								
+									#header_middle_inner #mainmenu li.brown.blob_over:not(.current-menu-item) > a:hover,
+									#header_middle_inner #mainmenu li.brown.blob_over.sfHover > a {
+										background-color: transparent !important;
+									}
+									
+									#header_middle_inner #mainmenu li.blue > a:hover,
+									#header_middle_inner #mainmenu li.blue.sfHover > a {
+										background-color: #00a0db !important;
+									}
+									#header_middle_inner #mainmenu li.blue ul {
+										background-color: #00a0db !important;
+									}
+								
+									#header_middle_inner #mainmenu li.blue > a:hover,
+									#header_middle_inner #mainmenu li.blue.sfHover > a {
+										background-color: #00a0db !important;
+									}
+									#header_middle_inner #mainmenu li.blue ul {
+										background-color: #00a0db !important;
+									}
+								
+								
+									#header_middle_inner #mainmenu li.orange > a:hover,
+									#header_middle_inner #mainmenu li.orange.sfHover > a {
+										background-color: #e99f00 !important;
+									}
+									#header_middle_inner #mainmenu li.orange ul {
+										background-color: #e99f00 !important;
+									}
+								
+								
+									#header_middle_inner #mainmenu li.menu-item-61.blob_over:not(.current-menu-item) > a:hover,
+									#header_middle_inner #mainmenu li.menu-item-61.blob_over.sfHover > a {
+										background-color: transparent !important;
+									}
+									#header_middle_inner #mainmenu li.orange.current-menu-item > a,
+									#header_middle_inner #mainmenu li.orange > a:hover,
+									#header_middle_inner #mainmenu li.orange.sfHover > a {
+										background-color: #e99f00 !important;
+									}
+									#header_middle_inner #mainmenu li.orange ul {
+										background-color: #e99f00 !important;
+									}
+								
+									#header_middle_inner #mainmenu li.orange.blob_over:not(.current-menu-item) > a:hover,
+									#header_middle_inner #mainmenu li.orange.blob_over.sfHover > a {
+										background-color: transparent !important;
+									}
+									#header_middle_inner #mainmenu li.red.current-menu-item > a,
+									#header_middle_inner #mainmenu li.red > a:hover,
+									#header_middle_inner #mainmenu li.red.sfHover > a {
+										background-color: #f03232 !important;
+									}
+									#header_middle_inner #mainmenu li.red ul {
+										background-color: #f03232 !important;
+									}
+								
+									#header_middle_inner #mainmenu li.red.blob_over:not(.current-menu-item) > a:hover,
+									#header_middle_inner #mainmenu li.red.blob_over.sfHover > a {
+										background-color: transparent !important;
+									}
+									#header_middle_inner #mainmenu li.green.current-menu-item > a,
+									#header_middle_inner #mainmenu li.green > a:hover,
+									#header_middle_inner #mainmenu li.green.sfHover > a {
+										background-color: #2ecc71 !important;
+									}
+									#header_middle_inner #mainmenu li.green ul {
+										background-color: #2ecc71 !important;
+									}
+								
+									#header_middle_inner #mainmenu li.green.blob_over:not(.current-menu-item) > a:hover,
+									#header_middle_inner #mainmenu li.green.blob_over.sfHover > a {
+										background-color: transparent !important;
+									}
+									#header_middle_inner #mainmenu li.black.current-menu-item > a,
+									#header_middle_inner #mainmenu li.black > a:hover,
+									#header_middle_inner #mainmenu li.black.sfHover > a {
+										background-color: #222222 !important;
+									}
+									#header_middle_inner #mainmenu li.black ul {
+										background-color: #222222 !important;
+									}
+								
+									#header_middle_inner #mainmenu li.black.blob_over:not(.current-menu-item) > a:hover,
+									#header_middle_inner #mainmenu li.black.blob_over.sfHover > a {
+										background-color: transparent !important;
+									}
+									
+	
+		
+			#mainmenu > li ul {
+				width: 250px;
+			}
+			#mainmenu > li ul li ul {
+				left: 251px;
+			}
+			#mainmenu > li:nth-child(n+6) ul li ul {
+				left: -251px;
+			}

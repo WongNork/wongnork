@@ -1,0 +1,640 @@
+/* Color theme: 'YellowLight' */
+
+/* Page Body background */
+.theme_yellowlight.theme_body, .theme_yellowlight .theme_body {
+	background-color:#f0f0f0;
+}
+
+/* Article background */
+.theme_yellowlight.theme_article, .theme_yellowlight .theme_article {
+	color:#434343;
+	background-color:#ffffff;
+}
+
+/* Text color */
+.theme_yellowlight p, .theme_yellowlight td, .theme_yellowlight th, .theme_yellowlight input, .theme_yellowlight textarea, .theme_yellowlight div,
+.theme_yellowlight .theme_text {
+	color:#434343;
+}
+
+/* Headers color */
+.theme_yellowlight h1, .theme_yellowlight h2, .theme_yellowlight h3,
+.theme_yellowlight .theme_title, .theme_yellowlight .theme_header {
+	color:#282828;
+}
+
+/* SubHeaders color */
+.theme_yellowlight h4, .theme_yellowlight h5, .theme_yellowlight h6,
+.theme_yellowlight .theme_subtitle, .theme_yellowlight .theme_subheader {
+	color:#282828;
+}
+
+/* Strong text */
+.theme_yellowlight .theme_strong {
+	color:#282828;
+}
+
+/* Info text - post date, author, comments etc. */
+.theme_yellowlight .theme_info {
+	color:#999999;
+}
+
+/* Links (as text) */
+.theme_yellowlight a,
+.theme_yellowlight .theme_link {
+	color:#999999;
+}
+
+/* Links (as text) hover */
+.theme_yellowlight a:hover,
+.theme_yellowlight .theme_link:hover {
+	color:#ffc800;
+}
+
+/* Links (as button) */
+.theme_yellowlight a.more-link,
+.theme_yellowlight a.comment-reply-link,
+.theme_yellowlight .theme_button {
+	background-color:#282828;
+	color:#ffc800;	
+	-webkit-transition: all ease .2s;
+	-moz-transition: all ease .2s;
+	-ms-transition: all ease .2s;
+	-o-transition: all ease .2s;
+	transition: all ease .2s;
+}
+
+/* Links (as button) hover */
+.theme_yellowlight a.more-link:hover,
+.theme_yellowlight a.comment-reply-link:hover,
+.theme_yellowlight a.theme_button:hover,
+.theme_yellowlight a.theme_accent_bg:hover,
+.theme_yellowlight .theme_hover {
+	background-color:#727272;
+	color:#ffffff;	
+}
+
+/* Border color */
+.theme_yellowlight fieldset,
+.theme_yellowlight .theme_border {
+	border-color:#e0e0e0 !important;
+}
+
+/* Accent color */
+.theme_yellowlight .theme_accent_bg {
+	background-color:#ffc800;
+	color:#ffffff;
+}
+.theme_yellowlight .theme_accent {
+	color:#ffc800;
+}
+.theme_yellowlight .theme_accent_border {
+	border-color:#ffc800;
+}
+
+/* Reviews stars */
+.theme_yellowlight .theme_stars {		/* Inactive */
+	color:#888888;
+}
+.theme_yellowlight .theme_stars_on {	/* Active */
+	color:#ffc800;
+}
+.theme_yellowlight .theme_rating_bar {		/* Inactive */
+	background-color:#888888;
+}
+.theme_yellowlight .theme_rating_level {	/* Active */
+	background-color:#ffc800;
+}
+.theme_yellowlight .theme_rating_drag {	/* Slider */
+	background-color:#e99f00;
+}
+
+
+/* Puzzles - description block background and color */
+.theme_yellowlight .theme_puzzles {
+	background-color:#e99f00;
+	color:#ffffff;
+}
+
+
+
+
+
+/* Main menu
+---------------------------------------------------*/
+.theme_yellowlight .theme_menu {
+	background-color:#f0f0f0;
+}
+	.theme_yellowlight #mainmenu a {
+		color:#222222;
+	}
+	#mainmenu > li.theme_yellowlight.current-menu-item > a,
+	.theme_yellowlight #mainmenu > li.current-menu-item > a {
+		background-color:#ffc800;
+		color:#ffffff;
+	}
+	#mainmenu > li.theme_yellowlight > a:hover,
+	#mainmenu > li.theme_yellowlight.sfHover > a,
+	.theme_yellowlight #mainmenu > li > a:hover,
+	.theme_yellowlight #mainmenu > li.sfHover > a {
+		background-color:#ffc800;
+		color:#ffffff;
+	}
+	/* Second level */
+	#mainmenu > li.theme_yellowlight ul,
+	.theme_yellowlight #mainmenu > li ul {
+		background-color:#ffc800;
+		color:#ffffff;
+	}
+	#mainmenu > li.theme_yellowlight ul li a,
+	.theme_yellowlight #mainmenu > li ul li a {
+		color: #ffffff;
+	}
+	#mainmenu > li.theme_yellowlight ul li.current-menu-item > a,
+	.theme_yellowlight #mainmenu > li ul li.current-menu-item > a {
+		background-color:#282828;
+	}
+	#mainmenu > li.theme_yellowlight ul li a:hover,
+	#mainmenu > li.theme_yellowlight ul li.sfHover > a,
+	.theme_yellowlight #mainmenu > li ul li a:hover,
+	.theme_yellowlight #mainmenu > li ul li.sfHover > a {
+		background-color:#727272;
+		color:#ffffff;	
+	}
+	/* Side menu */
+	.theme_yellowlight #sidemenu_area li a {
+		color:#ffffff;
+	}
+	#sidemenu_area li.theme_yellowlight.current-menu-item a,
+	.theme_yellowlight #sidemenu_area li.current-menu-item a {
+		background-color:#282828;
+		color:#ffffff;
+	}
+	#sidemenu_area li.theme_yellowlight a:hover,
+	#sidemenu_area li.theme_yellowlight.sfHover a,
+	.theme_yellowlight #sidemenu_area li a:hover,
+	.theme_yellowlight #sidemenu_area li.sfHover a {
+		background-color:#727272;
+		color:#ffffff;
+	}
+
+
+/* Pages navigation
+---------------------------------------------------*/
+.theme_yellowlight #nav_pages li a,
+.theme_yellowlight #nav_pages li span,
+.theme_yellowlight .nav_pages_parts a,
+.theme_yellowlight .nav_pages_parts > span,
+.theme_yellowlight .nav_comments a,
+.theme_yellowlight .nav_comments > span {
+	background-color:#282828;
+	color:#ffffff;	
+}
+.theme_yellowlight #nav_pages li a:hover,
+.theme_yellowlight .nav_pages_parts a:hover,
+.theme_yellowlight .nav_comments a:hover {
+	background-color:#727272;
+	color:#ffffff;	
+}
+.theme_yellowlight #nav_pages li.pager_current span,
+.theme_yellowlight #nav_pages li.pager_current a,
+.theme_yellowlight #nav_pages li a.current,
+.theme_yellowlight .nav_pages_parts > span.page_num,
+.theme_yellowlight .nav_comments span {
+	background-color:#ffc800;
+	color:#ffffff;	
+}
+.theme_yellowlight .nav_pages_parts > span.pages {
+	background:none;
+	filter:none;
+	border:none;
+}
+.theme_yellowlight #nav_pages .pager_pages span {	
+	background:none;
+	filter:none;
+	border-color:transparent;
+	border-width:0;
+	color:#999999;
+}
+
+
+/* Form fields
+---------------------------------------------------*/
+.theme_yellowlight #buddypress .button,
+.theme_yellowlight #buddypress .generic-button a,
+.theme_yellowlight #buddypress form input[type="button"],
+.theme_yellowlight #buddypress form input[type="reset"],
+.theme_yellowlight #buddypress form input[type="submit"],
+.theme_yellowlight.bbpress #bbpress-forums form input[type="button"],
+.theme_yellowlight.bbpress #bbpress-forums form input[type="submit"],
+.theme_yellowlight.bbpress #bbpress-forums form input[type="reset"],
+.theme_yellowlight button,
+.theme_yellowlight html input[type="button"],
+.theme_yellowlight input[type="reset"],
+.theme_yellowlight input[type="submit"] {
+	border-color:transparent;
+	border-width:0;
+	background:#282828;
+	color:#ffc800;	
+	-webkit-transition: all ease .2s;
+	-moz-transition: all ease .2s;
+	-ms-transition: all ease .2s;
+	-o-transition: all ease .2s;
+	transition: all ease .2s;
+	cursor: pointer;
+}
+.theme_yellowlight #buddypress .button:hover,
+.theme_yellowlight #buddypress .generic-button a:hover,
+.theme_yellowlight #buddypress form input[type="button"]:hover,
+.theme_yellowlight #buddypress form input[type="reset"]:hover,
+.theme_yellowlight #buddypress form input[type="submit"]:hover,
+.theme_yellowlight.bbpress #bbpress-forums form input[type="button"]:hover,
+.theme_yellowlight.bbpress #bbpress-forums form input[type="submit"]:hover,
+.theme_yellowlight.bbpress #bbpress-forums form input[type="reset"]:hover,
+.theme_yellowlight button:hover,
+.theme_yellowlight html input[type="button"]:hover,
+.theme_yellowlight input[type="reset"]:hover,
+.theme_yellowlight input[type="submit"]:hover {
+	background:#727272;
+	color:#ffffff;	
+}
+.theme_yellowlight #buddypress .button:focus,
+.theme_yellowlight #buddypress .generic-button a:focus,
+.theme_yellowlight #buddypress form input[type="button"]:focus,
+.theme_yellowlight #buddypress form input[type="reset"]:focus,
+.theme_yellowlight #buddypress form input[type="submit"]:focus,
+.theme_yellowlight.bbpress #bbpress-forums form input[type="button"]:focus,
+.theme_yellowlight.bbpress #bbpress-forums form input[type="submit"]:focus,
+.theme_yellowlight.bbpress #bbpress-forums form input[type="reset"]:focus,
+.theme_yellowlight button:focus,
+.theme_yellowlight html input[type="button"]:focus,
+.theme_yellowlight input[type="reset"]:focus,
+.theme_yellowlight input[type="submit"]:focus,
+.theme_yellowlight button:active,
+.theme_yellowlight html input[type="button"]:active,
+.theme_yellowlight input[type="reset"]:active,
+.theme_yellowlight input[type="submit"]:active {
+	background:#282828;
+	color:#ffffff;	
+}
+.theme_yellowlight #buddypress form textarea,
+.theme_yellowlight #buddypress form#whats-new-form textarea,
+.theme_yellowlight #buddypress form select,
+.theme_yellowlight #buddypress form input[type="file"],
+.theme_yellowlight #buddypress form input[type="text"],
+.theme_yellowlight #buddypress form input[type="search"],
+.theme_yellowlight #buddypress form input[type="email"],
+.theme_yellowlight #buddypress form input[type="number"],
+.theme_yellowlight #buddypress form input[type="checkbox"],
+.theme_yellowlight #buddypress form input[type="radio"],
+.theme_yellowlight #buddypress form input[type="password"],
+.theme_yellowlight .theme_field,
+.theme_yellowlight blockquote,
+.theme_yellowlight input[type="text"],
+.theme_yellowlight input[type="number"],
+.theme_yellowlight input[type="email"],
+.theme_yellowlight input[type="password"],
+.theme_yellowlight input[type="search"],
+.theme_yellowlight select,
+.theme_yellowlight textarea {
+	background: #f0f0f0;
+	border-width:0;
+	color: #666666;
+}
+.theme_yellowlight #buddypress form textarea:focus,
+.theme_yellowlight #buddypress form#whats-new-form textarea:focus,
+.theme_yellowlight #buddypress form select:focus,
+.theme_yellowlight #buddypress form input[type="file"]:focus,
+.theme_yellowlight #buddypress form input[type="text"]:focus,
+.theme_yellowlight #buddypress form input[type="search"]:focus,
+.theme_yellowlight #buddypress form input[type="email"]:focus,
+.theme_yellowlight #buddypress form input[type="number"]:focus,
+.theme_yellowlight #buddypress form input[type="checkbox"]:focus,
+.theme_yellowlight #buddypress form input[type="radio"]:focus,
+.theme_yellowlight #buddypress form input[type="password"]:focus,
+.theme_yellowlight .theme_field:focus,
+.theme_yellowlight input[type="text"]:focus,
+.theme_yellowlight input[type="number"]:focus,
+.theme_yellowlight input[type="email"]:focus,
+.theme_yellowlight input[type="password"]:focus,
+.theme_yellowlight input[type="search"]:focus,
+.theme_yellowlight select:focus,
+.theme_yellowlight textarea:focus {
+	background: #cccccc;
+	color: #666666;
+}
+
+
+
+
+
+/* Sidebars
+---------------------------------------------------*/
+.theme_yellowlight aside.widget {
+	color:#434343;
+	background-color:#ffffff;
+}
+
+/* All lists bullets in widgets */
+.theme_yellowlight #content ul li:before,
+.theme_yellowlight.widget_area ul li.current-menu-item > a,
+.theme_yellowlight.widget_area ul li:before {
+	color:#ffc800;
+}
+
+/* Widget Calendar */
+.theme_yellowlight .widget.widget_calendar caption {
+	color:#282828;
+}
+.theme_yellowlight .widget.widget_calendar table thead th {
+	color:#ffffff;
+	background-color:#282828;
+}
+.theme_yellowlight .widget.widget_calendar table tbody td {
+	color:#ffffff;
+	background-color:#282828;
+}
+.theme_yellowlight .widget.widget_calendar table tbody a {
+	color:#ffc800;
+	background-color:#282828;
+}
+.theme_yellowlight .widget.widget_calendar table tbody a:hover {
+	color:#ffffff;
+	background-color:#727272;
+}
+.theme_yellowlight .widget.widget_calendar table tbody .pad {
+	background-color:transparent;
+}
+.theme_yellowlight .widget.widget_calendar table tbody #today,
+.theme_yellowlight .widget.widget_calendar table tbody #today a {
+	color:#282828;	
+	background-color:#ffc800;
+}
+
+/* Tag cloud */
+.theme_yellowlight .widget.widget_tag_cloud a {
+	color:#ffc800;
+	background-color:#282828;
+}
+.theme_yellowlight .widget.widget_tag_cloud a:hover {
+	color:#ffffff;
+	background-color:#727272;
+}
+
+
+
+/* Shortcodes
+---------------------------------------------------*/
+
+/* Accordion */
+.theme_yellowlight .sc_accordion .sc_accordion_item .sc_accordion_title a span.sc_accordion_icon {
+	background-color: #282828;
+	color:#ffffff;
+}
+.theme_yellowlight .sc_accordion .sc_accordion_item .sc_accordion_title.ui-state-active a span.sc_accordion_icon {
+	background-color: #ffc800;
+}
+.theme_yellowlight .sc_accordion .sc_accordion_item .sc_accordion_title.ui-state-active a {
+	color:#ffc800;
+}
+.theme_yellowlight .sc_accordion .sc_accordion_item .sc_accordion_title a:hover {
+	color:#727272;
+}
+.theme_yellowlight .sc_accordion .sc_accordion_item .sc_accordion_title a:hover span.sc_accordion_icon {
+	background-color: #727272;
+	color:#ffffff;
+}
+
+/* Blogger */
+.theme_yellowlight .sc_blogger .sc_blogger_title a:hover {
+	color:#727272;
+}
+.theme_yellowlight .sc_blogger[class*="style_image_"] .title_area .post_comments {
+	color: #999999;
+}
+.theme_yellowlight .sc_blogger.sc_blogger_vertical .sc_blogger_item {
+	border-top-color:#e0e0e0;
+}
+.theme_yellowlight .sc_blogger.style_date .date_month {
+	background-color:#ffc800;
+	color:#ffffff;
+}
+.theme_yellowlight .sc_blogger.style_date .date_day {
+	background-color:#ffffff;
+	color:#282828;
+	border-color:#e0e0e0;
+}
+.theme_yellowlight .sc_blogger .sc_blogger_item_bordered {
+	border-color: #e0e0e0;
+}
+
+/* Button */
+.theme_yellowlight .sc_button {
+	border-color:#e0e0e0;
+	color:#ffffff;
+}
+.theme_yellowlight .sc_button.sc_button_style_regular {
+	border-color:transparent;
+	border-width:0;
+}
+
+/* Dropcaps */
+.theme_yellowlight .sc_dropcaps.sc_dropcaps_style_1 span.sc_dropcap {
+	color: #282828;
+}
+.theme_yellowlight .sc_dropcaps.sc_dropcaps_style_2 span.sc_dropcap {
+	background-color: #ffc800;
+	color: #ffffff;
+}
+.theme_yellowlight .sc_dropcaps.sc_dropcaps_style_3 span.sc_dropcap {
+	background: #999999;
+	color: #ffffff;
+}
+
+/* Infobox */
+.theme_yellowlight.bbpress #bbpress-forums .bbp-template-notice,
+.theme_yellowlight .sc_infobox_style_regular {
+	border-color: #e0e0e0;
+	color:#999999;
+	background: #ffffff;
+}
+.theme_yellowlight.bbpress #bbpress-forums .bbp-template-notice p,
+.theme_yellowlight .sc_infobox_style_regular p {
+	color:#999999;
+}
+.theme_yellowlight.bbpress #bbpress-forums .bbp-template-notice.info,
+.theme_yellowlight .sc_infobox_style_info {
+	border: 1px solid #f4ecab;
+	color: #bd9a67;
+	background: #fffdec;
+}
+.theme_yellowlight.bbpress #bbpress-forums .bbp-template-notice.info p,
+.theme_yellowlight .sc_infobox_style_info p {
+	color: #bd9a67;
+}
+.theme_yellowlight .sc_infobox_style_success {
+	border: 1px solid #c8f8af;
+	color: #5aa631;
+	background: #eaffdf;
+}
+.theme_yellowlight .sc_infobox_style_success p {
+	color: #5aa631;
+}
+.theme_yellowlight .sc_infobox_style_error {
+	border: 1px solid #ffd8d8;
+	color: #ff5555;
+	background: #fff1f1;
+}
+.theme_yellowlight .sc_infobox_style_error p {
+	color: #ff5555;
+}
+.theme_yellowlight .sc_infobox_style_result {
+	border: 1px solid #ccdae0;
+	color: #94adb9;
+	background: #f7fbfc;
+}
+.theme_yellowlight .sc_infobox_style_result p {
+	color: #94adb9;
+}
+
+
+/* Line */
+.theme_yellowlight .sc_line {
+	border-color: #e0e0e0;
+}
+
+/* List */
+.theme_yellowlight ul.sc_list.sc_list_style_regular li span.sc_list_icon,
+.theme_yellowlight ul.sc_list li.sc_list_style_regular span.sc_list_icon {
+	background: #ffc800;
+}
+.theme_yellowlight ul.sc_list.sc_list_style_mark li span.sc_list_icon,
+.theme_yellowlight ul.sc_list li.sc_list_style_mark span.sc_list_icon {
+	background: #ff5555;
+}
+
+/* Skills*/
+.theme_yellowlight .sc_skills .sc_skills_item .sc_skills_progressbar {
+	background:#f3f3f3;
+}
+.theme_yellowlight .sc_skills .sc_skills_item .sc_skills_progress {
+	border-color: #e0e0e0;
+	background:#f0f0f0;
+}
+.theme_yellowlight .sc_skills .sc_skills_item .sc_skills_caption {
+	color:#282828;
+}
+.theme_yellowlight .sc_skills .sc_skills_item .sc_skills_level {
+	background:#ffc800;
+	color:#ffffff;
+
+}
+
+/* Slider Flex */
+.theme_yellowlight .sc_slider_flex .flex-control-nav a:hover {
+	background-color:#ffc800;
+}
+.theme_yellowlight .sc_slider_flex .flex-control-nav .flex-active {
+	border-color:#ffc800;
+}
+
+/* Table */
+.theme_yellowlight .sc_table table td, 
+.theme_yellowlight .sc_table table th {
+	border-color: #e0e0e0;
+	background: #ffffff;
+}
+.theme_yellowlight .sc_table table th {
+	color:#282828;
+	background: #f0f0f0;
+}
+.theme_yellowlight .sc_table table tr:hover td {
+	background-color:#fcfcfc;
+}
+
+/* Tabs */
+.theme_yellowlight .ui-tabs-active .theme_button {
+	background-color:#ffc800;
+	color:#282828;	
+}
+.theme_yellowlight .sc_tabs .content {
+	background: #ffffff;
+	border-color: #e0e0e0;
+}
+
+/* Team */
+.theme_yellowlight .sc_team .sc_team_item {
+	background: #f0f0f0;
+}
+
+/* Testimonials */
+.theme_yellowlight .sc_testimonials .sc_testimonials_position {
+	color:#aaaaaa;
+}
+.theme_yellowlight .sc_testimonials.sc_testimonials_style_flat .sc_testimonials_content {
+	background-color:#f0f0f0;
+}
+.theme_yellowlight .sc_testimonials.sc_testimonials_style_callout .sc_testimonials_content {
+	background-color:#9b9b9b;
+	color:#ffffff;
+}
+.theme_yellowlight .sc_testimonials.sc_testimonials_style_callout .sc_testimonials_extra {
+	background-color: #565656;
+}
+.theme_yellowlight .sc_testimonials.sc_testimonials_style_callout .sc_testimonials_extra .sc_testimonials_extra_inner {
+	border-color:transparent transparent #ffffff #ffffff;
+}
+
+/* Title */
+.theme_yellowlight .sc_title_bubble_top .sc_title_bubble_icon,
+.theme_yellowlight .sc_title_bubble_left .sc_title_bubble_icon {
+	background-color:#ffc800;
+	color:#ffffff;
+}
+.theme_yellowlight .sc_title_underline:after {
+	border-bottom-color:#ffc800;
+}
+
+/* Toggles */
+.theme_yellowlight .sc_toggles .sc_toggles_item .sc_toggles_title a span.sc_toggles_icon {
+	background-color: #282828;
+	color:#ffffff;
+}
+.theme_yellowlight .sc_toggles .sc_toggles_item .sc_toggles_title.ui-state-active a span.sc_toggles_icon {
+	background-color: #ffc800;
+}
+.theme_yellowlight .sc_toggles .sc_toggles_item .sc_toggles_title.ui-state-active a {
+	color:#ffc800;
+}
+.theme_yellowlight .sc_toggles .sc_toggles_item .sc_toggles_title a:hover {
+	color:#727272;
+}
+.theme_yellowlight .sc_toggles .sc_toggles_item .sc_toggles_title a:hover span.sc_toggles_icon {
+	background-color: #727272;
+	color:#ffffff;
+}
+
+/* Tooltip */
+.theme_yellowlight .sc_tooltip_parent {
+	color:#282828;
+	border-bottom-color:#727272;
+}
+.theme_yellowlight .sc_tooltip {
+	background: #282828;
+	color:#ffffff;
+}
+.theme_yellowlight .sc_tooltip:after {
+	border-color: #282828 transparent transparent;
+}
+
+
+
+
+
+/* Popup & register
+---------------------------------------------------*/
+.theme_yellowlight .popup_form .popup_title .popup_arrow:after {
+	border-bottom-color: #ffc800;
+}
+
+

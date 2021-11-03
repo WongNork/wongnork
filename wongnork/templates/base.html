@@ -1,5 +1,4 @@
 {% load static %}
-{% block content %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -37,7 +36,6 @@
 	<link rel="stylesheet" href="{% static 'js/prettyphoto/css/prettyPhoto.css' %}" type="text/css" media="all" />
 	<link rel="stylesheet" href="{% static 'js/mediaplayer/mediaelementplayer.css' %}" type="text/css" media="all" />
 </head>
-
 <body>
 	<!-- header -->
 		<header role="banner">
@@ -63,11 +61,13 @@
 						<nav id="mainmenu_area" class="mainmenu_area theme_menu" role="navigation">
 							<ul id="mainmenu">
 								<li class="blue">
-									<a href="index.html">Home</a>
+									<a href="{% url 'index' %}">Home</a>
 								</li>
-								<li class="brown"><a href="#">Reviews</a>
+								<li class="brown">
+									<a href="{% url 'review_page' %}">Reviews</a>
 								</li>
-								<li class="blue"><a href="excerpt-style1.html">Restaurants</a></li>
+								<li class="blue">
+									<a href="#">Restaurants</a></li>
 <!--								<li class="orange"><a href="excerpt-style3.html">Games</a></li>-->
 <!--								<li class="red"><a href="fullpost-style.html">Music</a></li>-->
 <!--								<li class="green"><a href="excerpt-style4.html">Video</a></li>-->
@@ -76,8 +76,5 @@
 							<a href="#" class="search_link"><span class="icon-search"></span></a>
 							</nav>
 							<!-- #main menu -->
-
 </body>
 </html>
-
-{% endblock %}

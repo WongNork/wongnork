@@ -22,4 +22,5 @@ urlpatterns = [
     path('wongnork/', include('wongnork.urls')),
     path('admin/', admin.site.urls),
     path('', views.index, name='index'),
+    path('review/', views.review, name='review_page'),
 ]

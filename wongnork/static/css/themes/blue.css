@@ -1,0 +1,639 @@
+/* Color theme 'Blue' */
+
+/* Page Body background */
+.theme_blue.theme_body, .theme_blue .theme_body {
+	background-color:#002130;
+}
+
+/* Article background */
+.theme_blue.theme_article, .theme_blue .theme_article {
+	color:#ffffff;
+	background-color:#005e7f;
+}
+
+/* Text color */
+.theme_blue p, .theme_blue td, .theme_blue th, .theme_blue input, .theme_blue textarea, .theme_blue div,
+.theme_blue .theme_text {
+	color:#d0d0d0;
+}
+
+/* Headers color */
+.theme_blue h1, .theme_blue h2, .theme_blue h3,
+.theme_blue .theme_title, .theme_blue .theme_header {
+	color:#ffffff;
+}
+
+/* SubHeaders color */
+.theme_blue h4, .theme_blue h5, .theme_blue h6,
+.theme_blue .theme_subtitle, .theme_blue .theme_subheader {
+	color:#ffffff;
+}
+
+/* Strong text */
+.theme_blue .theme_strong {
+	color:#ffffff;
+}
+
+/* Info text - post date, author, comments etc. */
+.theme_blue .theme_info {
+	color:#008ec0;
+}
+
+/* Links (as text) */
+.theme_blue a, 
+.theme_blue .theme_link {
+	color:#ffffff;
+}
+
+/* Links (as text) hover */
+.theme_blue a:hover,
+.theme_blue .theme_link:hover {
+	color:#00c6ff;
+}
+
+/* Links (as button) */
+.theme_blue a.more-link,
+.theme_blue a.comment-reply-link,
+.theme_blue .theme_button {
+	background-color:#008ec0;
+	color:#ffffff;	
+	-webkit-transition: all ease .2s;
+	-moz-transition: all ease .2s;
+	-ms-transition: all ease .2s;
+	-o-transition: all ease .2s;
+	transition: all ease .2s;
+}
+
+/* Links (as button) hover */
+.theme_blue a.more-link:hover,
+.theme_blue a.comment-reply-link:hover,
+.theme_blue a.theme_button:hover,
+.theme_blue a.theme_accent_bg:hover,
+.theme_blue .theme_hover {
+	background-color:#004666;
+	color:#ffffff;	
+}
+
+/* Border color */
+.theme_blue fieldset,
+.theme_blue .theme_border {
+	border-color:#337e99 !important;
+}
+
+/* Accent color */
+.theme_blue .theme_accent_bg {
+	background-color:#00a0db;
+	color:#ffffff;
+}
+.theme_blue .theme_accent {
+	color:#00a0db;
+}
+.theme_blue .theme_accent_border {
+	border-color:#00a0db;
+}
+
+
+/* Reviews stars */
+.theme_blue .theme_stars {		/* Inactive */
+	color:#008ec0;
+}
+.theme_blue .theme_stars_on {	/* Active */
+	color:#ffc800;
+}
+.theme_blue .theme_rating_bar {		/* Inactive */
+	background-color:#008ec0;
+}
+.theme_blue .theme_rating_level {	/* Active */
+	background-color:#ffc800;
+}
+.theme_blue .theme_rating_drag {	/* Slider */
+	background-color:#00a0db;
+}
+
+
+/* Puzzles - description block background and color */
+.theme_blue .theme_puzzles {
+	background-color:#006776;
+	color:#ffffff;
+}
+
+
+
+
+
+/* Main menu
+---------------------------------------------------*/
+.theme_blue .theme_menu {
+	background-color:#002130;
+}
+	.theme_blue #mainmenu a {
+		color:#ffffff;
+	}
+	#mainmenu > li.theme_blue.current-menu-item > a,
+	.theme_blue #mainmenu > li.current-menu-item > a {
+		background-color:#00a0db;
+		color:#ffffff;
+	}
+	#mainmenu > li.theme_blue > a:hover,
+	#mainmenu > li.theme_blue.sfHover > a,
+	.theme_blue #mainmenu > li > a:hover,
+	.theme_blue #mainmenu > li.sfHover > a {
+		background-color:#00a0db;
+		color:#ffffff;
+	}
+	/* Second level */
+	#mainmenu > li.theme_blue ul,
+	.theme_blue #mainmenu > li ul {
+		background-color:#00a0db;
+		color:#ffffff;
+	}
+	#mainmenu > li.theme_blue ul li a,
+	.theme_blue #mainmenu > li ul li a {
+		color: #ffffff;
+	}
+	#mainmenu > li.theme_blue ul li.current-menu-item > a,
+	.theme_blue #mainmenu > li ul li.current-menu-item > a {
+		background-color:#002130;
+	}
+	#mainmenu > li.theme_blue ul li a:hover,
+	#mainmenu > li.theme_blue ul li.sfHover > a,
+	.theme_blue #mainmenu > li ul li a:hover,
+	.theme_blue #mainmenu > li ul li.sfHover > a {
+		background-color:#004666;
+		color:#ffffff;	
+	}
+	/* Side menu */
+	.theme_blue #sidemenu_area li a {
+		color:#ffffff;
+	}
+	#sidemenu_area li.theme_blue.current-menu-item a,
+	.theme_blue #sidemenu_area li.current-menu-item a {
+		background-color:#002130;
+		color:#ffffff;
+	}
+	#sidemenu_area li.theme_blue a:hover,
+	#sidemenu_area li.theme_blue.sfHover a,
+	.theme_blue #sidemenu_area li a:hover,
+	.theme_blue #sidemenu_area li.sfHover a {
+		background-color:#004666;
+		color:#ffffff;
+	}
+
+
+
+
+/* Pages navigation
+---------------------------------------------------*/
+.theme_blue #nav_pages li a,
+.theme_blue #nav_pages li span,
+.theme_blue .nav_pages_parts a,
+.theme_blue .nav_pages_parts > span,
+.theme_blue .nav_comments a,
+.theme_blue .nav_comments > span {
+	background-color:#008ec0;
+	color:#ffffff;	
+}
+.theme_blue #nav_pages li a:hover,
+.theme_blue .nav_pages_parts a:hover,
+.theme_blue .nav_comments a:hover {
+	background-color:#004666;
+	color:#ffffff;	
+}
+.theme_blue #nav_pages li.pager_current span,
+.theme_blue #nav_pages li.pager_current a,
+.theme_blue #nav_pages li a.current,
+.theme_blue .nav_pages_parts > span.page_num,
+.theme_blue .nav_comments span {
+	background-color:#00a0db;
+	color:#ffffff;	
+}
+.theme_blue .nav_pages_parts > span.pages {
+	background:none;
+	filter:none;
+	border:none;
+}
+.theme_blue #nav_pages .pager_pages span {	
+	background:none;
+	filter:none;
+	border-color:transparent;
+	border-width:0;
+	color:#888888;
+}
+
+
+
+/* Form fields
+---------------------------------------------------*/
+.theme_blue #buddypress .button,
+.theme_blue #buddypress .generic-button a,
+.theme_blue #buddypress form input[type="button"],
+.theme_blue #buddypress form input[type="reset"],
+.theme_blue #buddypress form input[type="submit"],
+.theme_blue.bbpress #bbpress-forums form input[type="button"],
+.theme_blue.bbpress #bbpress-forums form input[type="submit"],
+.theme_blue.bbpress #bbpress-forums form input[type="reset"],
+.theme_blue button,
+.theme_blue html input[type="button"],
+.theme_blue input[type="reset"],
+.theme_blue input[type="submit"] {
+	border-color:transparent;
+	border-width:0;
+	background:#008ec0;
+	color:#ffffff;	
+	-webkit-transition: all ease .2s;
+	-moz-transition: all ease .2s;
+	-ms-transition: all ease .2s;
+	-o-transition: all ease .2s;
+	transition: all ease .2s;
+	cursor: pointer;
+}
+.theme_blue #buddypress .button:hover,
+.theme_blue #buddypress .generic-button a:hover,
+.theme_blue #buddypress form input[type="button"]:hover,
+.theme_blue #buddypress form input[type="reset"]:hover,
+.theme_blue #buddypress form input[type="submit"]:hover,
+.theme_blue.bbpress #bbpress-forums form input[type="button"]:hover,
+.theme_blue.bbpress #bbpress-forums form input[type="submit"]:hover,
+.theme_blue.bbpress #bbpress-forums form input[type="reset"]:hover,
+.theme_blue button:hover,
+.theme_blue html input[type="button"]:hover,
+.theme_blue input[type="reset"]:hover,
+.theme_blue input[type="submit"]:hover {
+	background:#003d59;
+	color:#ffffff;	
+}
+.theme_blue #buddypress .button:focus,
+.theme_blue #buddypress .generic-button a:focus,
+.theme_blue #buddypress form input[type="button"]:focus,
+.theme_blue #buddypress form input[type="reset"]:focus,
+.theme_blue #buddypress form input[type="submit"]:focus,
+.theme_blue.bbpress #bbpress-forums form input[type="button"]:focus,
+.theme_blue.bbpress #bbpress-forums form input[type="submit"]:focus,
+.theme_blue.bbpress #bbpress-forums form input[type="reset"]:focus,
+.theme_blue button:focus,
+.theme_blue html input[type="button"]:focus,
+.theme_blue input[type="reset"]:focus,
+.theme_blue input[type="submit"]:focus,
+.theme_blue button:active,
+.theme_blue html input[type="button"]:active,
+.theme_blue input[type="reset"]:active,
+.theme_blue input[type="submit"]:active {
+	background:#00c6ff;
+	color:#ffffff;	
+}
+.theme_blue #buddypress form textarea,
+.theme_blue #buddypress form#whats-new-form textarea,
+.theme_blue #buddypress form select,
+.theme_blue #buddypress form input[type="file"],
+.theme_blue #buddypress form input[type="text"],
+.theme_blue #buddypress form input[type="search"],
+.theme_blue #buddypress form input[type="email"],
+.theme_blue #buddypress form input[type="number"],
+.theme_blue #buddypress form input[type="checkbox"],
+.theme_blue #buddypress form input[type="radio"],
+.theme_blue #buddypress form input[type="password"],
+.theme_blue .theme_field,
+.theme_blue blockquote,
+.theme_blue input[type="text"],
+.theme_blue input[type="number"],
+.theme_blue input[type="email"],
+.theme_blue input[type="password"],
+.theme_blue input[type="search"],
+.theme_blue select,
+.theme_blue textarea {
+	background: #003d59;
+	border-width:0;
+	color: #ffffff;
+}
+.theme_blue #buddypress form textarea:focus,
+.theme_blue #buddypress form#whats-new-form textarea:focus,
+.theme_blue #buddypress form select:focus,
+.theme_blue #buddypress form input[type="file"]:focus,
+.theme_blue #buddypress form input[type="text"]:focus,
+.theme_blue #buddypress form input[type="search"]:focus,
+.theme_blue #buddypress form input[type="email"]:focus,
+.theme_blue #buddypress form input[type="number"]:focus,
+.theme_blue #buddypress form input[type="checkbox"]:focus,
+.theme_blue #buddypress form input[type="radio"]:focus,
+.theme_blue #buddypress form input[type="password"]:focus,
+.theme_blue .theme_field:focus,
+.theme_blue input[type="text"]:focus,
+.theme_blue input[type="number"]:focus,
+.theme_blue input[type="email"]:focus,
+.theme_blue input[type="password"]:focus,
+.theme_blue input[type="search"]:focus,
+.theme_blue select:focus,
+.theme_blue textarea:focus {
+	background: #004962;
+	color: #ffffff;
+}
+
+
+
+
+/* Sidebars
+---------------------------------------------------*/
+.theme_blue aside.widget {
+	color:#ffffff;
+	background-color:#005e7f;
+}
+
+/* All lists bullets in widgets */
+.theme_blue #content ul li:before,
+.theme_blue.widget_area ul li.current-menu-item > a,
+.theme_blue.widget_area ul li:before {
+	color:#00c6ff;
+}
+
+/* Widget Calendar */
+.theme_blue .widget.widget_calendar table thead th {
+	background-color:#008ec0;
+}
+.theme_blue .widget.widget_calendar table tbody td {
+	color:#d0d0d0;
+	background-color:#008ec0;
+}
+.theme_blue .widget.widget_calendar table tbody a {
+	color:#ffffff;
+	background-color:#008ec0;
+}
+.theme_blue .widget.widget_calendar table tbody a:hover {
+	color:#ffffff;
+	background-color:#003d59;
+}
+.theme_blue .widget.widget_calendar table tbody .pad {
+	background-color:transparent;
+}
+.theme_blue .widget.widget_calendar caption {
+	color:#ffffff;
+}
+.theme_blue .widget.widget_calendar table tbody #today,
+.theme_blue .widget.widget_calendar table tbody #today a {
+	color:#ffffff;	
+	background-color:#00c6ff;
+}
+
+/* Widget Tag cloud */
+.theme_blue .widget.widget_tag_cloud a {
+	color:#ffffff;
+	background-color:#008ec0;
+}
+.theme_blue .widget.widget_tag_cloud a:hover {
+	color:#ffffff;
+	background-color:#003d59;
+}
+
+
+
+
+/* Shortcodes
+---------------------------------------------------*/
+
+/* Accordion */
+.theme_blue .sc_accordion .sc_accordion_item .sc_accordion_title a {
+	color:#ffffff;
+}
+.theme_blue .sc_accordion .sc_accordion_item .sc_accordion_title a span.sc_accordion_icon {
+	background-color: #008ec0;
+	color:#ffffff;
+}
+.theme_blue .sc_accordion .sc_accordion_item .sc_accordion_title.ui-state-active a span.sc_accordion_icon {
+	background-color: #00c6ff;
+}
+.theme_blue .sc_accordion .sc_accordion_item .sc_accordion_title.ui-state-active a {
+	color:#00c6ff;
+}
+.theme_blue .sc_accordion .sc_accordion_item .sc_accordion_title a:hover {
+	color:#00c6ff;
+}
+.theme_blue .sc_accordion .sc_accordion_item .sc_accordion_title a:hover span.sc_accordion_icon {
+	background-color: #004666;
+	color:#ffffff;
+}
+
+/* Blogger */
+.theme_blue .sc_blogger .sc_blogger_title a:hover {
+	color:#00c6ff;
+}
+.theme_blue .sc_blogger[class*="style_image_"] .title_area .post_comments {
+	color: #008ec0;
+}
+.theme_blue .sc_blogger.sc_blogger_vertical .sc_blogger_item {
+	border-top-color:#337e99;
+}
+.theme_blue .sc_blogger.style_date .date_month {
+	background-color:#00c6ff;
+	color:#ffffff;
+}
+.theme_blue .sc_blogger.style_date .date_day {
+	background-color:#ffffff;
+	color:#111111;
+	border-color:#337e99;
+}
+.theme_blue .sc_blogger .sc_blogger_item_bordered {
+	border-color: #337e99;
+}
+
+/* Button */
+.theme_blue .sc_button {
+	border-color:#337e99;
+	color:#ffffff;
+}
+.theme_blue .sc_button.sc_button_style_regular {
+	border-color:transparent;
+	border-width:0;
+}
+
+/* Dropcaps */
+.theme_blue .sc_dropcaps.sc_dropcaps_style_1 span.sc_dropcap {
+	color: #ffffff;
+}
+.theme_blue .sc_dropcaps.sc_dropcaps_style_2 span.sc_dropcap {
+	background-color: #00c6ff;
+	color: #fff;
+}
+.theme_blue .sc_dropcaps.sc_dropcaps_style_3 span.sc_dropcap {
+	background: #003d59;
+	color: #fff;
+}
+
+/* Infobox */
+.theme_blue.bbpress #bbpress-forums .bbp-template-notice,
+.theme_blue .sc_infobox_style_regular {
+	border-color: #e0e0e0;
+	color:#666666;
+	background: #ffffff;
+}
+.theme_blue.bbpress #bbpress-forums .bbp-template-notice p,
+.theme_blue .sc_infobox_style_regular p {
+	color:#666666;
+}
+.theme_blue.bbpress #bbpress-forums .bbp-template-notice.info,
+.theme_blue .sc_infobox_style_info {
+	border: 1px solid #f4ecab;
+	color: #bd9a67;
+	background: #fffdec;
+}
+.theme_blue.bbpress #bbpress-forums .bbp-template-notice.info p,
+.theme_blue .sc_infobox_style_info p {
+	color: #bd9a67;
+}
+.theme_blue .sc_infobox_style_success {
+	border: 1px solid #c8f8af;
+	color: #5aa631;
+	background: #eaffdf;
+}
+.theme_blue .sc_infobox_style_success p {
+	color: #5aa631;
+}
+.theme_blue .sc_infobox_style_error {
+	border: 1px solid #ffd8d8;
+	color: #ff5555;
+	background: #fff1f1;
+}
+.theme_blue .sc_infobox_style_error p {
+	color: #ff5555;
+}
+.theme_blue .sc_infobox_style_result {
+	border: 1px solid #ccdae0;
+	color: #94adb9;
+	background: #f7fbfc;
+}
+.theme_blue .sc_infobox_style_result p {
+	color: #94adb9;
+}
+
+
+/* Line */
+.theme_blue .sc_line {
+	border-color: #e0e0e0;
+}
+
+/* List */
+.theme_blue ul.sc_list.sc_list_style_regular li span.sc_list_icon,
+.theme_blue ul.sc_list li.sc_list_style_regular span.sc_list_icon {
+	background: #00bcff;
+}
+.theme_blue ul.sc_list.sc_list_style_mark li span.sc_list_icon,
+.theme_blue ul.sc_list li.sc_list_style_mark span.sc_list_icon {
+	background: #ff5555;
+}
+
+/* Skills*/
+.theme_blue .sc_skills .sc_skills_item .sc_skills_progressbar {
+	background:#004962;
+}
+.theme_blue .sc_skills .sc_skills_item .sc_skills_progress {
+	border-color: #337e99;
+	background:#003d59;
+}
+.theme_blue .sc_skills .sc_skills_item .sc_skills_caption {
+	color:#ffffff;
+}
+.theme_blue .sc_skills .sc_skills_item .sc_skills_level {
+	background:#00c6ff;
+	color:#ffffff;
+
+}
+
+/* Slider Flex */
+.theme_blue .sc_slider_flex .flex-control-nav a:hover {
+	background-color:#00c6ff;
+}
+.theme_blue .sc_slider_flex .flex-control-nav .flex-active {
+	border-color:#00c6ff;
+}
+
+/* Table */
+.theme_blue .sc_table table td, 
+.theme_blue .sc_table table th {
+	border-color: #337e99;
+	background: #003d59;
+}
+.theme_blue .sc_table table th {
+	color:#ffffff;
+	background: #004962;
+}
+.theme_blue .sc_table table tr:hover td {
+	background-color:#005982;
+}
+
+/* Tabs */
+.theme_blue .ui-tabs-active .theme_button {
+	background-color:#00c6ff;
+	color:#ffffff;	
+}
+.theme_blue .sc_tabs .content {
+	background: #003d59;
+	border-color: #337e99;
+}
+
+/* Team */
+.theme_blue .sc_team .sc_team_item {
+	background-color: #003d59;
+}
+
+/* Testimonials */
+.theme_blue .sc_testimonials .sc_testimonials_position {
+	color:#d0d0d0;
+}
+.theme_blue .sc_testimonials.sc_testimonials_style_flat .sc_testimonials_content {
+	background-color:#003d59;
+}
+.theme_blue .sc_testimonials.sc_testimonials_style_callout .sc_testimonials_content {
+	background-color:#004962;
+	color:#ffffff;
+}
+.theme_blue .sc_testimonials.sc_testimonials_style_callout .sc_testimonials_extra {
+	background-color: #002d49;
+}
+.theme_blue .sc_testimonials.sc_testimonials_style_callout .sc_testimonials_extra .sc_testimonials_extra_inner {
+	border-color:transparent transparent #005e7f #005e7f;
+}
+
+/* Title */
+.theme_blue .sc_title_bubble_top .sc_title_bubble_icon,
+.theme_blue .sc_title_bubble_left .sc_title_bubble_icon {
+	background-color:#00c6ff;
+	color:#ffffff;
+}
+.theme_blue .sc_title_underline:after {
+	border-bottom-color:#00c6ff;
+}
+
+/* Toggles */
+.theme_blue .sc_toggles .sc_toggles_item .sc_toggles_title a {
+	color:#ffffff;
+}
+.theme_blue .sc_toggles .sc_toggles_item .sc_toggles_title a span.sc_toggles_icon {
+	background-color: #008ec0;
+	color:#ffffff;
+}
+.theme_blue .sc_toggles .sc_toggles_item .sc_toggles_title.ui-state-active a span.sc_toggles_icon {
+	background-color: #00c6ff;
+}
+.theme_blue .sc_toggles .sc_toggles_item .sc_toggles_title.ui-state-active a {
+	color:#00c6ff;
+}
+.theme_blue .sc_toggles .sc_toggles_item .sc_toggles_title a:hover {
+	color:#00c6ff;
+}
+.theme_blue .sc_toggles .sc_toggles_item .sc_toggles_title a:hover span.sc_toggles_icon {
+	background-color: #004666;
+	color:#ffffff;
+}
+
+/* Tooltip */
+.theme_blue .sc_tooltip_parent {
+	color:#ffffff;
+	border-bottom-color:#003d59;
+}
+.theme_blue .sc_tooltip {
+	background: #003d59;
+	color:#ffffff;
+}
+.theme_blue .sc_tooltip:after {
+	border-color: #003d59 transparent transparent;
+}
+
+

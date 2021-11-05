@@ -1,0 +1,642 @@
+/* Color theme 'Red Light' */
+
+/* Page Body background */
+.theme_redlight.theme_body, .theme_redlight .theme_body {
+	background-color:#d5d3d2;
+}
+
+/* Article background */
+.theme_redlight.theme_article, .theme_redlight .theme_article {
+	color:#ffffff;
+	background-color:#e5e5e5;
+}
+
+/* Text color */
+.theme_redlight p, .theme_redlight td, .theme_redlight th, .theme_redlight input, .theme_redlight textarea, .theme_redlight div,
+.theme_redlight .theme_text {
+	color:#555555;
+}
+
+/* Headers color */
+.theme_redlight h1, .theme_redlight h2, .theme_redlight h3,
+.theme_redlight .theme_title, .theme_redlight .theme_header {
+	color:#1c1c1c;
+}
+
+/* SubHeaders color */
+.theme_redlight h4, .theme_redlight h5, .theme_redlight h6,
+.theme_redlight .theme_subtitle, .theme_redlight .theme_subheader {
+	color:#1c1c1c;
+}
+
+/* Strong text */
+.theme_redlight .theme_strong {
+	color:#555555;
+}
+
+/* Info text - post date, author, comments etc. */
+.theme_redlight .theme_info {
+	color:#999999;
+}
+
+/* Links (as text) */
+.theme_redlight a, 
+.theme_redlight .theme_link {
+	color:#e54848;
+}
+
+/* Links (as text) hover */
+.theme_redlight a:hover,
+.theme_redlight .theme_link:hover {
+	color:#750000;
+}
+
+/* Links (as button) */
+.theme_redlight a.more-link,
+.theme_redlight a.comment-reply-link,
+.theme_redlight .theme_button {
+	background-color:#ffffff;
+	color:#999999;	
+	-webkit-transition: all ease .2s;
+	-moz-transition: all ease .2s;
+	-ms-transition: all ease .2s;
+	-o-transition: all ease .2s;
+	transition: all ease .2s;
+}
+
+/* Links (as button) hover */
+.theme_redlight a.more-link:hover,
+.theme_redlight a.comment-reply-link:hover,
+.theme_redlight a.theme_button:hover,
+.theme_redlight a.theme_accent_bg:hover,
+.theme_redlight .theme_hover {
+	background-color:#999999;
+	color:#ffffff;	
+}
+
+/* Border color */
+.theme_redlight fieldset,
+.theme_redlight .theme_border {
+	border-color:#cccccc !important;
+}
+
+/* Accent color */
+.theme_redlight .theme_accent_bg {
+	background-color:#f03232;
+	color:#ffffff;
+}
+.theme_redlight .theme_accent {
+	color:#f03232;
+}
+.theme_redlight .theme_accent_border {
+	border-color:#f03232;
+}
+
+
+/* Reviews stars */
+.theme_redlight .theme_stars {		/* Inactive */
+	color:#e5e5e5;
+}
+.theme_redlight .theme_stars_on {	/* Active */
+	color:#ffc800;
+}
+.theme_redlight .theme_rating_bar {		/* Inactive */
+	background-color:#e5e5e5;
+}
+.theme_redlight .theme_rating_level {	/* Active */
+	background-color:#f03232;
+}
+.theme_redlight .theme_rating_drag {	/* Slider */
+	background-color:#999999;
+}
+
+
+/* Puzzles - description block background and color */
+.theme_redlight .theme_puzzles {
+	background-color:#999999;
+	color:#ffffff;
+}
+
+
+
+
+
+/* Main menu
+---------------------------------------------------*/
+.theme_redlight .theme_menu {
+	background-color:#d5d3d2;
+}
+	.theme_redlight #mainmenu a {
+		color:#1c1c1c;
+	}
+	#mainmenu > li.theme_redlight.current-menu-item > a,
+	.theme_redlight #mainmenu > li.current-menu-item > a {
+		background-color:#999999;
+		color:#ffffff;
+	}
+	#mainmenu > li.theme_redlight > a:hover,
+	#mainmenu > li.theme_redlight.sfHover > a,
+	.theme_redlight #mainmenu > li > a:hover,
+	.theme_redlight #mainmenu > li.sfHover > a {
+		background-color:#f03232;
+		color:#ffffff;
+	}
+	/* Second level */
+	#mainmenu > li.theme_redlight ul,
+	.theme_redlight #mainmenu > li ul {
+		background-color:#f03232;
+		color:#ffffff;
+	}
+	#mainmenu > li.theme_redlight ul li a,
+	.theme_redlight #mainmenu > li ul li a {
+		color: #ffffff;
+	}
+	#mainmenu > li.theme_redlight ul li.current-menu-item > a,
+	.theme_redlight #mainmenu > li ul li.current-menu-item > a {
+		background-color:#999999;
+	}
+	#mainmenu > li.theme_redlight ul li a:hover,
+	#mainmenu > li.theme_redlight ul li.sfHover > a,
+	.theme_redlight #mainmenu > li ul li a:hover,
+	.theme_redlight #mainmenu > li ul li.sfHover > a {
+		background-color:#f03232;
+		color:#ffffff;	
+	}
+	/* Side menu */
+	.theme_redlight #sidemenu_area li a {
+		color:#ffffff;
+	}
+	#sidemenu_area li.theme_redlight.current-menu-item a,
+	.theme_redlight #sidemenu_area li.current-menu-item a {
+		background-color:#f03232;
+		color:#ffffff;
+	}
+	#sidemenu_area li.theme_redlight a:hover,
+	#sidemenu_area li.theme_redlight.sfHover a,
+	.theme_redlight #sidemenu_area li a:hover,
+	.theme_redlight #sidemenu_area li.sfHover a {
+		background-color:#999999;
+		color:#ffffff;
+	}
+
+
+
+
+/* Pages navigation
+---------------------------------------------------*/
+.theme_redlight #nav_pages li a,
+.theme_redlight #nav_pages li span,
+.theme_redlight .nav_pages_parts a,
+.theme_redlight .nav_pages_parts > span,
+.theme_redlight .nav_comments a,
+.theme_redlight .nav_comments > span {
+	background-color:#ffffff;
+	color:#999999;	
+}
+.theme_redlight #nav_pages li a:hover,
+.theme_redlight .nav_pages_parts a:hover,
+.theme_redlight .nav_comments a:hover {
+	background-color:#999999;
+	color:#ffffff;	
+}
+.theme_redlight #nav_pages li.pager_current span,
+.theme_redlight #nav_pages li.pager_current a,
+.theme_redlight #nav_pages li a.current,
+.theme_redlight .nav_pages_parts > span.page_num,
+.theme_redlight .nav_comments span {
+	background-color:#f03232;
+	color:#ffffff;	
+}
+.theme_redlight .nav_pages_parts > span.pages {
+	background:none;
+	filter:none;
+	border:none;
+}
+.theme_redlight #nav_pages .pager_pages span {	
+	background:none;
+	filter:none;
+	border-color:transparent;
+	border-width:0;
+	color:#666666;
+}
+
+
+
+/* Form fields
+---------------------------------------------------*/
+.theme_redlight #buddypress .button,
+.theme_redlight #buddypress .generic-button a,
+.theme_redlight #buddypress form input[type="button"],
+.theme_redlight #buddypress form input[type="reset"],
+.theme_redlight #buddypress form input[type="submit"],
+.theme_redlight.bbpress #bbpress-forums form input[type="button"],
+.theme_redlight.bbpress #bbpress-forums form input[type="submit"],
+.theme_redlight.bbpress #bbpress-forums form input[type="reset"],
+.theme_redlight button,
+.theme_redlight html input[type="button"],
+.theme_redlight input[type="reset"],
+.theme_redlight input[type="submit"] {
+	border-color:transparent;
+	border-width:0;
+	background:#ffffff;
+	color:#999999;	
+	-webkit-transition: all ease .2s;
+	-moz-transition: all ease .2s;
+	-ms-transition: all ease .2s;
+	-o-transition: all ease .2s;
+	transition: all ease .2s;
+	cursor: pointer;
+}
+.theme_redlight #buddypress .button:hover,
+.theme_redlight #buddypress .generic-button a:hover,
+.theme_redlight #buddypress form input[type="button"]:hover,
+.theme_redlight #buddypress form input[type="reset"]:hover,
+.theme_redlight #buddypress form input[type="submit"]:hover,
+.theme_redlight.bbpress #bbpress-forums form input[type="button"]:hover,
+.theme_redlight.bbpress #bbpress-forums form input[type="submit"]:hover,
+.theme_redlight.bbpress #bbpress-forums form input[type="reset"]:hover,
+.theme_redlight button:hover,
+.theme_redlight html input[type="button"]:hover,
+.theme_redlight input[type="reset"]:hover,
+.theme_redlight input[type="submit"]:hover {
+	background:#999999;
+	color:#ffffff;	
+}
+.theme_redlight #buddypress .button:focus,
+.theme_redlight #buddypress .generic-button a:focus,
+.theme_redlight #buddypress form input[type="button"]:focus,
+.theme_redlight #buddypress form input[type="reset"]:focus,
+.theme_redlight #buddypress form input[type="submit"]:focus,
+.theme_redlight.bbpress #bbpress-forums form input[type="button"]:focus,
+.theme_redlight.bbpress #bbpress-forums form input[type="submit"]:focus,
+.theme_redlight.bbpress #bbpress-forums form input[type="reset"]:focus,
+.theme_redlight button:focus,
+.theme_redlight html input[type="button"]:focus,
+.theme_redlight input[type="reset"]:focus,
+.theme_redlight input[type="submit"]:focus,
+.theme_redlight button:active,
+.theme_redlight html input[type="button"]:active,
+.theme_redlight input[type="reset"]:active,
+.theme_redlight input[type="submit"]:active {
+	background:#c0c0c0;
+	color:#ffffff;	
+}
+.theme_redlight #buddypress form textarea,
+.theme_redlight #buddypress form#whats-new-form textarea,
+.theme_redlight #buddypress form select,
+.theme_redlight #buddypress form input[type="file"],
+.theme_redlight #buddypress form input[type="text"],
+.theme_redlight #buddypress form input[type="search"],
+.theme_redlight #buddypress form input[type="email"],
+.theme_redlight #buddypress form input[type="number"],
+.theme_redlight #buddypress form input[type="checkbox"],
+.theme_redlight #buddypress form input[type="radio"],
+.theme_redlight #buddypress form input[type="password"],
+.theme_redlight .theme_field,
+.theme_redlight blockquote,
+.theme_redlight input[type="text"],
+.theme_redlight input[type="number"],
+.theme_redlight input[type="email"],
+.theme_redlight input[type="password"],
+.theme_redlight input[type="search"],
+.theme_redlight select,
+.theme_redlight textarea {
+	background: #cccccc;
+	border-width:0;
+	color: #222222;
+}
+.theme_redlight #buddypress form textarea:focus,
+.theme_redlight #buddypress form#whats-new-form textarea:focus,
+.theme_redlight #buddypress form select:focus,
+.theme_redlight #buddypress form input[type="file"]:focus,
+.theme_redlight #buddypress form input[type="text"]:focus,
+.theme_redlight #buddypress form input[type="search"]:focus,
+.theme_redlight #buddypress form input[type="email"]:focus,
+.theme_redlight #buddypress form input[type="number"]:focus,
+.theme_redlight #buddypress form input[type="checkbox"]:focus,
+.theme_redlight #buddypress form input[type="radio"]:focus,
+.theme_redlight #buddypress form input[type="password"]:focus,
+.theme_redlight .theme_field:focus,
+.theme_redlight input[type="text"]:focus,
+.theme_redlight input[type="number"]:focus,
+.theme_redlight input[type="email"]:focus,
+.theme_redlight input[type="password"]:focus,
+.theme_redlight input[type="search"]:focus,
+.theme_redlight select:focus,
+.theme_redlight textarea:focus {
+	background: #c0c0c0;
+	color: #222222;
+}
+
+
+
+
+/* Sidebars
+---------------------------------------------------*/
+.theme_redlight aside.widget {
+	color:#666666;
+	background-color:#e5e5e5;
+}
+
+/* All lists bullets in widgets */
+.theme_redlight #content ul li:before,
+.theme_redlight.widget_area ul li.current-menu-item > a,
+.theme_redlight.widget_area ul li:before {
+	color:#f03232;
+}
+
+/* Widget Calendar */
+.theme_redlight .widget.widget_calendar table thead th {
+	background-color:#ffffff;
+	color:#555555;
+}
+.theme_redlight .widget.widget_calendar table tbody td {
+	background-color:#ffffff;
+	color:#666666;
+}
+.theme_redlight .widget.widget_calendar table tbody a {
+	background-color:#ffffff;
+	color:#e54848;
+}
+.theme_redlight .widget.widget_calendar table tbody a:hover {
+	color:#ffffff;
+	background-color:#999999;
+}
+.theme_redlight .widget.widget_calendar table tbody .pad {
+	background-color:transparent;
+}
+.theme_redlight .widget.widget_calendar caption {
+	color:#1c1c1c;
+}
+.theme_redlight .widget.widget_calendar table tbody #today,
+.theme_redlight .widget.widget_calendar table tbody #today a {
+	color:#ffffff;	
+	background-color:#f03232;
+}
+
+/* Widget Tag cloud */
+.theme_redlight .widget.widget_tag_cloud a {
+	color:#999999;
+	background-color:#ffffff;
+}
+.theme_redlight .widget.widget_tag_cloud a:hover {
+	color:#ffffff;
+	background-color:#999999;
+}
+
+
+
+
+/* Shortcodes
+---------------------------------------------------*/
+
+/* Accordion */
+.theme_redlight .sc_accordion .sc_accordion_item .sc_accordion_title a {
+	color:#1c1c1c;
+}
+.theme_redlight .sc_accordion .sc_accordion_item .sc_accordion_title a span.sc_accordion_icon {
+	background-color: #e54848;
+	color:#ffffff;
+}
+.theme_redlight .sc_accordion .sc_accordion_item .sc_accordion_title.ui-state-active a span.sc_accordion_icon {
+	background-color: #f03232;
+}
+.theme_redlight .sc_accordion .sc_accordion_item .sc_accordion_title.ui-state-active a {
+	color:#e54848;
+}
+.theme_redlight .sc_accordion .sc_accordion_item .sc_accordion_title a:hover {
+	color:#750000;
+}
+.theme_redlight .sc_accordion .sc_accordion_item .sc_accordion_title a:hover span.sc_accordion_icon {
+	background-color: #750000;
+	color:#ffffff;
+}
+
+/* Blogger */
+.theme_redlight .sc_blogger .sc_blogger_title a:hover {
+	color:#750000;
+}
+.theme_redlight .sc_blogger[class*="style_image_"] .title_area .post_comments {
+	color: #e54848;
+}
+.theme_redlight .sc_blogger.sc_blogger_vertical .sc_blogger_item {
+	border-top-color:#cccccc;
+}
+.theme_redlight .sc_blogger.style_date .date_month {
+	background-color:#f03232;
+	color:#ffffff;
+}
+.theme_redlight .sc_blogger.style_date .date_day {
+	background-color:#ffffff;
+	color:#1c1c1c;
+	border-color:#cccccc;
+}
+.theme_redlight .sc_blogger .sc_blogger_item_bordered {
+	border-color: #cccccc;
+}
+
+/* Button */
+.theme_redlight .sc_button {
+	border-color:#cccccc;
+	color:#ffffff;
+}
+.theme_redlight .sc_button.sc_button_style_regular {
+	border-color:transparent;
+	border-width:0;
+	color:#666666;
+}
+
+/* Dropcaps */
+.theme_redlight .sc_dropcaps.sc_dropcaps_style_1 span.sc_dropcap {
+	color: #1c1c1c;
+}
+.theme_redlight .sc_dropcaps.sc_dropcaps_style_2 span.sc_dropcap {
+	background-color: #f03232;
+	color: #ffffff;
+}
+.theme_redlight .sc_dropcaps.sc_dropcaps_style_3 span.sc_dropcap {
+	background: #c0c0c0;
+	color: #ffffff;
+}
+
+/* Infobox */
+.theme_redlight.bbpress #bbpress-forums .bbp-template-notice,
+.theme_redlight .sc_infobox_style_regular {
+	border-color: #e0e0e0;
+	color:#666666;
+	background: #ffffff;
+}
+.theme_redlight.bbpress #bbpress-forums .bbp-template-notice p,
+.theme_redlight .sc_infobox_style_regular p {
+	color:#666666;
+}
+.theme_redlight.bbpress #bbpress-forums .bbp-template-notice.info,
+.theme_redlight .sc_infobox_style_info {
+	border: 1px solid #f4ecab;
+	color: #bd9a67;
+	background: #fffdec;
+}
+.theme_redlight.bbpress #bbpress-forums .bbp-template-notice.info p,
+.theme_redlight .sc_infobox_style_info p {
+	color: #bd9a67;
+}
+.theme_redlight .sc_infobox_style_success {
+	border: 1px solid #c8f8af;
+	color: #5aa631;
+	background: #eaffdf;
+}
+.theme_redlight .sc_infobox_style_success p {
+	color: #5aa631;
+}
+.theme_redlight .sc_infobox_style_error {
+	border: 1px solid #ffd8d8;
+	color: #ff5555;
+	background: #fff1f1;
+}
+.theme_redlight .sc_infobox_style_error p {
+	color: #ff5555;
+}
+.theme_redlight .sc_infobox_style_result {
+	border: 1px solid #ccdae0;
+	color: #94adb9;
+	background: #f7fbfc;
+}
+.theme_redlight .sc_infobox_style_result p {
+	color: #94adb9;
+}
+
+
+/* Line */
+.theme_redlight .sc_line {
+	border-color: #cccccc;
+}
+
+/* List */
+.theme_redlight ul.sc_list.sc_list_style_regular li span.sc_list_icon,
+.theme_redlight ul.sc_list li.sc_list_style_regular span.sc_list_icon {
+	background: #f03232;
+}
+.theme_redlight ul.sc_list.sc_list_style_mark li span.sc_list_icon,
+.theme_redlight ul.sc_list li.sc_list_style_mark span.sc_list_icon {
+	background: #f03232;
+}
+
+/* Skills*/
+.theme_redlight .sc_skills .sc_skills_item .sc_skills_progressbar {
+	background:#c0c0c0;
+}
+.theme_redlight .sc_skills .sc_skills_item .sc_skills_progress {
+	border-color: #cccccc;
+	background:#999999;
+}
+.theme_redlight .sc_skills .sc_skills_item .sc_skills_caption {
+	color:#ffffff;
+}
+.theme_redlight .sc_skills .sc_skills_item .sc_skills_level {
+	background:#f03232;
+	color:#ffffff;
+
+}
+
+/* Slider Flex */
+.theme_redlight .sc_slider_flex .flex-control-nav a:hover {
+	background-color:#f03232;
+}
+.theme_redlight .sc_slider_flex .flex-control-nav .flex-active {
+	border-color:#f03232;
+}
+
+/* Table */
+.theme_redlight .sc_table table td, 
+.theme_redlight .sc_table table th {
+	border-color: #999999;
+	background: transparent;
+}
+.theme_redlight .sc_table table th {
+	color:#1c1c1c;
+	background: #c0c0c0;
+}
+.theme_redlight .sc_table table tr:hover td {
+	background-color:#cccccc;
+}
+
+/* Tabs */
+.theme_redlight .ui-tabs-active .theme_button {
+	background-color:#f03232;
+	color:#ffffff;	
+}
+.theme_redlight .sc_tabs .content {
+	background: #c0c0c0;
+	border-color: #999999;
+}
+
+/* Team */
+.theme_redlight .sc_team .sc_team_item {
+	background-color: #cccccc;
+}
+
+/* Testimonials */
+.theme_redlight .sc_testimonials .sc_testimonials_position {
+	color:#999999;
+}
+.theme_redlight .sc_testimonials.sc_testimonials_style_flat .sc_testimonials_content {
+	background-color:#c0c0c0;
+}
+.theme_redlight .sc_testimonials.sc_testimonials_style_callout .sc_testimonials_content {
+	background-color:#c0c0c0;
+	color:#ffffff;
+}
+.theme_redlight .sc_testimonials.sc_testimonials_style_callout .sc_testimonials_extra {
+	background-color: #999999;
+}
+.theme_redlight .sc_testimonials.sc_testimonials_style_callout .sc_testimonials_extra .sc_testimonials_extra_inner {
+	border-color:transparent transparent #e5e5e5 #e5e5e5;
+}
+
+/* Title */
+.theme_redlight .sc_title_bubble_top .sc_title_bubble_icon,
+.theme_redlight .sc_title_bubble_left .sc_title_bubble_icon {
+	background-color:#f03232;
+	color:#ffffff;
+}
+.theme_redlight .sc_title_underline:after {
+	border-bottom-color:#f03232;
+}
+
+/* Toggles */
+.theme_redlight .sc_toggles .sc_toggles_item .sc_toggles_title a {
+	color:#1c1c1c;
+}
+.theme_redlight .sc_toggles .sc_toggles_item .sc_toggles_title a span.sc_toggles_icon {
+	background-color: #e54848;
+	color:#ffffff;
+}
+.theme_redlight .sc_toggles .sc_toggles_item .sc_toggles_title.ui-state-active a span.sc_toggles_icon {
+	background-color: #f03232;
+}
+.theme_redlight .sc_toggles .sc_toggles_item .sc_toggles_title.ui-state-active a {
+	color:#e54848;
+}
+.theme_redlight .sc_toggles .sc_toggles_item .sc_toggles_title a:hover {
+	color:#750000;
+}
+.theme_redlight .sc_toggles .sc_toggles_item .sc_toggles_title a:hover span.sc_toggles_icon {
+	background-color: #750000;
+	color:#ffffff;
+}
+
+
+/* Tooltip */
+.theme_redlight .sc_tooltip_parent {
+	color:#ffffff;
+	border-bottom-color:#cccccc;
+}
+.theme_redlight .sc_tooltip {
+	background: #3b0b0b;
+	color:#ffffff;
+}
+.theme_redlight .sc_tooltip:after {
+	border-color: #3b0b0b transparent transparent;
+}
+
+

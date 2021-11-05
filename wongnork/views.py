@@ -1,10 +1,27 @@
 from django.shortcuts import render, redirect
 from .forms import NewUserForm
-from django.contrib.auth import login, authenticate
+from django.contrib.auth import login, authenticate, logout
 from django.contrib import messages
 from django.contrib.auth.forms import AuthenticationForm
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.
+
+
+def profile(request):
+    return render(request, 'user_profile.html')
+
+def index(request):
+    """Views for home page"""
+    return render(request, 'home_page.html')
+
+def review(request):
+    """Views for review page"""
+    return render(request, 'review_page.html')
+
+@login_required
+def user_profile(request):
+    return render(request, 'user_profile.html')
 
 
 def register_request(request):
@@ -14,7 +31,7 @@ def register_request(request):
             user = form.save()
             login(request, user)
             messages.success(request, "Registration successful.")
-            return redirect("wongnork:register")
+            return redirect('wongnork:user-profile')
         messages.error(
             request, "Unsuccessful registration. Invalid information.")
     form = NewUserForm()
@@ -31,10 +48,17 @@ def login_request(request):
             if user is not None:
                 login(request, user)
                 messages.info(request, f"You are now logged in as {username}.")
-                return redirect("wongnork:login")
+                return redirect("wongnork:user-profile")
             else:
                 messages.error(request, "Invalid username or password.")
         else:
             messages.error(request, "Invalid username or password.")
     form = AuthenticationForm()
     return render(request, "login.html", {"login_form": form})
+
+
+def logout_request(request):
+    logout(request)
+    messages.info(request, "You have successfully logged out.")
+    return redirect("wongnork:login")
+

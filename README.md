@@ -9,4 +9,8 @@ Wongnork is a web application that will help you to find recommended restaurants
 
 ## Iteration Plans
 
-[Iteration 1](https://github.com/WongNork/wongnork/wiki/Iteration-1) and [Task board](https://github.com/WongNork/wongnork/projects/1)
+[Iteration 1](https://github.com/WongNork/wongnork/wiki/Iteration-1) and [Task board](https://github.com/WongNork/wongnork/projects/1)    
+
+[Iteration 2](https://github.com/WongNork/wongnork/wiki/Iteration-2) and [Task board](https://github.com/WongNork/wongnork/projects/2)   
+
+[Iteration 3](https://github.com/WongNork/wongnork/wiki/Iteration-3) and [Task board](https://github.com/WongNork/wongnork/projects/3)   

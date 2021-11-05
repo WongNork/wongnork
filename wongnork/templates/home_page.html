@@ -1,3 +1,9 @@
 {% extends 'base.html' %}
 
-
+{% block content %}
+    {% for restaurant in restaurants %}
+        <p> {{restaurant.name}}</p>
+        <p> {{restaurant.location_string}}</p>
+        <img src={{restaurant.photo}}></img>
+    {% endfor %}
+{% endblock %}

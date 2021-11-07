@@ -5,6 +5,8 @@ from django.contrib import messages
 from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth.decorators import login_required
 
+from .api import get_restaurant_data
+
 # Create your views here.
 
 
@@ -13,7 +15,8 @@ def profile(request):
 
 def index(request):
     """Views for home page"""
-    return render(request, 'home_page.html')
+    restaurants = get_restaurant_data()
+    return render(request, 'home_page.html', {"restaurants": restaurants})
 
 def review(request):
     """Views for review page"""
@@ -22,7 +25,6 @@ def review(request):
 @login_required
 def user_profile(request):
     return render(request, 'user_profile.html')
-
 
 def register_request(request):
     if request.method == "POST":

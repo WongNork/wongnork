@@ -22,9 +22,14 @@ def review(request):
     """Views for review page"""
     return render(request, 'review_page.html')
 
-@login_required
-def user_profile(request):
-    return render(request, 'user_profile.html')
+
+def user_profile(request):        
+    if request.user.is_authenticated:
+        return render(request, 'user_profile.html')
+    else:
+        messages.error(request,"You are not login!")
+        return redirect('wongnork:login')
+    
 
 def register_request(request):
     if request.method == "POST":
@@ -33,7 +38,7 @@ def register_request(request):
             user = form.save()
             login(request, user)
             messages.success(request, "Registration successful.")
-            return redirect('wongnork:user-profile')
+            return redirect('wongnork:home-page')
         messages.error(
             request, "Unsuccessful registration. Invalid information.")
     form = NewUserForm()
@@ -50,7 +55,7 @@ def login_request(request):
             if user is not None:
                 login(request, user)
                 messages.info(request, f"You are now logged in as {username}.")
-                return redirect("wongnork:user-profile")
+                return redirect("wongnork:home-page")
             else:
                 messages.error(request, "Invalid username or password.")
         else:

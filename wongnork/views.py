@@ -20,7 +20,8 @@ def index(request):
 
 def review(request):
     """Views for review page"""
-    return render(request, 'review_page.html')
+    restaurants = get_restaurant_data()
+    return render(request, 'review_page.html',{"restaurants": restaurants})
 
 
 def user_profile(request):        

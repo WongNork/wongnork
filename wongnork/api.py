@@ -11,10 +11,12 @@ headers = {
     }
 
 class Restaurant():
-    def __init__(self, name, location_string, photo):
+    def __init__(self, name, location_string, photo,description,rating):
         self.name = name
         self.location_string = location_string
         self.photo = photo
+        self.description = description
+        self.rating = rating
 
 
 def get_restaurant_data():
@@ -26,6 +28,8 @@ def get_restaurant_data():
             data.append(Restaurant(
                 name=i['name'],
                 location_string=i['location_string'],
-                photo=i['photo']['images']['original']['url']
+                photo=i['photo']['images']['original']['url'],
+                description=i['description'],
+                rating=i['rating']
             ))
     return data

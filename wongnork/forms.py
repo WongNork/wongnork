@@ -1,6 +1,9 @@
 from django import forms
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
+from django.forms import ModelForm, Textarea
+from .models import Review
+
 
 class NewUserForm(UserCreationForm):
     email = forms.EmailField(required=True)
@@ -15,3 +18,15 @@ class NewUserForm(UserCreationForm):
         if commit:
             user.save()
         return user
+
+
+class ReviewForm(ModelForm):
+    class Meta:
+        model = Review
+        fields = [
+            'review_title',
+            'review_description',
+        ]
+        widgets = {
+            'review_description': Textarea(attrs={'cols': 80, 'rows': 8}),
+        }

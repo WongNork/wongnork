@@ -19,10 +19,6 @@ class Restaurant(models.Model):
     detail = models.CharField(max_length=1000000)
     rating = models.FloatField(max_length=5)
 
-    def __init__(self, name, location_string, photo):
-        self.name = name
-        self.location_string = location_string
-        self.photo = photo
 
     def review_amount(self):
         return self.review_set.count()

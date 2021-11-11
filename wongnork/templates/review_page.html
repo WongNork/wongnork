@@ -125,7 +125,7 @@
 									<a href="{% url 'index' %}">Home</a>
 								</li>
 								<li class="brown">
-									<a href="{% url 'review_page' %}">Reviews</a>
+									{% comment %} <a href="{% url 'review_page' %}">Reviews</a> {% endcomment %}
 								</li>
 								<li class="blue">
 									<a href="#">Restaurants</a></li>
@@ -145,7 +145,7 @@
 					<div class="itemscope" itemscope itemtype="http://schema.org/Review">
 						<article class="theme_article post_format_standard instock">
 							<div class="post_thumb image_wrapper no_thumb">
-								<img alt="Ripd" src="http://placehold.it/932x460" itemprop="image">
+								<img alt="Ripd" src={{ restaurant.photo }} itemprop="image">
 								<span class="post_format theme_accent_bg icon-doc-text"></span>
 								<span class="post_category theme_accent_bg">Actions</span>
 							</div>
@@ -266,10 +266,11 @@
 									<!-- /Review user -->
 								</div>
 								<div class="title_area">
-									<h1 itemprop="itemReviewed" class="post_title theme_title entry-title">Ripd</h1>
+									<h1 itemprop="itemReviewed" class="post_title theme_title entry-title"> {{ restaurant.name }}</h1>
 								</div>
 								<div itemprop="reviewBody" class="post_text_area">
 									<div id="lipsum">
+										<p>{{ restaurant.location_string }}</p>
 										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam at mauris non erat tempor consectetur. Vivamus semper nec elit at consequat. Praesent porta dignissim feugiat. Praesent ut vulputate arcu. Nulla interdum tempor nibh, ut porta nisl pretium in. Vivamus elementum imperdiet dolor, ac imperdiet elit gravida quis. Vestibulum eu mi ullamcorper, lobortis metus sit amet, placerat risus. Ut iaculis augue ac consectetur scelerisque. Quisque a urna quis nisi vulputate viverra.</p>
 										<p>Ut pretium tristique dui, eu sagittis mauris mollis vel. Pellentesque eget nulla ipsum. Fusce hendrerit felis a lacus euismod tincidunt consectetur eget tellus. Nam placerat, magna eu molestie mattis, nisl lorem vulputate massa, vitae condimentum sapien mi at erat. Sed sed justo augue. Morbi sit amet tempor orci. Mauris facilisis, sapien et dictum malesuada, dui nulla facilisis risus, vitae dignissim turpis lacus at nulla. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nunc turpis magna, laoreet at sem sed, semper dictum neque. Integer faucibus, augue ac tempor aliquet, metus erat elementum erat, sed sagittis sapien turpis vitae quam. Maecenas sollicitudin eget nisi at laoreet. Sed eu porta metus. Pellentesque in rutrum libero. Nulla semper diam eu scelerisque accumsan.</p>
 										<p>Mauris viverra erat vel tincidunt ornare. Vivamus consequat, odio ut commodo fringilla, metus massa volutpat massa, sit amet volutpat sem est sollicitudin libero. Integer nunc nibh, sollicitudin vel tempus et, egestas et velit. Maecenas condimentum ante vitae porta lacinia. Phasellus et accumsan sem. Sed scelerisque semper ante, facilisis adipiscing ante iaculis ac. Praesent lacinia mi blandit pellentesque faucibus. Duis tempus lacinia leo, in faucibus turpis gravida commodo. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Mauris nulla massa, iaculis tristique mollis vel, tristique id turpis. Quisque eu ultrices tellus. Praesent at dolor vestibulum lacus fermentum accumsan sed a justo. Proin auctor tempus ultrices. Praesent euismod fringilla ipsum, a molestie sem tincidunt in. Nunc non odio bibendum, fringilla augue vitae, elementum sapien.</p>

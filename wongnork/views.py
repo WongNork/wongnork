@@ -1,11 +1,12 @@
-from django.shortcuts import render, redirect
+from django.http.response import HttpResponseRedirect, Http404
+from django.shortcuts import render, redirect, get_object_or_404
 from .forms import NewUserForm
 from django.contrib.auth import login, authenticate, logout
 from django.contrib import messages
 from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth.decorators import login_required
 
-from .api import get_restaurant_data
+from .api import Restaurant, get_restaurant_data
 
 # Create your views here.
 
@@ -18,10 +19,17 @@ def index(request):
     restaurants = get_restaurant_data()
     return render(request, 'home_page.html', {"restaurants": restaurants})
 
-def review(request):
+def review(request, pk):
     """Views for review page"""
-    return render(request, 'review_page.html')
-
+    # restaurant = get_object_or_404(Restaurant,pk=pk) # For restaurant model object
+    get_restaurants = get_restaurant_data()
+    for restaurant in get_restaurants:
+        if pk.lower() == restaurant.name.lower():
+            context = {"restaurant": restaurant}
+            return render(request, 'review_page.html', context=context)
+        else:
+            print(pk, restaurant.name) # delete later
+    raise Http404("Not found.")
 
 def user_profile(request):        
     if request.user.is_authenticated:
@@ -29,7 +37,6 @@ def user_profile(request):
     else:
         messages.error(request,"You are not login!")
         return redirect('wongnork:login')
-    
 
 def register_request(request):
     if request.method == "POST":

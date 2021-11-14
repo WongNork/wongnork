@@ -46,23 +46,23 @@
 			<div id="sidemenu_scroller">
 				<ul id="sidemenu">
 					<li class="lightblue">
-						<a href="index.html">Home</a>
-						<ul class="sub-menu">
-							<li><a href="index1.html">Homepage with Slider</a></li>
-							<li><a href="index2.html">Homepage with Google map</a></li>
-							<li><a href="index3.html">Homepage (Light puzzles style)</a></li>
-							<li><a href="index4.html">Homepage (classic)</a></li>
-							<li><a href="index5.html">Home page (fullwidth)</a></li>
-						</ul>
+						<a href="{% url 'index' %}">Home</a>
+<!--						<ul class="sub-menu">-->
+<!--							<li><a href="index1.html">Homepage with Slider</a></li>-->
+<!--							<li><a href="index2.html">Homepage with Google map</a></li>-->
+<!--							<li><a href="index3.html">Homepage (Light puzzles style)</a></li>-->
+<!--							<li><a href="index4.html">Homepage (classic)</a></li>-->
+<!--							<li><a href="index5.html">Home page (fullwidth)</a></li>-->
+<!--						</ul>-->
 					</li>
 					<li class="brown"><a href="#">Features</a>
 						<ul class="sub-menu">
-							<li><a href="typography.html">Typography</a></li>
-							<li><a href="shortcodes.html">Columns</a></li>
-							<li><a href="shortcodes-full-list.html">Shortcodes</a></li>
-							<li class="current-menu-item"><a href="404.html">Page 404</a></li>
-							<li><a href="uncategorized.html">No posts found</a></li>
-							<li><a target="_blank" href="http://puzzleshtml.themerex.net/doc">On-line documentation</a></li>
+<!--							<li><a href="typography.html">Typography</a></li>-->
+<!--							<li><a href="shortcodes.html">Columns</a></li>-->
+<!--							<li><a href="shortcodes-full-list.html">Shortcodes</a></li>-->
+<!--							<li class="current-menu-item"><a href="404.html">Page 404</a></li>-->
+<!--							<li><a href="uncategorized.html">No posts found</a></li>-->
+<!--							<li><a target="_blank" href="http://puzzleshtml.themerex.net/doc">On-line documentation</a></li>-->
 						</ul>
 					</li>
 					<li><a href="puzzles-style.html">Blog</a>
@@ -108,7 +108,7 @@
 						<a href="#" class="link_register icon-key theme_accent_bg" title="Register"></a>
 					</div>
 					<div id="breadcrumbs_area"></div>
-					<div class="logo logo_text"><a href="index.html"><span class="logo_title theme_header">Won<span class="theme_accent">g</span>Nork</span><span class="logo_slogan theme_info">Food review blog</span></a></div>
+					<div class="logo logo_text"><a href="{% url 'index' %}"><span class="logo_title theme_header">Won<span class="theme_accent">g</span>Nork</span><span class="logo_slogan theme_info">Food review blog</span></a></div>
 				</div>
        		</div>
 			<div id="header_middle_wrapper">
@@ -124,9 +124,9 @@
 								<li class="blue">
 									<a href="{% url 'index' %}">Home</a>
 								</li>
-								<li class="brown">
-									<a href="{% url 'review_page' %}">Reviews</a>
-								</li>
+<!--								<li class="brown">-->
+<!--									<a href="{% url 'review_page' %}">Reviews</a>-->
+<!--								</li>-->
 								<li class="blue">
 									<a href="#">Restaurants</a></li>
 <!--								<li class="orange"><a href="excerpt-style3.html">Games</a></li>-->
@@ -145,9 +145,9 @@
 					<div class="itemscope" itemscope itemtype="http://schema.org/Review">
 						<article class="theme_article post_format_standard instock">
 							<div class="post_thumb image_wrapper no_thumb">
-								<img alt="Ripd" src="http://placehold.it/932x460" itemprop="image">
+								<img alt="" src={{restaurant.photo}} itemprop="image">
 								<span class="post_format theme_accent_bg icon-doc-text"></span>
-								<span class="post_category theme_accent_bg">Actions</span>
+								<span class="post_category theme_accent_bg">Restaurant</span>
 							</div>
 
 							<!-- Post content -->
@@ -164,7 +164,7 @@
 
 								<div class="post_reviews theme_regular">
 									<ul class="tabs theme_field">
-										<li><a href="#reviews_author" class="theme_button">Author</a></li><li><a href="#reviews_users" class="theme_button">Users</a></li>
+<!--										<li><a href="#reviews_author" class="theme_button">Author</a></li><li><a href="#reviews_users" class="theme_button">Users</a></li>-->
 									</ul>
 									<!-- Review author -->
 									<div id="reviews_author" class="reviews_tab reviews_author">
@@ -172,44 +172,56 @@
 										<input type="hidden" name="criterias_list" class="criterias_list" value="Movies criteria 1|1,Movies criteria 2|2,Movies criteria 3|3,Movies criteria 4|4,Movies criteria 5|5" />
 										<input type="hidden" name="marks_list" class="marks_list" value="4,5,4" />
 										<div class="reviews_data">
-											<div class="criteria_row theme_field">
-												<input type="hidden" name="reviews_marks_author[]" value="4" />
-												<span class="criteria_label theme_strong">Movies criteria 1</span><span class="criteria_stars"><span class="theme_stars" data-mark="1"></span><span class="theme_stars" data-mark="2"></span><span class="theme_stars" data-mark="3"></span><span class="theme_stars" data-mark="4"></span><span class="theme_stars" data-mark="5"></span></span>
-												<span class="criteria_mark theme_accent_bg">4</span>
-											</div>
-											<div class="criteria_row theme_field">
-												<input type="hidden" name="reviews_marks_author[]" value="5" />
-												<span class="criteria_label theme_strong">Movies criteria 2</span><span class="criteria_stars"><span class="theme_stars" data-mark="1"></span><span class="theme_stars" data-mark="2"></span><span class="theme_stars" data-mark="3"></span><span class="theme_stars" data-mark="4"></span><span class="theme_stars" data-mark="5"></span></span>
-												<span class="criteria_mark theme_accent_bg">5</span>
-											</div>
-											<div class="criteria_row theme_field">
-												<input type="hidden" name="reviews_marks_author[]" value="4" />
-												<span class="criteria_label theme_strong">Movies criteria 3</span><span class="criteria_stars"><span class="theme_stars" data-mark="1"></span><span class="theme_stars" data-mark="2"></span><span class="theme_stars" data-mark="3"></span><span class="theme_stars" data-mark="4"></span><span class="theme_stars" data-mark="5"></span></span>
-												<span class="criteria_mark theme_accent_bg">4</span>
-											</div>
-											<div class="criteria_row theme_field">
-												<input type="hidden" name="reviews_marks_author[]" value="0" />
-												<span class="criteria_label theme_strong">Movies criteria 4</span><span class="criteria_stars"><span class="theme_stars" data-mark="1"></span><span class="theme_stars" data-mark="2"></span><span class="theme_stars" data-mark="3"></span><span class="theme_stars" data-mark="4"></span><span class="theme_stars" data-mark="5"></span></span>
-												<span class="criteria_mark theme_accent_bg">0</span>
-											</div>
-											<div class="criteria_row theme_field">
-												<input type="hidden" name="reviews_marks_author[]" value="0" />
-												<span class="criteria_label theme_strong">Movies criteria 5</span><span class="criteria_stars"><span class="theme_stars" data-mark="1"></span><span class="theme_stars" data-mark="2"></span><span class="theme_stars" data-mark="3"></span><span class="theme_stars" data-mark="4"></span><span class="theme_stars" data-mark="5"></span></span>
-												<span class="criteria_mark theme_accent_bg">0</span>
-											</div>
-										</div>
-										<div class="reviews_summary blog_reviews">
-											<div class="criteria_summary_text criteria_row theme_field"><p>An interstellar teleportation device, found in Egypt, leads to a planet with humans resembling ancient Egyptians who worship the god Ra</p></div>
+											<div class="reviews_summary blog_reviews">
+<!--											<div class="criteria_summary_text criteria_row theme_field"><p>An interstellar teleportation device, found in Egypt, leads to a planet with humans resembling ancient Egyptians who worship the god Ra</p></div>-->
 											<div class="criteria_summary criteria_row theme_field">
 												<span class="criteria_label theme_strong">Summary</span>
 												<span itemscope itemprop="reviewRating" itemtype="http://schema.org/Rating"><meta itemprop="worstRating" content="0"><meta itemprop="bestRating" content="5"><meta itemprop="ratingValue" content="4.3"><span class="criteria_stars" title="4.3 from 5">
 												<span class="stars_off"><span class="theme_stars"></span><span class="theme_stars"></span><span class="theme_stars"></span><span class="theme_stars"></span><span class="theme_stars"></span></span>
 												<span class="stars_on" data-review="86"><span class="theme_stars theme_stars_on"></span><span class="theme_stars theme_stars_on"></span><span class="theme_stars theme_stars_on"></span><span class="theme_stars theme_stars_on"></span><span class="theme_stars theme_stars_on"></span></span>
 												</span></span>
-												<span class="criteria_mark theme_accent_bg">4.3</span>
+												<span class="criteria_mark theme_accent_bg">{{restaurant.rating}}</span>
 												<span class="criteria_word theme_accent_bg">great</span>
 											</div>
 										</div>
+<!--											<div class="criteria_row theme_field">-->
+<!--&lt;!&ndash;												<input type="hidden" name="reviews_marks_author[]" value="4" />&ndash;&gt;-->
+<!--&lt;!&ndash;												<span class="criteria_label theme_strong"></span><span class="criteria_stars"><span class="theme_stars" data-mark="1"></span><span class="theme_stars" data-mark="2"></span><span class="theme_stars" data-mark="3"></span><span class="theme_stars" data-mark="4"></span><span class="theme_stars" data-mark="5"></span></span>&ndash;&gt;-->
+<!--&lt;!&ndash;												<span class="criteria_mark theme_accent_bg">4</span>&ndash;&gt;-->
+<!--											</div>-->
+<!--											<div class="criteria_row theme_field">-->
+<!--&lt;!&ndash;												<input type="hidden" name="reviews_marks_author[]" value="5" />&ndash;&gt;-->
+<!--&lt;!&ndash;												<span class="criteria_label theme_strong"></span><span class="criteria_stars"><span class="theme_stars" data-mark="1"></span><span class="theme_stars" data-mark="2"></span><span class="theme_stars" data-mark="3"></span><span class="theme_stars" data-mark="4"></span><span class="theme_stars" data-mark="5"></span></span>&ndash;&gt;-->
+<!--&lt;!&ndash;												<span class="criteria_mark theme_accent_bg">5</span>&ndash;&gt;-->
+<!--											</div>-->
+<!--											<div class="criteria_row theme_field">-->
+<!--&lt;!&ndash;												<input type="hidden" name="reviews_marks_author[]" value="4" />&ndash;&gt;-->
+<!--&lt;!&ndash;												<span class="criteria_label theme_strong"></span><span class="criteria_stars"><span class="theme_stars" data-mark="1"></span><span class="theme_stars" data-mark="2"></span><span class="theme_stars" data-mark="3"></span><span class="theme_stars" data-mark="4"></span><span class="theme_stars" data-mark="5"></span></span>&ndash;&gt;-->
+<!--&lt;!&ndash;												<span class="criteria_mark theme_accent_bg">4</span>&ndash;&gt;-->
+<!--											</div>-->
+<!--											<div class="criteria_row theme_field">-->
+<!--&lt;!&ndash;												<input type="hidden" name="reviews_marks_author[]" value="0" />&ndash;&gt;-->
+<!--&lt;!&ndash;												<span class="criteria_label theme_strong"></span><span class="criteria_stars"><span class="theme_stars" data-mark="1"></span><span class="theme_stars" data-mark="2"></span><span class="theme_stars" data-mark="3"></span><span class="theme_stars" data-mark="4"></span><span class="theme_stars" data-mark="5"></span></span>&ndash;&gt;-->
+<!--&lt;!&ndash;												<span class="criteria_mark theme_accent_bg">0</span>&ndash;&gt;-->
+<!--											</div>-->
+<!--											<div class="criteria_row theme_field">-->
+<!--&lt;!&ndash;												<input type="hidden" name="reviews_marks_author[]" value="0" />&ndash;&gt;-->
+<!--&lt;!&ndash;												<span class="criteria_label theme_strong"></span><span class="criteria_stars"><span class="theme_stars" data-mark="1"></span><span class="theme_stars" data-mark="2"></span><span class="theme_stars" data-mark="3"></span><span class="theme_stars" data-mark="4"></span><span class="theme_stars" data-mark="5"></span></span>&ndash;&gt;-->
+<!--&lt;!&ndash;												<span class="criteria_mark theme_accent_bg">0</span>&ndash;&gt;-->
+<!--											</div>-->
+										</div>
+<!--										<div class="reviews_summary blog_reviews">-->
+<!--											<div class="criteria_summary_text criteria_row theme_field"><p>An interstellar teleportation device, found in Egypt, leads to a planet with humans resembling ancient Egyptians who worship the god Ra</p></div>-->
+<!--											<div class="criteria_summary criteria_row theme_field">-->
+<!--												<span class="criteria_label theme_strong">Summary</span>-->
+<!--												<span itemscope itemprop="reviewRating" itemtype="http://schema.org/Rating"><meta itemprop="worstRating" content="0"><meta itemprop="bestRating" content="5"><meta itemprop="ratingValue" content="4.3"><span class="criteria_stars" title="4.3 from 5">-->
+<!--												<span class="stars_off"><span class="theme_stars"></span><span class="theme_stars"></span><span class="theme_stars"></span><span class="theme_stars"></span><span class="theme_stars"></span></span>-->
+<!--												<span class="stars_on" data-review="86"><span class="theme_stars theme_stars_on"></span><span class="theme_stars theme_stars_on"></span><span class="theme_stars theme_stars_on"></span><span class="theme_stars theme_stars_on"></span><span class="theme_stars theme_stars_on"></span></span>-->
+<!--												</span></span>-->
+<!--												<span class="criteria_mark theme_accent_bg">{{restaurants.0.rating}}</span>-->
+<!--												<span class="criteria_word theme_accent_bg">great</span>-->
+<!--											</div>-->
+<!--										</div>-->
 									</div>
 									<!-- /Review author -->
 
@@ -266,31 +278,27 @@
 									<!-- /Review user -->
 								</div>
 								<div class="title_area">
-									<h1 itemprop="itemReviewed" class="post_title theme_title entry-title">Ripd</h1>
+									<h1 itemprop="itemReviewed" class="post_title theme_title entry-title">{{restaurant.restaurant_name}}</h1>
 								</div>
 								<div itemprop="reviewBody" class="post_text_area">
 									<div id="lipsum">
-										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam at mauris non erat tempor consectetur. Vivamus semper nec elit at consequat. Praesent porta dignissim feugiat. Praesent ut vulputate arcu. Nulla interdum tempor nibh, ut porta nisl pretium in. Vivamus elementum imperdiet dolor, ac imperdiet elit gravida quis. Vestibulum eu mi ullamcorper, lobortis metus sit amet, placerat risus. Ut iaculis augue ac consectetur scelerisque. Quisque a urna quis nisi vulputate viverra.</p>
-										<p>Ut pretium tristique dui, eu sagittis mauris mollis vel. Pellentesque eget nulla ipsum. Fusce hendrerit felis a lacus euismod tincidunt consectetur eget tellus. Nam placerat, magna eu molestie mattis, nisl lorem vulputate massa, vitae condimentum sapien mi at erat. Sed sed justo augue. Morbi sit amet tempor orci. Mauris facilisis, sapien et dictum malesuada, dui nulla facilisis risus, vitae dignissim turpis lacus at nulla. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nunc turpis magna, laoreet at sem sed, semper dictum neque. Integer faucibus, augue ac tempor aliquet, metus erat elementum erat, sed sagittis sapien turpis vitae quam. Maecenas sollicitudin eget nisi at laoreet. Sed eu porta metus. Pellentesque in rutrum libero. Nulla semper diam eu scelerisque accumsan.</p>
-										<p>Mauris viverra erat vel tincidunt ornare. Vivamus consequat, odio ut commodo fringilla, metus massa volutpat massa, sit amet volutpat sem est sollicitudin libero. Integer nunc nibh, sollicitudin vel tempus et, egestas et velit. Maecenas condimentum ante vitae porta lacinia. Phasellus et accumsan sem. Sed scelerisque semper ante, facilisis adipiscing ante iaculis ac. Praesent lacinia mi blandit pellentesque faucibus. Duis tempus lacinia leo, in faucibus turpis gravida commodo. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Mauris nulla massa, iaculis tristique mollis vel, tristique id turpis. Quisque eu ultrices tellus. Praesent at dolor vestibulum lacus fermentum accumsan sed a justo. Proin auctor tempus ultrices. Praesent euismod fringilla ipsum, a molestie sem tincidunt in. Nunc non odio bibendum, fringilla augue vitae, elementum sapien.</p>
-										<p>Maecenas rutrum velit id arcu faucibus, id sagittis lorem vulputate. Etiam sed mollis metus. Fusce molestie vehicula ultrices. Duis semper vulputate luctus. Proin dignissim ipsum tempor erat dictum, nec ullamcorper quam convallis. In vehicula egestas luctus. Sed non est nunc. In rutrum metus at porta interdum. Quisque iaculis mi tincidunt, dignissim nisl vulputate, tempus diam. Donec lacinia neque sed dolor gravida, vitae feugiat purus feugiat. In fermentum aliquet diam, a consectetur dui sollicitudin at. Vivamus sed consectetur velit, non ullamcorper tellus. Quisque gravida augue vitae est ultrices congue. Mauris vel feugiat quam.</p>
-										<p>Vivamus sed cursus tortor, eget aliquet leo. Maecenas egestas eros eget lacus feugiat fermentum. Integer fringilla mauris ipsum. Aenean vel odio sed sapien bibendum blandit molestie ac augue. Ut eget semper justo. Aenean convallis arcu a lacus sollicitudin consectetur. Praesent posuere purus non arcu rhoncus, nec bibendum lorem hendrerit. Aliquam ut sagittis metus.</p>
+										<p>{{restaurant.detail}}</p>
 									</div>
 									<!-- socials -->
-									<div class="post_info post_info_bottom theme_text">
-										<div class="share-social theme_info share-dir-vertical">
-											<span class="share-caption">Share this</span>
-											<a href="#" class="share-item" onclick="trexShareTwitter()" data-count="twitter"><img src="images/socials/twitter.png" alt="twitter"></a>
+<!--									<div class="post_info post_info_bottom theme_text">-->
+<!--										<div class="share-social theme_info share-dir-vertical">-->
+<!--											<span class="share-caption">Share this</span>-->
+<!--											<a href="#" class="share-item" onclick="trexShareTwitter()" data-count="twitter"><img src="images/socials/twitter.png" alt="twitter"></a>-->
 
-											<a href="#" class="share-item" onclick="trexShareFacebook()" data-count="facebook"><img src="images/socials/facebook.png" alt="facebook"></a>
+<!--											<a href="#" class="share-item" onclick="trexShareFacebook()" data-count="facebook"><img src="images/socials/facebook.png" alt="facebook"></a>-->
 
-											<a href="#" class="share-item" onclick="trexShareGplus()" data-count="gplus"><img src="images/socials/gplus.png" alt="gplus"></a>
+<!--											<a href="#" class="share-item" onclick="trexShareGplus()" data-count="gplus"><img src="images/socials/gplus.png" alt="gplus"></a>-->
 
-											<a href="#" class="share-item" onclick="trexShareLinkedin()" data-count="linkedin"><img src="images/socials/linkedin.png" alt="linkedin"></a>
+<!--											<a href="#" class="share-item" onclick="trexShareLinkedin()" data-count="linkedin"><img src="images/socials/linkedin.png" alt="linkedin"></a>-->
 
-											<a href="#" class="share-item" onclick="trexSharePinterest()" data-count="pinterest"><img src="images/socials/pinterest.png" alt="pinterest"></a>
-										</div>
-									</div>
+<!--											<a href="#" class="share-item" onclick="trexSharePinterest()" data-count="pinterest"><img src="images/socials/pinterest.png" alt="pinterest"></a>-->
+<!--										</div>-->
+<!--									</div>-->
 									<!-- #socials -->
 								</div>
 							</div>
@@ -309,513 +317,694 @@
 							</div>
 						</div>
 
-
-						<div id="related_posts" class="theme_article">
-							<div class="subtitle_area">
-								<h3 class="post_related_title theme_subtitle">Related posts</h3>
-							</div>
-							<div class="related_posts_item post_thumb down-1">
-								<a href="single-format-gallery.html">
-									<div class="sc_slider sc_slider_flex">
-										<ul class="slides">
-											<li><img alt="" src="http://placehold.it/310x310"></li>
-											<li><img alt="" src="http://placehold.it/310x310"></li>
-											<li><img alt="" src="http://placehold.it/310x310"></li>
-											<li><img alt="" src="http://placehold.it/310x310"></li>
-											<li><img alt="" src="http://placehold.it/310x310"></li>
-										</ul>
-									</div>
-								</a>
-								<span class="post_format theme_accent_bg icon-camera" data-categoryiconbg="00a0db"></span>
-								<span class="post_category theme_accent_bg" data-categoryiconbg="00a0db">Movies</span>
-								<div class="post_content_wrapper theme_puzzles" data-puzzlecolor="111111">
-									<h2 class="post_subtitle"><a href="single-format-gallery.html">Star Trek Into Darkness</a></h2>
-									<div class="reviews_summary blog_reviews theme_puzzles">
-										<div class="criteria_summary criteria_row">
-											<span class="criteria_stars" title="4.6 from 5">
-												<span class="stars_off"><span class="theme_stars"></span><span class="theme_stars"></span><span class="theme_stars"></span><span class="theme_stars"></span><span class="theme_stars"></span></span>
-												<span class="stars_on" data-review="92"><span class="theme_stars theme_stars_on"></span><span class="theme_stars theme_stars_on"></span><span class="theme_stars theme_stars_on"></span><span class="theme_stars theme_stars_on"></span><span class="theme_stars theme_stars_on"></span></span>
-											</span>
-										</div>
-									</div>
-									<div class="post_descr"><p>After the crew of the Enterprise find an unstoppable force of terror from within their own organization...</p></div>
-									<div class="post_content_padding theme_puzzles"></div>
-								</div>
-							</div>
-							<div class="related_posts_item post_thumb right-2" data-video="<iframe class='video_frame' src='https://youtube.com/embed/1iIZeIy7TqM?autoplay=1' width='310' height='310' frameborder='0' webkitAllowFullScreen='webkitAllowFullScreen' mozallowfullscreen='mozallowfullscreen' allowFullScreen='allowFullScreen'></iframe>">
-								<a href="single-format-video.html"><img alt="" src="http://placehold.it/310x310"></a>
-								<a href="#" class="post_video_play icon-play"></a>
-								<span class="post_format theme_accent_bg icon-video" data-categoryiconbg="00a0db"></span>
-								<span class="post_category theme_accent_bg" data-categoryiconbg="00a0db">Actions</span>
-								<div class="post_content_wrapper theme_puzzles" data-puzzlecolor="9a0000">
-									<h2 class="post_subtitle"><a href="single-format-video.html">Iron Man</a></h2>
-									<div class="reviews_summary blog_reviews theme_puzzles">
-										<div class="criteria_summary criteria_row">
-											<span class="criteria_stars" title="4.4 from 5">
-												<span class="stars_off"><span class="theme_stars"></span><span class="theme_stars"></span><span class="theme_stars"></span><span class="theme_stars"></span><span class="theme_stars"></span></span>
-												<span class="stars_on" data-review="88"><span class="theme_stars theme_stars_on"></span><span class="theme_stars theme_stars_on"></span><span class="theme_stars theme_stars_on"></span><span class="theme_stars theme_stars_on"></span><span class="theme_stars theme_stars_on"></span></span>
-											</span>
-										</div>
-									</div>
-									<div class="post_descr"><p>When Tony Stark's world is torn apart by a formidable terrorist called the Mandarin, he starts an odyssey of rebuilding and retribution. </p></div>
-									<div class="post_content_padding theme_puzzles"></div>
-								</div>
-							</div>
-							<div class="related_posts_item related_post_item_3 post_thumb down-3">
-								<a href="single-format-standard.html"><img alt="" src="http://placehold.it/310x310"></a>
-								<span class="post_format theme_accent_bg icon-doc-text" data-categoryiconbg="00a0db"></span>
-								<span class="post_category theme_accent_bg" data-categoryiconbg="00a0db">Actions</span>
-								<div class="post_content_wrapper theme_puzzles" data-puzzlecolor="126996">
-									<h2 class="post_subtitle"><a href="single-format-standard.html">Man of steel</a></h2>
-									<div class="reviews_summary blog_reviews theme_puzzles">
-										<div class="criteria_summary criteria_row">
-											<span class="criteria_stars" title="4.4 from 5">
-												<span class="stars_off"><span class="theme_stars"></span><span class="theme_stars"></span><span class="theme_stars"></span><span class="theme_stars"></span><span class="theme_stars"></span></span>
-												<span class="stars_on" data-review="88"><span class="theme_stars theme_stars_on"></span><span class="theme_stars theme_stars_on"></span><span class="theme_stars theme_stars_on"></span><span class="theme_stars theme_stars_on"></span><span class="theme_stars theme_stars_on"></span></span>
-											</span>
-										</div>
-									</div>
-									<div class="post_descr"><p> A young itinerant worker is forced to confront his secret extraterrestrial heritage when Earth is invaded by members of his race.</p></div>
-									<div class="post_content_padding theme_puzzles"></div>
-								</div>
-							</div>
-						</div>
-
-
 						<div id="comments" class="post_comments">
 							<div class="post_comments_tree theme_article">
 								<div class="subtitle_area">
-									<h3 class="post_comments_title theme_subtitle">5 Comments</h3>
+									<h3 class="post_comments_title theme_subtitle">{{ restaurant.review_amount }} Comments</h3>
 								</div>
-								<ol class="comment-list">
-									<li>
-										<div class="comment_author_avatar">
-											<img alt="" src="http://0.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=60" />
-										</div>
-										<h6 class="comment_title theme_subtitle">
-											Jhon Miller <span class="comment_date theme_info">December 5, 2013</span>
-										</h6>
-										<span class="comment_reply theme_button"><a class="comment-reply-link" href="#">Reply</a></span>
-										<div class="comment_content">
-											Dear Doe,<br />
-											ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qu
-										</div>
-						        	</li>
-						            <li class="parent">
-						            	<ul class="children">
-											<li class="theme_border">
-												<div class="comment_author_avatar">
-													<img src="http://0.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=60" alt="" />
-												</div>
-												<h6 class="comment_title theme_subtitle">
-													<a href="excerpt-style1.html">John Doe</a><span class="comment_date theme_info">April 2, 2014</span>
-												</h6>
-												<span class="comment_reply theme_button"><a class="comment-reply-link" href="#">Reply</a></span>
-												<div class="comment_content">
-													<p>Tsit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui</p>
-												</div>
-									        </li>
-									        <li class="parent">
-									        	<ul class="children">
-													<li class="theme_border">
-														<div class="comment_author_avatar">
-															<img alt="" src="http://0.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=60" />
-														</div>
-														<h6 class="comment_title theme_subtitle">
-															Martin Moore <span class="comment_date theme_info">April 3, 2014</span>
-														</h6>
-														<span class="comment_reply theme_button"><a class="comment-reply-link" href="#">Reply</a></span>
-														<div class="comment_content">
-															<p>adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat</p>
-														</div>
-													</li>
-													<li class="parent">
-														<ul class="children">
-															<li class="theme_border">
-																<div class="comment_author_avatar">
-																	<img alt="" src="http://0.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=60" />
-																</div>
-																<h6 class="comment_title theme_subtitle">
-																	Miki Williams <span class="comment_date theme_info">April 3, 2014</span>
-																</h6>
-																<span class="comment_reply theme_button"><a class="comment-reply-link" href="#">Reply</a></span>
-																<div class="comment_content">
-																	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-																</div>
-															</li>
-														</ul>
-													</li>
-												</ul>
-									        </li>
-										</ul>
-						            </li>
-									<li class="theme_border">
-										<div class="comment_author_avatar image_wrapper">
-											<img alt="" src="http://0.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=60" />
-										</div>
-										<h6 class="comment_title theme_subtitle">
-											Mark Chapman <span class="comment_date theme_info">December 4, 2013</span>
-										</h6>
-										<span class="comment_reply theme_button"><a class="comment-reply-link" href="#">Reply</a></span>
-										<div class="comment_content">
-											<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit,</p>
-										</div>
-						            </li>
-						        </ol>
-							</div>
-							<!-- #comments -->
-							<div class="post_comments_form theme_article">
-								<div id="respond" class="comment-respond">
-									<h3 id="reply-title">Leave a comment
-									<!-- <small><a rel="nofollow" href="">Cancel reply</a></small> -->
-									</h3>
-									<form action="#" method="post" id="commentform" class="comment-form">
-										<p class="comment-form-author">
-											<label for="author" class="required">Name<span class="required"> (required)</span></label>
-											<input id="author" name="author" type="text" value="" size="30" aria-required='true' />
-										</p>
-										<p class="comment-form-email">
-											<label for="email" class="required">Email<span class="required"> (required)</span></label>
-											<input id="email" name="email" type="text" value="" size="30" aria-required='true' />
-										</p>
-										<p class="comment-form-website clearboth">
-											<label for="url" class="optional">Website<span class="optional"> (optional)</span></label>
-											<input id="url" name="url" type="text" value="" size="30" aria-required='true' />
-										</p>
-										<p class="comment-form-comment">
-											<label for="comment" class="required">Your Message<span class="required"> (required)</span></label>
-											<textarea id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea>
-										</p>
-										<p class="form-submit">
-											<input name="submit" type="submit" id="submit" value="Submit" />
-										</p>
-									</form>
-								</div><!-- #respond -->
-							</div>
-						</div><!-- #comments form -->
 
-					</div>
-				</div><!-- #content -->
+                        <!--ADD REVIEW-->
+                        <a href="{% url 'wongnork:add' restaurant.id %}" id="add-review" class="btn btn-lg btn-block">
+                            <h1>Add a Review!</h1>
+                        </a>
 
+                        <!--ALL REVIEWS-->
+
+                        {% if restaurant.review_set.all %}
+                            {% for review in restaurant.review_set.all|dictsortreversed:"pk" %}
+                                <div class="row">
+                                    <div class="col card" style="margin: 10px">
+                                        <div class="card-body">
+                                            <div class="user-bar">
+                                                <span class="user-icon"><i class="fas fa-user-circle"></i></span>
+                                                <div class="user-icon-side review-meta-data">
+                                                    <span><strong>{{review.review_user}}</strong></span><br>
+                                                    <span class="date">Reviewed on {{ review.review_date }}</span>
+                                                </div>
+                                            </div>
+
+
+                                            <label class="review-liner-small review-icon">
+                                                {% for i in review.review_rate|rjust:review.review_rate %}
+<!--{#                                                <i class="fas fa-star rate-small"/></i>// Add star#}-->
+                                                {% endfor %}
+                                            </label>
+                                            <label id="price" class="review-liner-small review-icon">
+                                                {% for i in review.review_price|rjust:review.review_price %}
+<!--{#                                                <i class="fas fa-dollar-sign price-small"/></i>// Add price#}-->
+                                                {% endfor %}
+                                            </label>
+
+                                            <h3>{{ review.review_title }}</h3>
+                                            <p>{{review.review_description}}</p>
+
+                                            <!--Likes-->
+                                            <div id="rl{{ review.id }}" class="row">
+                                                <div class="col-1">
+                                                    {% if review.id in user_liked_reviews %}
+                                                        <span class="badge badge-primary">Liked! </span>
+                                                    {% else %}
+                                                    <form action="#" method="post" onsubmit="addLike(this); return false;">
+                                                        {% csrf_token %}
+                                                        <input type="submit" value="Like" class="btn btn-outline-primary btn-sm" style="height:20px;line-height: 0px;"></input>
+                                                        <input type="hidden" name="review_id" value="{{ review.id }}" />
+                                                    </form>
+                                                    {% endif %}
+                                                </div>
+                                                <div class="col-1">
+                                                    <span class="badge badge-danger">
+                                                        <span class="likes-count" style="padding-right:10px;">{{review.like_set.count}}</span>
+                                                        <i class="fas fa-thumbs-up"></i>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <hr>
+
+                                            <!-- COMMENTS -->
+                                            <div>
+
+                                                <!-- ADD COMMENT -->
+                                                <div class="row row-comment-reply">
+                                                    <span class="user-icon-small col"><i class="fas fa-user-circle"></i></span>
+                                                    <form action="#" method="post" class="col-11 comment_form" onsubmit="addComment(this); return false;">
+                                                        {% csrf_token %}
+                                                        <input type="text" class="form-control new-comment-reply" name="comment_description" placeholder="Write your comment for this review...">
+                                                        <input type="hidden" name="review_id" value="{{ review.id }}" />
+                                                    </form>
+                                                </div>
+
+                                                <!-- CURRENT COMMENTS -->
+                                                <div id="rc{{ review.id }}">
+                                                    {% for comment in review.comment_set.all|dictsortreversed:"pk" %}
+                                                        <div>
+                                                            <div class="row row-comment-reply">
+                                                                <span class="user-icon-small col"><i class="fas fa-user-circle"></i></span>
+                                                                <div class="col-11">
+                                                                    <div class="comment-reply-content">
+                                                                        <span class="comment-reply-username">{{comment.comment_user}}</span>
+                                                                        <span class="comment-reply-description">{{comment.comment_description}}</span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <!-- OPTIONS -->
+                                                            <div id="cc{{ comment.id }}" class="replies-with-comment-options">
+                                                                <div class="comment-options">
+                                                                    <a href="#" onclick="createAddReply({{ comment.id }}, this); return false;">Reply</a>
+                                                                </div>
+                                                            </div>
+
+                                                            <!-- CURRENT REPLIES -->
+                                                            <div id="c{{ comment.id }}" class="replies">
+                                                                {% for reply in comment.reply_set.all|dictsortreversed:"pk" %}
+                                                                    <div class="row row-comment-reply">
+                                                                        <span class="user-icon-small col"><i class="fas fa-user-circle"></i></span>
+                                                                        <div class="col-11">
+                                                                            <div class="comment-reply-content">
+                                                                                <span class="comment-reply-username">{{reply.reply_user}}</span>
+                                                                                <span class="comment-reply-description">{{reply.reply_description}}</span>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                {% endfor %}
+                                                            </div>
+                                                        </div>
+                                                    {% endfor %}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            {% endfor %}
+
+                        {% else %}
+                            <div id="no-reviews-yet-message" class="alert alert-success" role="alert">
+                                <p>There are no reviews for {{ restaurant.restaurant_text }} yet.</p>
+                                <p>Would you like to start writing a review?</p>
+                            </div>
+                        {% endif %}
+                    </div>
+                </div>
+{##############################################################}
 				<!-- Sidebar -->
-				<!-- Sidebar -->
-				<div id="sidebar_main" class="widget_area sidebar_main theme_blue" role="complementary">
-					<!-- widget categories -->
-					<aside class="widget widget_categories">
-						<h3 class="widget_title theme_title">Categories</h3>
-						<ul>
-							<li><a href="excerpt-style6.html" title="View all posts filed under Advertisement">Advertisement</a></li>
-							<li><a href="excerpt-style3.html" title="View all posts filed under Games">Games</a></li>
-							<li><a href="excerpt-style1.html" title="View all posts filed under Movies">Movies</a>
-								<ul class="children">
-									<li><a href="excerpt-style5.html" title="View all posts filed under Actions">Actions</a></li>
-									<li><a href="excerpt-style1.html" title="View all posts filed under Adventure">Adventure</a></li>
-								</ul>
-							</li>
-							<li><a href="fullpost-style.html" title="View all posts filed under Music">Music</a></li>
-							<li><a href="excerpt-style4.html" title="View all posts filed under Tech">Tech</a></li>
-						</ul>
-					</aside>
-					<!-- widget categories -->
-					<!-- Popular Post -->
-					<aside class="widget widget_popular_posts">
-						<h3 class="widget_title theme_title">Popular</h3>
-						<!-- Tabs -->
-						<div class="popular_and_commented_tabs">
-							<ul class="tabs">
-								<li><a href="#widget_popular_block1" class="theme_button"><span>Popular</span></a></li><li><a href="#widget_popular_block2" class="theme_button"><span>Commented</span></a></li>
-							</ul>
-							<div class="tab_content" id="widget_popular_block1">
-								<!-- post item -->
-								<div class="post_item first">
-									<div class="post_thumb image_wrapper"><img alt="" src="http://placehold.it/60x60"></div>
-									<div class="post_wrapper">
-										<h5 class="post_title theme_title"><a href="single-format-video.html">Iron Man</a></h5>
-										<div class="post_info theme_info">
-											<span class="post_date theme_text">September 1, 2013</span>
-											<span class="post_author">by <a href="excerpt-style1.html">John Doe</a></span><br />
-											<span class="post_comments_text"><a href="single-format-video.html"><span class="post_comments_number">12019</span> views</a></span>
-										</div>
-									</div>
-								</div>
-								<!-- /post item -->
+<!--				&lt;!&ndash; Sidebar &ndash;&gt;-->
+<!--				<div id="sidebar_main" class="widget_area sidebar_main theme_blue" role="complementary">-->
+<!--					&lt;!&ndash; widget categories &ndash;&gt;-->
+<!--					<aside class="widget widget_categories">-->
+<!--						<h3 class="widget_title theme_title">Categories</h3>-->
+<!--						<ul>-->
+<!--							<li><a href="excerpt-style6.html" title="View all posts filed under Advertisement">Advertisement</a></li>-->
+<!--							<li><a href="excerpt-style3.html" title="View all posts filed under Games">Games</a></li>-->
+<!--							<li><a href="excerpt-style1.html" title="View all posts filed under Movies">Movies</a>-->
+<!--								<ul class="children">-->
+<!--									<li><a href="excerpt-style5.html" title="View all posts filed under Actions">Actions</a></li>-->
+<!--									<li><a href="excerpt-style1.html" title="View all posts filed under Adventure">Adventure</a></li>-->
+<!--								</ul>-->
+<!--							</li>-->
+<!--							<li><a href="fullpost-style.html" title="View all posts filed under Music">Music</a></li>-->
+<!--							<li><a href="excerpt-style4.html" title="View all posts filed under Tech">Tech</a></li>-->
+<!--						</ul>-->
+<!--					</aside>-->
+<!--					&lt;!&ndash; widget categories &ndash;&gt;-->
+<!--					&lt;!&ndash; Popular Post &ndash;&gt;-->
+<!--					<aside class="widget widget_popular_posts">-->
+<!--						<h3 class="widget_title theme_title">Popular</h3>-->
+<!--						&lt;!&ndash; Tabs &ndash;&gt;-->
+<!--						<div class="popular_and_commented_tabs">-->
+<!--							<ul class="tabs">-->
+<!--								<li><a href="#widget_popular_block1" class="theme_button"><span>Popular</span></a></li><li><a href="#widget_popular_block2" class="theme_button"><span>Commented</span></a></li>-->
+<!--							</ul>-->
+<!--							<div class="tab_content" id="widget_popular_block1">-->
+<!--								&lt;!&ndash; post item &ndash;&gt;-->
+<!--								<div class="post_item first">-->
+<!--									<div class="post_thumb image_wrapper"><img alt="" src="http://placehold.it/60x60"></div>-->
+<!--									<div class="post_wrapper">-->
+<!--										<h5 class="post_title theme_title"><a href="single-format-video.html">Iron Man</a></h5>-->
+<!--										<div class="post_info theme_info">-->
+<!--											<span class="post_date theme_text">September 1, 2013</span>-->
+<!--											<span class="post_author">by <a href="excerpt-style1.html">John Doe</a></span><br />-->
+<!--											<span class="post_comments_text"><a href="single-format-video.html"><span class="post_comments_number">12019</span> views</a></span>-->
+<!--										</div>-->
+<!--									</div>-->
+<!--								</div>-->
+<!--								&lt;!&ndash; /post item &ndash;&gt;-->
 
-								<!-- post item -->
-								<div class="post_item">
-									<div class="post_thumb image_wrapper"><img alt="" src="http://placehold.it/60x60"></div>
-									<div class="post_wrapper">
-										<h5 class="post_title theme_title"><a href="single-format-standard.html">Man of steel</a></h5>
-										<div class="post_info theme_info">
-											<span class="post_date theme_text">August 30, 2013</span>
-											<span class="post_author">by <a href="excerpt-style1.html">John Doe</a></span><br />
-											<span class="post_comments_text"><a href="single-format-standard.html"><span class="post_comments_number">10680</span> views</a></span>
-										</div>
-									</div>
-								</div>
-								<!-- /post item -->
+<!--								&lt;!&ndash; post item &ndash;&gt;-->
+<!--								<div class="post_item">-->
+<!--									<div class="post_thumb image_wrapper"><img alt="" src="http://placehold.it/60x60"></div>-->
+<!--									<div class="post_wrapper">-->
+<!--										<h5 class="post_title theme_title"><a href="single-format-standard.html">Man of steel</a></h5>-->
+<!--										<div class="post_info theme_info">-->
+<!--											<span class="post_date theme_text">August 30, 2013</span>-->
+<!--											<span class="post_author">by <a href="excerpt-style1.html">John Doe</a></span><br />-->
+<!--											<span class="post_comments_text"><a href="single-format-standard.html"><span class="post_comments_number">10680</span> views</a></span>-->
+<!--										</div>-->
+<!--									</div>-->
+<!--								</div>-->
+<!--								&lt;!&ndash; /post item &ndash;&gt;-->
 
-								<!-- post item -->
-								<div class="post_item">
-									<div class="post_thumb image_wrapper"><img alt="" src="http://placehold.it/60x60"></div>
-									<div class="post_wrapper">
-										<h5 class="post_title theme_title"><a href="single-format-gallery.html">Star Trek Into Darkness</a></h5>
-										<div class="post_info theme_info">
-											<span class="post_date theme_text">September 6, 2013</span>
-											<span class="post_author">by <a href="excerpt-style1.html">John Doe</a></span><br />
-											<span class="post_comments_text"><a href="single-format-gallery.html"><span class="post_comments_number">8055</span> views</a></span>
-										</div>
-									</div>
-								</div>
-								<!-- /post item -->
+<!--								&lt;!&ndash; post item &ndash;&gt;-->
+<!--								<div class="post_item">-->
+<!--									<div class="post_thumb image_wrapper"><img alt="" src="http://placehold.it/60x60"></div>-->
+<!--									<div class="post_wrapper">-->
+<!--										<h5 class="post_title theme_title"><a href="single-format-gallery.html">Star Trek Into Darkness</a></h5>-->
+<!--										<div class="post_info theme_info">-->
+<!--											<span class="post_date theme_text">September 6, 2013</span>-->
+<!--											<span class="post_author">by <a href="excerpt-style1.html">John Doe</a></span><br />-->
+<!--											<span class="post_comments_text"><a href="single-format-gallery.html"><span class="post_comments_number">8055</span> views</a></span>-->
+<!--										</div>-->
+<!--									</div>-->
+<!--								</div>-->
+<!--								&lt;!&ndash; /post item &ndash;&gt;-->
 
-								<!-- post item -->
-								<div class="post_item">
-									<div class="post_thumb image_wrapper"><img alt="" src="http://placehold.it/60x60"></div>
-									<div class="post_wrapper">
-										<h5 class="post_title theme_title"><a href="single-format-standard.html">Grid</a></h5>
-										<div class="post_info theme_info">
-											<span class="post_date theme_text">August 30, 2013</span>
-											<span class="post_author">by <a href="excerpt-style1.html">John Doe</a></span><br />
-											<span class="post_comments_text"><a href="single-format-standard.html"><span class="post_comments_number">6354</span> views</a></span>
-										</div>
-									</div>
-								</div>
-								<!-- /post item -->
-							</div>
+<!--								&lt;!&ndash; post item &ndash;&gt;-->
+<!--								<div class="post_item">-->
+<!--									<div class="post_thumb image_wrapper"><img alt="" src="http://placehold.it/60x60"></div>-->
+<!--									<div class="post_wrapper">-->
+<!--										<h5 class="post_title theme_title"><a href="single-format-standard.html">Grid</a></h5>-->
+<!--										<div class="post_info theme_info">-->
+<!--											<span class="post_date theme_text">August 30, 2013</span>-->
+<!--											<span class="post_author">by <a href="excerpt-style1.html">John Doe</a></span><br />-->
+<!--											<span class="post_comments_text"><a href="single-format-standard.html"><span class="post_comments_number">6354</span> views</a></span>-->
+<!--										</div>-->
+<!--									</div>-->
+<!--								</div>-->
+<!--								&lt;!&ndash; /post item &ndash;&gt;-->
+<!--							</div>-->
 
-							<div class="tab_content" id="widget_popular_block2">
+<!--							<div class="tab_content" id="widget_popular_block2">-->
 
-								<!-- post item -->
-								<div class="post_item first">
-									<div class="post_thumb image_wrapper"><img alt="" src="http://placehold.it/60x60"></div>
-									<div class="post_wrapper">
-										<h5 class="post_title theme_title"><a href="single-format-video.html">Iron Man</a></h5>
-										<div class="post_info theme_info">
-											<span class="post_date theme_text">September 1, 2013</span>
-											<span class="post_author">by <a href="excerpt-style1.html">John Doe</a></span><br />
-											<span class="post_comments_text"><a href="single-format-video.html#comments"><span class="post_comments_number">2</span> comments</a></span>
-										</div>
-									</div>
-								</div>
-								<!-- /post item -->
+<!--								&lt;!&ndash; post item &ndash;&gt;-->
+<!--								<div class="post_item first">-->
+<!--									<div class="post_thumb image_wrapper"><img alt="" src="http://placehold.it/60x60"></div>-->
+<!--									<div class="post_wrapper">-->
+<!--										<h5 class="post_title theme_title"><a href="single-format-video.html">Iron Man</a></h5>-->
+<!--										<div class="post_info theme_info">-->
+<!--											<span class="post_date theme_text">September 1, 2013</span>-->
+<!--											<span class="post_author">by <a href="excerpt-style1.html">John Doe</a></span><br />-->
+<!--											<span class="post_comments_text"><a href="single-format-video.html#comments"><span class="post_comments_number">2</span> comments</a></span>-->
+<!--										</div>-->
+<!--									</div>-->
+<!--								</div>-->
+<!--								&lt;!&ndash; /post item &ndash;&gt;-->
 
-								<!-- post item -->
-								<div class="post_item">
-									<div class="post_thumb image_wrapper"><img alt="" src="http://placehold.it/60x60"></div>
-									<div class="post_wrapper">
-										<h5 class="post_title theme_title"><a href="single-format-gallery.html">Star Trek Into Darkness</a></h5>
-										<div class="post_info theme_info">
-											<span class="post_date theme_text">September 6, 2013</span>
-											<span class="post_author">by <a href="excerpt-style1.html">John Doe</a></span><br />
-											<span class="post_comments_text"><a href="single-format-gallery.html#comments"><span class="post_comments_number">1</span> comments</a></span>
+<!--								&lt;!&ndash; post item &ndash;&gt;-->
+<!--								<div class="post_item">-->
+<!--									<div class="post_thumb image_wrapper"><img alt="" src="http://placehold.it/60x60"></div>-->
+<!--									<div class="post_wrapper">-->
+<!--										<h5 class="post_title theme_title"><a href="single-format-gallery.html">Star Trek Into Darkness</a></h5>-->
+<!--										<div class="post_info theme_info">-->
+<!--											<span class="post_date theme_text">September 6, 2013</span>-->
+<!--											<span class="post_author">by <a href="excerpt-style1.html">John Doe</a></span><br />-->
+<!--											<span class="post_comments_text"><a href="single-format-gallery.html#comments"><span class="post_comments_number">1</span> comments</a></span>-->
 
-										</div>
-									</div>
-								</div>
-								<!-- /post item -->
+<!--										</div>-->
+<!--									</div>-->
+<!--								</div>-->
+<!--								&lt;!&ndash; /post item &ndash;&gt;-->
 
-								<!-- post item -->
-								<div class="post_item">
-									<div class="post_thumb image_wrapper"><img alt="" src="http://placehold.it/60x60"></div>
-									<div class="post_wrapper">
-										<h5 class="post_title theme_title"><a href="excerpt-style1.html">Inception</a></h5>
-										<div class="post_info theme_info">
-											<span class="post_date theme_text">September 15, 2012</span>
-											<span class="post_author">by <a href="excerpt-style1.html">John Doe</a></span><br />
-											<span class="post_comments_text"><a href="excerpt-style1.html#comments"><span class="post_comments_number">0</span> comments</a></span>
-										</div>
-									</div>
-								</div>
-								<!-- /post item -->
+<!--								&lt;!&ndash; post item &ndash;&gt;-->
+<!--								<div class="post_item">-->
+<!--									<div class="post_thumb image_wrapper"><img alt="" src="http://placehold.it/60x60"></div>-->
+<!--									<div class="post_wrapper">-->
+<!--										<h5 class="post_title theme_title"><a href="excerpt-style1.html">Inception</a></h5>-->
+<!--										<div class="post_info theme_info">-->
+<!--											<span class="post_date theme_text">September 15, 2012</span>-->
+<!--											<span class="post_author">by <a href="excerpt-style1.html">John Doe</a></span><br />-->
+<!--											<span class="post_comments_text"><a href="excerpt-style1.html#comments"><span class="post_comments_number">0</span> comments</a></span>-->
+<!--										</div>-->
+<!--									</div>-->
+<!--								</div>-->
+<!--								&lt;!&ndash; /post item &ndash;&gt;-->
 
-								<!-- post item -->
-								<div class="post_item">
-									<div class="post_thumb image_wrapper"><img alt="" src="http://placehold.it/60x60"></div>
-									<div class="post_wrapper">
-										<h5 class="post_title theme_title"><a href="single-format-audio.html">Duft punk - Get lucky</a></h5>
-										<div class="post_info theme_info">
-											<span class="post_date theme_text">August 26, 2013</span>
-											<span class="post_author">by <a href="excerpt-style1.html">John Doe</a></span><br />
-											<span class="post_comments_text"><a href="single-format-audio.html#comments"><span class="post_comments_number">0</span> comments</a></span>
-										</div>
-									</div>
-								</div>
-								<!-- /post item -->
-							</div>
-						</div>
-						<!-- /Tabs -->
-					</aside>
-					<!-- /Popular Post -->
+<!--								&lt;!&ndash; post item &ndash;&gt;-->
+<!--								<div class="post_item">-->
+<!--									<div class="post_thumb image_wrapper"><img alt="" src="http://placehold.it/60x60"></div>-->
+<!--									<div class="post_wrapper">-->
+<!--										<h5 class="post_title theme_title"><a href="single-format-audio.html">Duft punk - Get lucky</a></h5>-->
+<!--										<div class="post_info theme_info">-->
+<!--											<span class="post_date theme_text">August 26, 2013</span>-->
+<!--											<span class="post_author">by <a href="excerpt-style1.html">John Doe</a></span><br />-->
+<!--											<span class="post_comments_text"><a href="single-format-audio.html#comments"><span class="post_comments_number">0</span> comments</a></span>-->
+<!--										</div>-->
+<!--									</div>-->
+<!--								</div>-->
+<!--								&lt;!&ndash; /post item &ndash;&gt;-->
+<!--							</div>-->
+<!--						</div>-->
+<!--						&lt;!&ndash; /Tabs &ndash;&gt;-->
+<!--					</aside>-->
+<!--					&lt;!&ndash; /Popular Post &ndash;&gt;-->
 
-					<!-- Tag clouds -->
-					<aside class="widget widget_tag_cloud">
-						<h3 class="widget_title theme_title">Tags</h3>
-						<div class="tagcloud">
-							<a href="excerpt-style4.html" title="1 topic">accessories</a>
-							<a href="excerpt-style3.html" title="1 topic">actions</a>
-							<a href="excerpt-style3.html" title="3 topics">games</a>
-							<a href="single-format-standard.html" title="1 topic">iron man</a>
-							<a href="single-format-standard.html" title="1 topic">man of steel</a>
-							<a href="excerpt-style4.html" title="1 topic">media</a>
-							<a href="single-format-video.html" title="1 topic">mobile</a>
-							<a href="excerpt-style1.html" title="3 topics">movies</a>
-							<a href="fullpost-style.html" title="3 topics">music</a>
-							<a href="single-format-video.html" title="1 topic">phones</a>
-							<a href="single-format-quote.html" title="1 topic">quotes</a>
-							<a href="excerpt-style4.html" title="1 topic">Technics</a>
-						</div>
-					</aside>
-					<!-- /Tag clouds -->
-					<!-- Calendar -->
-					<aside class="widget widget_calendar">
-						<div>
-							<table>
-								<caption>May 2014</caption>
-								<thead>
-									<tr>
-										<th scope="col" title="Monday">M</th>
-										<th scope="col" title="Tuesday">T</th>
-										<th scope="col" title="Wednesday">W</th>
-										<th scope="col" title="Thursday">T</th>
-										<th scope="col" title="Friday">F</th>
-										<th scope="col" title="Saturday">S</th>
-										<th scope="col" title="Sunday">S</th>
-									</tr>
-								</thead>
-								<tfoot>
-									<tr>
-										<td colspan="3" id="prev"><a href="#" title="View posts for August 2013">&laquo; Apr</a></td>
-										<td class="pad">&nbsp;</td>
-										<td colspan="3" id="next"><a href="#" title="View posts for May 2014">Jun &raquo;</a></td>
-									</tr>
-								</tfoot>
-								<tbody>
-									<tr>
-										<td colspan="3" class="pad">&nbsp;</td>
-										<td><a href="excerpt-style6.html" title="">1</a></td>
-										<td>2</td>
-										<td>3</td>
-										<td>4</td>
-									</tr>
-									<tr>
-										<td><a href="excerpt-style5.html" title="">5</a></td>
-										<td>6</td>
-										<td>7</td>
-										<td>8</td>
-										<td>9</td>
-										<td><a href="excerpt-style4.html" title="">10</a></td>
-										<td>11</td>
-									</tr>
-									<tr>
-										<td>12</td>
-										<td>13</td>
-										<td><a href="excerpt-style3.html" title="">14</a></td>
-										<td>15</td>
-										<td>16</td>
-										<td>17</td>
-										<td>18</td>
-									</tr>
-									<tr>
-										<td>19</td>
-										<td>20</td>
-										<td>21</td>
-										<td>22</td>
-										<td><a href="excerpt-style2.html" title="">23</a></td>
-										<td>24</td>
-										<td>25</td>
-									</tr>
-									<tr>
-										<td><a href="excerpt-style1.html" title="">26</a></td>
-										<td>27</td>
-										<td>28</td>
-										<td id="today"><a href="excerpt-style2.html" title="">29</a></td>
-										<td>30</td>
-										<td>31</td>
-										<td class="pad" colspan="1">&nbsp;</td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-					</aside>
-				</div>
-				<!-- #sidebar -->
+<!--					&lt;!&ndash; Tag clouds &ndash;&gt;-->
+<!--					<aside class="widget widget_tag_cloud">-->
+<!--						<h3 class="widget_title theme_title">Tags</h3>-->
+<!--						<div class="tagcloud">-->
+<!--							<a href="excerpt-style4.html" title="1 topic">accessories</a>-->
+<!--							<a href="excerpt-style3.html" title="1 topic">actions</a>-->
+<!--							<a href="excerpt-style3.html" title="3 topics">games</a>-->
+<!--							<a href="single-format-standard.html" title="1 topic">iron man</a>-->
+<!--							<a href="single-format-standard.html" title="1 topic">man of steel</a>-->
+<!--							<a href="excerpt-style4.html" title="1 topic">media</a>-->
+<!--							<a href="single-format-video.html" title="1 topic">mobile</a>-->
+<!--							<a href="excerpt-style1.html" title="3 topics">movies</a>-->
+<!--							<a href="fullpost-style.html" title="3 topics">music</a>-->
+<!--							<a href="single-format-video.html" title="1 topic">phones</a>-->
+<!--							<a href="single-format-quote.html" title="1 topic">quotes</a>-->
+<!--							<a href="excerpt-style4.html" title="1 topic">Technics</a>-->
+<!--						</div>-->
+<!--					</aside>-->
+<!--					&lt;!&ndash; /Tag clouds &ndash;&gt;-->
+<!--					&lt;!&ndash; Calendar &ndash;&gt;-->
+<!--					<aside class="widget widget_calendar">-->
+<!--						<div>-->
+<!--							<table>-->
+<!--								<caption>May 2014</caption>-->
+<!--								<thead>-->
+<!--									<tr>-->
+<!--										<th scope="col" title="Monday">M</th>-->
+<!--										<th scope="col" title="Tuesday">T</th>-->
+<!--										<th scope="col" title="Wednesday">W</th>-->
+<!--										<th scope="col" title="Thursday">T</th>-->
+<!--										<th scope="col" title="Friday">F</th>-->
+<!--										<th scope="col" title="Saturday">S</th>-->
+<!--										<th scope="col" title="Sunday">S</th>-->
+<!--									</tr>-->
+<!--								</thead>-->
+<!--								<tfoot>-->
+<!--									<tr>-->
+<!--										<td colspan="3" id="prev"><a href="#" title="View posts for August 2013">&laquo; Apr</a></td>-->
+<!--										<td class="pad">&nbsp;</td>-->
+<!--										<td colspan="3" id="next"><a href="#" title="View posts for May 2014">Jun &raquo;</a></td>-->
+<!--									</tr>-->
+<!--								</tfoot>-->
+<!--								<tbody>-->
+<!--									<tr>-->
+<!--										<td colspan="3" class="pad">&nbsp;</td>-->
+<!--										<td><a href="excerpt-style6.html" title="">1</a></td>-->
+<!--										<td>2</td>-->
+<!--										<td>3</td>-->
+<!--										<td>4</td>-->
+<!--									</tr>-->
+<!--									<tr>-->
+<!--										<td><a href="excerpt-style5.html" title="">5</a></td>-->
+<!--										<td>6</td>-->
+<!--										<td>7</td>-->
+<!--										<td>8</td>-->
+<!--										<td>9</td>-->
+<!--										<td><a href="excerpt-style4.html" title="">10</a></td>-->
+<!--										<td>11</td>-->
+<!--									</tr>-->
+<!--									<tr>-->
+<!--										<td>12</td>-->
+<!--				&lt;!&ndash; Sidebar &ndash;&gt;-->
+<!--				<div id="sidebar_main" class="widget_area sidebar_main theme_blue" role="complementary">-->
+<!--					&lt;!&ndash; widget categories &ndash;&gt;-->
+<!--					<aside class="widget widget_categories">-->
+<!--						<h3 class="widget_title theme_title">Categories</h3>-->
+<!--						<ul>-->
+<!--							<li><a href="excerpt-style6.html" title="View all posts filed under Advertisement">Advertisement</a></li>-->
+<!--							<li><a href="excerpt-style3.html" title="View all posts filed under Games">Games</a></li>-->
+<!--							<li><a href="excerpt-style1.html" title="View all posts filed under Movies">Movies</a>-->
+<!--								<ul class="children">-->
+<!--									<li><a href="excerpt-style5.html" title="View all posts filed under Actions">Actions</a></li>-->
+<!--									<li><a href="excerpt-style1.html" title="View all posts filed under Adventure">Adventure</a></li>-->
+<!--								</ul>-->
+<!--							</li>-->
+<!--							<li><a href="fullpost-style.html" title="View all posts filed under Music">Music</a></li>-->
+<!--							<li><a href="excerpt-style4.html" title="View all posts filed under Tech">Tech</a></li>-->
+<!--						</ul>-->
+<!--					</aside>-->
+<!--					&lt;!&ndash; widget categories &ndash;&gt;-->
+<!--					&lt;!&ndash; Popular Post &ndash;&gt;-->
+<!--					<aside class="widget widget_popular_posts">-->
+<!--						<h3 class="widget_title theme_title">Popular</h3>-->
+<!--						&lt;!&ndash; Tabs &ndash;&gt;-->
+<!--						<div class="popular_and_commented_tabs">-->
+<!--							<ul class="tabs">-->
+<!--								<li><a href="#widget_popular_block1" class="theme_button"><span>Popular</span></a></li><li><a href="#widget_popular_block2" class="theme_button"><span>Commented</span></a></li>-->
+<!--							</ul>-->
+<!--							<div class="tab_content" id="widget_popular_block1">-->
+<!--								&lt;!&ndash; post item &ndash;&gt;-->
+<!--								<div class="post_item first">-->
+<!--									<div class="post_thumb image_wrapper"><img alt="" src="http://placehold.it/60x60"></div>-->
+<!--									<div class="post_wrapper">-->
+<!--										<h5 class="post_title theme_title"><a href="single-format-video.html">Iron Man</a></h5>-->
+<!--										<div class="post_info theme_info">-->
+<!--											<span class="post_date theme_text">September 1, 2013</span>-->
+<!--											<span class="post_author">by <a href="excerpt-style1.html">John Doe</a></span><br />-->
+<!--											<span class="post_comments_text"><a href="single-format-video.html"><span class="post_comments_number">12019</span> views</a></span>-->
+<!--										</div>-->
+<!--									</div>-->
+<!--								</div>-->
+<!--								&lt;!&ndash; /post item &ndash;&gt;-->
+
+<!--								&lt;!&ndash; post item &ndash;&gt;-->
+<!--								<div class="post_item">-->
+<!--									<div class="post_thumb image_wrapper"><img alt="" src="http://placehold.it/60x60"></div>-->
+<!--									<div class="post_wrapper">-->
+<!--										<h5 class="post_title theme_title"><a href="single-format-standard.html">Man of steel</a></h5>-->
+<!--										<div class="post_info theme_info">-->
+<!--											<span class="post_date theme_text">August 30, 2013</span>-->
+<!--											<span class="post_author">by <a href="excerpt-style1.html">John Doe</a></span><br />-->
+<!--											<span class="post_comments_text"><a href="single-format-standard.html"><span class="post_comments_number">10680</span> views</a></span>-->
+<!--										</div>-->
+<!--									</div>-->
+<!--								</div>-->
+<!--								&lt;!&ndash; /post item &ndash;&gt;-->
+
+<!--								&lt;!&ndash; post item &ndash;&gt;-->
+<!--								<div class="post_item">-->
+<!--									<div class="post_thumb image_wrapper"><img alt="" src="http://placehold.it/60x60"></div>-->
+<!--									<div class="post_wrapper">-->
+<!--										<h5 class="post_title theme_title"><a href="single-format-gallery.html">Star Trek Into Darkness</a></h5>-->
+<!--										<div class="post_info theme_info">-->
+<!--											<span class="post_date theme_text">September 6, 2013</span>-->
+<!--											<span class="post_author">by <a href="excerpt-style1.html">John Doe</a></span><br />-->
+<!--											<span class="post_comments_text"><a href="single-format-gallery.html"><span class="post_comments_number">8055</span> views</a></span>-->
+<!--										</div>-->
+<!--									</div>-->
+<!--								</div>-->
+<!--								&lt;!&ndash; /post item &ndash;&gt;-->
+
+<!--								&lt;!&ndash; post item &ndash;&gt;-->
+<!--								<div class="post_item">-->
+<!--									<div class="post_thumb image_wrapper"><img alt="" src="http://placehold.it/60x60"></div>-->
+<!--									<div class="post_wrapper">-->
+<!--										<h5 class="post_title theme_title"><a href="single-format-standard.html">Grid</a></h5>-->
+<!--										<div class="post_info theme_info">-->
+<!--											<span class="post_date theme_text">August 30, 2013</span>-->
+<!--											<span class="post_author">by <a href="excerpt-style1.html">John Doe</a></span><br />-->
+<!--											<span class="post_comments_text"><a href="single-format-standard.html"><span class="post_comments_number">6354</span> views</a></span>-->
+<!--										</div>-->
+<!--									</div>-->
+<!--								</div>-->
+<!--								&lt;!&ndash; /post item &ndash;&gt;-->
+<!--							</div>-->
+
+<!--							<div class="tab_content" id="widget_popular_block2">-->
+
+<!--								&lt;!&ndash; post item &ndash;&gt;-->
+<!--								<div class="post_item first">-->
+<!--									<div class="post_thumb image_wrapper"><img alt="" src="http://placehold.it/60x60"></div>-->
+<!--									<div class="post_wrapper">-->
+<!--										<h5 class="post_title theme_title"><a href="single-format-video.html">Iron Man</a></h5>-->
+<!--										<div class="post_info theme_info">-->
+<!--											<span class="post_date theme_text">September 1, 2013</span>-->
+<!--											<span class="post_author">by <a href="excerpt-style1.html">John Doe</a></span><br />-->
+<!--											<span class="post_comments_text"><a href="single-format-video.html#comments"><span class="post_comments_number">2</span> comments</a></span>-->
+<!--										</div>-->
+<!--									</div>-->
+<!--								</div>-->
+<!--								&lt;!&ndash; /post item &ndash;&gt;-->
+
+<!--								&lt;!&ndash; post item &ndash;&gt;-->
+<!--								<div class="post_item">-->
+<!--									<div class="post_thumb image_wrapper"><img alt="" src="http://placehold.it/60x60"></div>-->
+<!--									<div class="post_wrapper">-->
+<!--										<h5 class="post_title theme_title"><a href="single-format-gallery.html">Star Trek Into Darkness</a></h5>-->
+<!--										<div class="post_info theme_info">-->
+<!--											<span class="post_date theme_text">September 6, 2013</span>-->
+<!--											<span class="post_author">by <a href="excerpt-style1.html">John Doe</a></span><br />-->
+<!--											<span class="post_comments_text"><a href="single-format-gallery.html#comments"><span class="post_comments_number">1</span> comments</a></span>-->
+
+<!--										</div>-->
+<!--									</div>-->
+<!--								</div>-->
+<!--								&lt;!&ndash; /post item &ndash;&gt;-->
+
+<!--								&lt;!&ndash; post item &ndash;&gt;-->
+<!--								<div class="post_item">-->
+<!--									<div class="post_thumb image_wrapper"><img alt="" src="http://placehold.it/60x60"></div>-->
+<!--									<div class="post_wrapper">-->
+<!--										<h5 class="post_title theme_title"><a href="excerpt-style1.html">Inception</a></h5>-->
+<!--										<div class="post_info theme_info">-->
+<!--											<span class="post_date theme_text">September 15, 2012</span>-->
+<!--											<span class="post_author">by <a href="excerpt-style1.html">John Doe</a></span><br />-->
+<!--											<span class="post_comments_text"><a href="excerpt-style1.html#comments"><span class="post_comments_number">0</span> comments</a></span>-->
+<!--										</div>-->
+<!--									</div>-->
+<!--								</div>-->
+<!--								&lt;!&ndash; /post item &ndash;&gt;-->
+
+<!--								&lt;!&ndash; post item &ndash;&gt;-->
+<!--								<div class="post_item">-->
+<!--									<div class="post_thumb image_wrapper"><img alt="" src="http://placehold.it/60x60"></div>-->
+<!--									<div class="post_wrapper">-->
+<!--										<h5 class="post_title theme_title"><a href="single-format-audio.html">Duft punk - Get lucky</a></h5>-->
+<!--										<div class="post_info theme_info">-->
+<!--											<span class="post_date theme_text">August 26, 2013</span>-->
+<!--											<span class="post_author">by <a href="excerpt-style1.html">John Doe</a></span><br />-->
+<!--											<span class="post_comments_text"><a href="single-format-audio.html#comments"><span class="post_comments_number">0</span> comments</a></span>-->
+<!--										</div>-->
+<!--									</div>-->
+<!--								</div>-->
+<!--								&lt;!&ndash; /post item &ndash;&gt;-->
+<!--							</div>-->
+<!--						</div>-->
+<!--						&lt;!&ndash; /Tabs &ndash;&gt;-->
+<!--					</aside>-->
+<!--					&lt;!&ndash; /Popular Post &ndash;&gt;-->
+
+<!--					&lt;!&ndash; Tag clouds &ndash;&gt;-->
+<!--					<aside class="widget widget_tag_cloud">-->
+<!--						<h3 class="widget_title theme_title">Tags</h3>-->
+<!--						<div class="tagcloud">-->
+<!--							<a href="excerpt-style4.html" title="1 topic">accessories</a>-->
+<!--							<a href="excerpt-style3.html" title="1 topic">actions</a>-->
+<!--							<a href="excerpt-style3.html" title="3 topics">games</a>-->
+<!--							<a href="single-format-standard.html" title="1 topic">iron man</a>-->
+<!--							<a href="single-format-standard.html" title="1 topic">man of steel</a>-->
+<!--							<a href="excerpt-style4.html" title="1 topic">media</a>-->
+<!--							<a href="single-format-video.html" title="1 topic">mobile</a>-->
+<!--							<a href="excerpt-style1.html" title="3 topics">movies</a>-->
+<!--							<a href="fullpost-style.html" title="3 topics">music</a>-->
+<!--							<a href="single-format-video.html" title="1 topic">phones</a>-->
+<!--							<a href="single-format-quote.html" title="1 topic">quotes</a>-->
+<!--							<a href="excerpt-style4.html" title="1 topic">Technics</a>-->
+<!--						</div>-->
+<!--					</aside>-->
+<!--					&lt;!&ndash; /Tag clouds &ndash;&gt;-->
+<!--					&lt;!&ndash; Calendar &ndash;&gt;-->
+<!--					<aside class="widget widget_calendar">-->
+<!--						<div>-->
+<!--							<table>-->
+<!--								<caption>May 2014</caption>-->
+<!--								<thead>-->
+<!--									<tr>-->
+<!--										<th scope="col" title="Monday">M</th>-->
+<!--										<th scope="col" title="Tuesday">T</th>-->
+<!--										<th scope="col" title="Wednesday">W</th>-->
+<!--										<th scope="col" title="Thursday">T</th>-->
+<!--										<th scope="col" title="Friday">F</th>-->
+<!--										<th scope="col" title="Saturday">S</th>-->
+<!--										<th scope="col" title="Sunday">S</th>-->
+<!--									</tr>-->
+<!--								</thead>-->
+<!--								<tfoot>-->
+<!--									<tr>-->
+<!--										<td colspan="3" id="prev"><a href="#" title="View posts for August 2013">&laquo; Apr</a></td>-->
+<!--										<td class="pad">&nbsp;</td>-->
+<!--										<td colspan="3" id="next"><a href="#" title="View posts for May 2014">Jun &raquo;</a></td>-->
+<!--									</tr>-->
+<!--								</tfoot>-->
+<!--								<tbody>-->
+<!--									<tr>-->
+<!--										<td colspan="3" class="pad">&nbsp;</td>-->
+<!--										<td><a href="excerpt-style6.html" title="">1</a></td>-->
+<!--										<td>2</td>-->
+<!--										<td>3</td>-->
+<!--										<td>4</td>-->
+<!--									</tr>-->
+<!--									<tr>-->
+<!--										<td><a href="excerpt-style5.html" title="">5</a></td>-->
+<!--										<td>6</td>-->
+<!--										<td>7</td>-->
+<!--										<td>8</td>-->
+<!--										<td>9</td>-->
+<!--										<td><a href="excerpt-style4.html" title="">10</a></td>-->
+<!--										<td>11</td>-->
+<!--									</tr>-->
+<!--									<tr>-->
+<!--										<td>12</td>-->
+<!--										<td>13</td>-->
+<!--										<td><a href="excerpt-style3.html" title="">14</a></td>-->
+<!--										<td>15</td>-->
+<!--										<td>16</td>-->
+<!--										<td>17</td>-->
+<!--										<td>18</td>-->
+<!--									</tr>-->
+<!--									<tr>-->
+<!--										<td>19</td>-->
+<!--										<td>20</td>-->
+<!--										<td>21</td>-->
+<!--										<td>22</td>-->
+<!--										<td><a href="excerpt-style2.html" title="">23</a></td>-->
+<!--										<td>24</td>-->
+<!--										<td>25</td>-->
+<!--									</tr>-->
+<!--									<tr>-->
+<!--										<td><a href="excerpt-style1.html" title="">26</a></td>-->
+<!--										<td>27</td>-->
+<!--										<td>28</td>-->
+<!--										<td id="today"><a href="excerpt-style2.html" title="">29</a></td>-->
+<!--										<td>30</td>-->
+<!--										<td>31</td>-->
+<!--										<td class="pad" colspan="1">&nbsp;</td>-->
+<!--									</tr>-->
+<!--								</tbody>-->
+<!--							</table>-->
+<!--						</div>-->
+<!--					</aside>-->
+<!--				</div>-->
+<!--				&lt;!&ndash; #sidebar &ndash;&gt;						<td>13</td>-->
+<!--										<td><a href="excerpt-style3.html" title="">14</a></td>-->
+<!--										<td>15</td>-->
+<!--										<td>16</td>-->
+<!--										<td>17</td>-->
+<!--										<td>18</td>-->
+<!--									</tr>-->
+<!--									<tr>-->
+<!--										<td>19</td>-->
+<!--										<td>20</td>-->
+<!--										<td>21</td>-->
+<!--										<td>22</td>-->
+<!--										<td><a href="excerpt-style2.html" title="">23</a></td>-->
+<!--										<td>24</td>-->
+<!--										<td>25</td>-->
+<!--									</tr>-->
+<!--									<tr>-->
+<!--										<td><a href="excerpt-style1.html" title="">26</a></td>-->
+<!--										<td>27</td>-->
+<!--										<td>28</td>-->
+<!--										<td id="today"><a href="excerpt-style2.html" title="">29</a></td>-->
+<!--										<td>30</td>-->
+<!--										<td>31</td>-->
+<!--										<td class="pad" colspan="1">&nbsp;</td>-->
+<!--									</tr>-->
+<!--								</tbody>-->
+<!--							</table>-->
+<!--						</div>-->
+<!--					</aside>-->
+<!--				</div>-->
+<!--				&lt;!&ndash; #sidebar &ndash;&gt;-->
 
 			</div><!-- #main_inner -->
     	</div><!-- #main -->
 
-    	<!-- footer -->
-    	<footer id="footer" class="site_footer" role="contentinfo">
-			<div id="footer_sidebar" class="widget_area theme_dark theme_article" role="complementary">
-				<div id="footer_sidebar_inner">
-					<!-- widget socials -->
-					<aside class="widget widget_socials">
-						<div class="widget_inner">
-            				<div class="logo logo_text"><a href="index.html">
-            					<span class="logo_title theme_header">puz<span class="theme_accent">z</span>les</span></a>
-            				</div>
-							<div class="logo_descr">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
-                    		<a class="social_icons social_facebook" href="https://www.facebook.com/themerex" target="_blank"><img src="images/socials/facebook.png" alt="" /></a><a class="social_icons social_twitter" href="https://twitter.com/Theme_REX" target="_blank"><img src="images/socials/twitter.png" alt="" /></a><a class="social_icons social_gplus" href="https://plus.google.com/102189073109602153696" target="_blank"><img src="images/socials/gplus.png" alt="" /></a><a class="social_icons social_youtube" href="https://www.youtube.com/channel/UCnFisBimrK2aIE-hnY70kCA" target="_blank"><img src="images/socials/youtube.png" alt="" /></a><a class="social_icons social_pinterest" href="http://themeforest.net/user/ThemeREX/portfolio" target="_blank"><img src="images/socials/pinterest.png" alt="" /></a>
-                		</div>
-					</aside>
-					<!-- #widget socials -->
-					<!-- widget flickr -->
-					<aside class="widget widget_flickr">
-						<h3 class="widget_title theme_title">Flickr</h3>
-						<div class="flickr_images">
-							<a href="#"><img title="" alt="A photo on Flickr" src="http://placehold.it/75x75"></a>
-							<a href="#"><img title="" alt="A photo on Flickr" src="http://placehold.it/75x75"></a>
-							<a href="#"><img title="" alt="A photo on Flickr" src="http://placehold.it/75x75"></a>
-							<a href="#"><img title="" alt="A photo on Flickr" src="http://placehold.it/75x75"></a>
-							<a href="#"><img title="" alt="A photo on Flickr" src="http://placehold.it/75x75"></a>
-							<a href="#"><img title="" alt="A photo on Flickr" src="http://placehold.it/75x75"></a>
-							<a href="#"><img title="" alt="A photo on Flickr" src="http://placehold.it/75x75"></a>
-							<a href="#"><img title="" alt="A photo on Flickr" src="http://placehold.it/75x75"></a>
-							<a href="#"><img title="" alt="A photo on Flickr" src="http://placehold.it/75x75"></a>
-							<a href="#"><img title="" alt="A photo on Flickr" src="http://placehold.it/75x75"></a>
-						</div>
-					</aside>
-					<!-- widget #flickr -->
-					<!-- widget recent post -->
-					<aside class="widget widget_recent_entries widget-odd">
-						<h3 class="widget_title theme_title">Recent posts</h3>
-						<ul>
-							<li><a href="single-format-standard.html">Ripd</a></li>
-							<li><a href="single-format-gallery.html">Star Trek Into Darkness</a></li>
-							<li><a href="single-format-video.html">Iron Man</a></li>
-							<li><a href="single-format-standard.html">Man of steel</a></li>
-							<li><a href="single-format-audio.html">Grid</a></li>
-							<li><a href="single-format-gallery.html">Hitman</a></li>
-							<li><a href="single-format-video.html">GTA V</a></li>
-						</ul>
-					</aside>
-					<!-- #widget recent post -->
-					<!-- widget contact form -->
-					<aside class="widget widget_text">
-						<h3 class="widget_title theme_title">Contact form</h3>
-						<div class="textwidget">
-							<div class="sc_contact_form">
-								<form method="post" action="include/sendmail.php">
-									<div class="field field_name"><input type="text" id="sc_contact_form_username" name="username" placeholder="Your Name*"></div>
-									<div class="field field_email"><input type="text" id="sc_contact_form_email" name="email" placeholder="Your Email*"></div>
-									<div class="field field_message"><textarea id="sc_contact_form_message" name="message" placeholder="Your Message*"></textarea></div>
-									<div class="sc_contact_form_button"><a href="#" class="sc_contact_form_submit theme_button"><span>Send</span></a></div>
-									<div class="result sc_infobox"></div>
-								</form>
-							</div>
-						</div>
-					</aside>
-					<!-- #widget contact form -->
-				</div>
-			</div>
-			<!-- footer_copyright -->
-			<div id="footer_copyright" class="theme_dark theme_article">
-				<div id="footer_copyright_inner" class="theme_text">
-					<a href="http://themeforest.net/user/ThemeREX/portfolio">ThemeREX</a> &copy; 2013 All Rights Reserved
-				</div>
-			</div>
-			<!-- #footer_copyright -->
-        </footer>
-        <!-- #footer -->
+<!--    	&lt;!&ndash; footer &ndash;&gt;-->
+<!--    	<footer id="footer" class="site_footer" role="contentinfo">-->
+<!--			<div id="footer_sidebar" class="widget_area theme_dark theme_article" role="complementary">-->
+<!--				<div id="footer_sidebar_inner">-->
+<!--					&lt;!&ndash; widget socials &ndash;&gt;-->
+<!--					<aside class="widget widget_socials">-->
+<!--						<div class="widget_inner">-->
+<!--            				<div class="logo logo_text"><a href="index.html">-->
+<!--            					<span class="logo_title theme_header">puz<span class="theme_accent">z</span>les</span></a>-->
+<!--            				</div>-->
+<!--							<div class="logo_descr">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>-->
+<!--                    		<a class="social_icons social_facebook" href="https://www.facebook.com/themerex" target="_blank"><img src="images/socials/facebook.png" alt="" /></a><a class="social_icons social_twitter" href="https://twitter.com/Theme_REX" target="_blank"><img src="images/socials/twitter.png" alt="" /></a><a class="social_icons social_gplus" href="https://plus.google.com/102189073109602153696" target="_blank"><img src="images/socials/gplus.png" alt="" /></a><a class="social_icons social_youtube" href="https://www.youtube.com/channel/UCnFisBimrK2aIE-hnY70kCA" target="_blank"><img src="images/socials/youtube.png" alt="" /></a><a class="social_icons social_pinterest" href="http://themeforest.net/user/ThemeREX/portfolio" target="_blank"><img src="images/socials/pinterest.png" alt="" /></a>-->
+<!--                		</div>-->
+<!--					</aside>-->
+<!--					&lt;!&ndash; #widget socials &ndash;&gt;-->
+<!--					&lt;!&ndash; widget flickr &ndash;&gt;-->
+<!--					<aside class="widget widget_flickr">-->
+<!--						<h3 class="widget_title theme_title">Flickr</h3>-->
+<!--						<div class="flickr_images">-->
+<!--							<a href="#"><img title="" alt="A photo on Flickr" src="http://placehold.it/75x75"></a>-->
+<!--							<a href="#"><img title="" alt="A photo on Flickr" src="http://placehold.it/75x75"></a>-->
+<!--							<a href="#"><img title="" alt="A photo on Flickr" src="http://placehold.it/75x75"></a>-->
+<!--							<a href="#"><img title="" alt="A photo on Flickr" src="http://placehold.it/75x75"></a>-->
+<!--							<a href="#"><img title="" alt="A photo on Flickr" src="http://placehold.it/75x75"></a>-->
+<!--							<a href="#"><img title="" alt="A photo on Flickr" src="http://placehold.it/75x75"></a>-->
+<!--							<a href="#"><img title="" alt="A photo on Flickr" src="http://placehold.it/75x75"></a>-->
+<!--							<a href="#"><img title="" alt="A photo on Flickr" src="http://placehold.it/75x75"></a>-->
+<!--							<a href="#"><img title="" alt="A photo on Flickr" src="http://placehold.it/75x75"></a>-->
+<!--							<a href="#"><img title="" alt="A photo on Flickr" src="http://placehold.it/75x75"></a>-->
+<!--						</div>-->
+<!--					</aside>-->
+<!--					&lt;!&ndash; widget #flickr &ndash;&gt;-->
+<!--					&lt;!&ndash; widget recent post &ndash;&gt;-->
+<!--					<aside class="widget widget_recent_entries widget-odd">-->
+<!--						<h3 class="widget_title theme_title">Recent posts</h3>-->
+<!--						<ul>-->
+<!--							<li><a href="single-format-standard.html">Ripd</a></li>-->
+<!--							<li><a href="single-format-gallery.html">Star Trek Into Darkness</a></li>-->
+<!--							<li><a href="single-format-video.html">Iron Man</a></li>-->
+<!--							<li><a href="single-format-standard.html">Man of steel</a></li>-->
+<!--							<li><a href="single-format-audio.html">Grid</a></li>-->
+<!--							<li><a href="single-format-gallery.html">Hitman</a></li>-->
+<!--							<li><a href="single-format-video.html">GTA V</a></li>-->
+<!--						</ul>-->
+<!--					</aside>-->
+<!--					&lt;!&ndash; #widget recent post &ndash;&gt;-->
+<!--					&lt;!&ndash; widget contact form &ndash;&gt;-->
+<!--					<aside class="widget widget_text">-->
+<!--						<h3 class="widget_title theme_title">Contact form</h3>-->
+<!--						<div class="textwidget">-->
+<!--							<div class="sc_contact_form">-->
+<!--								<form method="post" action="include/sendmail.php">-->
+<!--									<div class="field field_name"><input type="text" id="sc_contact_form_username" name="username" placeholder="Your Name*"></div>-->
+<!--									<div class="field field_email"><input type="text" id="sc_contact_form_email" name="email" placeholder="Your Email*"></div>-->
+<!--									<div class="field field_message"><textarea id="sc_contact_form_message" name="message" placeholder="Your Message*"></textarea></div>-->
+<!--									<div class="sc_contact_form_button"><a href="#" class="sc_contact_form_submit theme_button"><span>Send</span></a></div>-->
+<!--									<div class="result sc_infobox"></div>-->
+<!--								</form>-->
+<!--							</div>-->
+<!--						</div>-->
+<!--					</aside>-->
+<!--					&lt;!&ndash; #widget contact form &ndash;&gt;-->
+<!--				</div>-->
+<!--			</div>-->
+<!--			&lt;!&ndash; footer_copyright &ndash;&gt;-->
+<!--			<div id="footer_copyright" class="theme_dark theme_article">-->
+<!--				<div id="footer_copyright_inner" class="theme_text">-->
+<!--					<a href="{% url 'index' %}">WongNork</a> &copy; 2021 All Rights Reserved-->
+<!--				</div>-->
+<!--			</div>-->
+<!--			&lt;!&ndash; #footer_copyright &ndash;&gt;-->
+<!--        </footer>-->
+<!--        &lt;!&ndash; #footer &ndash;&gt;-->
 
 	</div><!-- #page -->
 

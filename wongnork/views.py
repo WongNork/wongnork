@@ -1,15 +1,14 @@
 from django.shortcuts import render, redirect, get_object_or_404
-from .forms import NewUserForm, ReviewForm
+from .forms import *
 from django.contrib.auth import login, authenticate, logout
 from django.contrib import messages
 from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth.decorators import login_required
-
+import datetime
 from .api import get_restaurant_data
 
-
 # Create your views here.
-from .models import Restaurant
+from .models import Restaurant,Review
 
 
 def profile(request):
@@ -18,15 +17,20 @@ def profile(request):
 
 def index(request):
     """Views for home page"""
-    restaurants = get_restaurant_data()
+    # get_restaurant_data()
+    restaurants = Restaurant.objects.all()
     return render(request, 'home_page.html', {"restaurants": restaurants})
 
 
-def review(request):
+def review(request, restaurant_id):
     """Views for review page"""
-    restaurants = get_restaurant_data()
-    return render(request, 'review_page.html', {"restaurants": restaurants})
+    restaurant = Restaurant.objects.filter(pk=restaurant_id).first()
+    return render(request, 'review_page.html', {"restaurant": restaurant})
 
+def restaurants(request):
+    """Views for restaurants page"""
+    restaurants = Restaurant.objects.all()
+    return render(request,'restaurants.html',{"restaurants": restaurants})
 
 def user_profile(request):
     if request.user.is_authenticated:
@@ -77,13 +81,19 @@ def logout_request(request):
 
 @login_required
 def reviewed(request, restaurant_id):
-    form = ReviewForm(request.POST)
-    if form.is_valid():
-        rtg = request.POST.get("rate", 1)
-        p = request.POST.get("price", 1)
-        res = get_object_or_404(Restaurant, pk=restaurant_id)
-        res.review_set.create(review_user=request.user, **form.cleaned_data, review_rate=rtg, review_price=p)
-    else:
-        print(form.errors)
+    rtg = request.POST.get("rate", 1)
+    p = request.POST.get("price", 1)
+    review_title = request.POST.get("review_title")
+    review_des = request.POST.get("review_des")
+    print(review_title, review_des)
+    res = get_object_or_404(Restaurant, pk=restaurant_id)
+    Review.objects.create(restaurant=res, review_user=request.user, review_title=review_title,
+                          review_description=review_des, review_rate=rtg, review_price=p,
+                          review_date=datetime.datetime.now())
+    return render(request, 'review_page.html', {'restaurant': res, 'user': request.user})
 
-    # return render(request, 'reviewapp/details.html', {'restaurant': res, 'user': request.user})
+
+@login_required
+def add(request, restaurant_id):
+    res = get_object_or_404(Restaurant, pk=restaurant_id)
+    return render(request, 'wongnork/add.html', {'restaurant': res})

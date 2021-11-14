@@ -9,7 +9,7 @@ class UserProfile(models.Model):
     img_profile = models.ImageField(default='images/default.png', upload_to='profile_pics')
 
     def __str__(self):
-        return f'{self.user.username}'
+        return f'{self.user_profile.username}'
 
 
 class Restaurant(models.Model):
@@ -17,7 +17,6 @@ class Restaurant(models.Model):
     location = models.CharField(max_length=30)
     photo = models.ImageField(upload_to='images/')
     detail = models.CharField(max_length=1000000)
-    rating = models.FloatField(max_length=5)
 
 
     def review_amount(self):
@@ -43,3 +42,23 @@ class Review(models.Model):
 
     def __str__(self):
         return self.review_description
+
+
+class Comment(models.Model):
+    review = models.ForeignKey(Review,on_delete=models.CASCADE)
+    comment_user = models.ForeignKey(User, on_delete=models.CASCADE)
+    comment_description = models.CharField(max_length=500)
+
+
+    def __str__(self):
+        return self.comment_description
+
+
+class Reply(models.Model):
+    comment = models.ForeignKey(Comment,on_delete=models.CASCADE)
+    reply_user = models.ForeignKey(User, on_delete=models.CASCADE)
+    reply_description = models.CharField(max_length=500)
+
+
+    def __str__(self):
+        return self.reply_description

@@ -3868,13 +3868,13 @@ article ul li:before,
     color: #222222;
 }
 
-body {
+/* body {
     margin: 0;
     padding: 0;
     background: lightskyblue;
     height: 100vh;
     overflow: hidden;
-}
+} */
 
 .hero {
     position: absolute;

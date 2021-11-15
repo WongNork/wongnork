@@ -1,10 +1,10 @@
 {% block content %}
 {% load crispy_forms_tags %}
     {% load static %}
-    {% comment %} <link rel="stylesheet" href="{% static 'css/style.css' %}"> {% endcomment %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
 
 <!--Login-->
-    {% comment %} <body> {% endcomment %}
+{#    <body>#}
         <div class="hero">
             <h1>Login</h1>
             <form method="POST">
@@ -16,7 +16,6 @@
             </form>
             <p class="signup_link">Don't have an account? <a href="/wongnork/register">Create an account</a>.</p>
         </div>
-    {% comment %} </body> {% endcomment %}
+{#    </body>#}
 
 {% endblock %}
-

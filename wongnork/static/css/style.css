@@ -3882,7 +3882,7 @@ article ul li:before,
     left: 50%;
     transform: translate(-50%, -50%);
     width: 400px;
-    background: white;
+    background: lightskyblue;
     border-radius: 10px;
 }
 

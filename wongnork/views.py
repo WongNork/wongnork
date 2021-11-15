@@ -76,7 +76,7 @@ def login_request(request):
 def logout_request(request):
     logout(request)
     messages.info(request, "You have successfully logged out.")
-    return redirect("wongnork:login")
+    return redirect("wongnork:home-page")
 
 
 @login_required
@@ -93,7 +93,9 @@ def reviewed(request, restaurant_id):
     return render(request, 'review_page.html', {'restaurant': res, 'user': request.user})
 
 
-@login_required
 def add(request, restaurant_id):
-    res = get_object_or_404(Restaurant, pk=restaurant_id)
-    return render(request, 'wongnork/add.html', {'restaurant': res})
+    if request.user.is_authenticated:
+        res = get_object_or_404(Restaurant, pk=restaurant_id)
+        return render(request, 'wongnork/add.html', {'restaurant': res})
+    else:
+        return redirect('wongnork:login')

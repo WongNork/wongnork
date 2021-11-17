@@ -1,12 +1,10 @@
-{% extends 'base.html' %}
-
 {% block content %}
     <center>
     {% if searched %}
         <h1> You searched {{ searched }} </h1>
         <br/> 
-        {% for name in restaurant %}
-            <a href= "{% url 'wongnork:review' restaurants.id %}"> {{ name.restaurant_name }} </a><br/>
+        {% for res in restaurant %}
+            <a href= "{% url 'wongnork:review' res.id %}"> {{ res.restaurant_name }} </a><br/>
         {% endfor %}
     
     {% else %}

@@ -82,8 +82,16 @@
                             <!--								<li class="green"><a href="excerpt-style4.html">Video</a></li>-->
                             <!--								<li class="black"><a href="excerpt-style2.html">Reviews</a></li>-->
                         </ul>
-                        <a href="#" class="search_link"><span class="icon-search"></span></a>
-                    </nav>
+                        <form action="{% url 'wongnork:search-bar' %}" method='POST'>
+                            {% csrf_token %}
+                            <input class="form-control form-control-lg form-control-borderless" name="searched"
+                                       placeholder="Search for restaurants">
+                            <button href="{% url 'wongnork:search-bar' %}"
+                                    class="btn btn-lg bg-color2 text-white"
+                                    type="submit"><span class="icon-search"></span>
+                            </button>
+                        </form>
+
                     <!-- #main menu -->
                 </div>
             </div>

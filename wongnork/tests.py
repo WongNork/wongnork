@@ -19,7 +19,7 @@ class RegistrationTest(TestCase):
             'password1': 'Test@12345', 'password2': 'Test@12345'
         })
         self.assertEqual(response.status_code, 302)
-        # self.assertRedirects(response, reverse('wongnork:home-page'))
+        self.assertRedirects(response, reverse('wongnork:home-page'))
 
 
 class LoginTest(TestCase):

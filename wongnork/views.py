@@ -8,7 +8,18 @@ import datetime
 from .api import get_restaurant_data
 
 # Create your views here.
-from .models import Restaurant,Review
+from .models import Restaurant, Review
+
+
+def search_bar(request):
+    if request.method == "POST":
+        searched = request.POST['searched']
+        restaurant = Restaurant.objects.filter(
+            restaurant_name__contains=searched)
+        return render(request, 'search_result.html',
+                      {'searched': searched, 'restaurant': restaurant})
+    else:
+        return render(request, 'search_result.html', {})
 
 
 def profile(request):
@@ -27,10 +38,12 @@ def review(request, restaurant_id):
     restaurant = Restaurant.objects.filter(pk=restaurant_id).first()
     return render(request, 'review_page.html', {"restaurant": restaurant})
 
+
 def restaurants(request):
     """Views for restaurants page"""
     restaurants = Restaurant.objects.all()
-    return render(request,'restaurants.html',{"restaurants": restaurants})
+    return render(request, 'restaurants.html', {"restaurants": restaurants})
+
 
 def user_profile(request):
     if request.user.is_authenticated:

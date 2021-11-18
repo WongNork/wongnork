@@ -40,6 +40,7 @@ def user_profile(request):
         return redirect('wongnork:login')
 
 
+
 def register_request(request):
     if request.method == "POST":
         form = NewUserForm(request.POST)
@@ -97,3 +98,24 @@ def reviewed(request, restaurant_id):
 def add(request, restaurant_id):
     res = get_object_or_404(Restaurant, pk=restaurant_id)
     return render(request, 'wongnork/add.html', {'restaurant': res})
+
+@login_required
+def edit_profile(request):
+    if request.method == "POST":
+        form = EditProfileForm(request.POST, request.FILES)
+        if form.is_valid():
+            about_me = form.cleaned_data["about_me"]
+            username = form.cleaned_data["username"]
+            image = form.cleaned_data["image"]
+
+            user = User.objects.get(id=request.user.id)
+            user.username = username
+            user.save()
+            profile.about_me = about_me
+            if image:
+                profile.image = image
+            profile.save()
+            return redirect("user_profile.html", username=user.username)
+    else:
+        form = EditProfileForm()
+    return render(request, "edit_profile.html", {'form': form})

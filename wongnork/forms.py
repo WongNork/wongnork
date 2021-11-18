@@ -30,3 +30,7 @@ class ReviewForm(ModelForm):
         widgets = {
             'review_description': Textarea(attrs={'cols': 80, 'rows': 8}),
         }
+
+class EditProfileForm(forms.Form):
+    username = forms.CharField()
+    about_me = forms.CharField(widget=forms.Textarea())

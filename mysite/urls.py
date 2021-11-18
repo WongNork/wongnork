@@ -26,6 +26,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index, name='index'),
     path('review/', views.review, name='review_page'),
+
 ]
 
 # path('register/', register_request), to only use /register in the link

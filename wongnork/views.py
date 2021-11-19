@@ -4,6 +4,8 @@ from django.contrib.auth import login, authenticate, logout
 from django.contrib import messages
 from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth.decorators import login_required
+from .forms import EditProfileForm
+from django.contrib.auth import update_session_auth_hash
 import datetime
 from .api import get_restaurant_data
 
@@ -99,23 +101,18 @@ def add(request, restaurant_id):
     res = get_object_or_404(Restaurant, pk=restaurant_id)
     return render(request, 'wongnork/add.html', {'restaurant': res})
 
+
 @login_required
 def edit_profile(request):
-    if request.method == "POST":
-        form = EditProfileForm(request.POST, request.FILES)
-        if form.is_valid():
-            about_me = form.cleaned_data["about_me"]
-            username = form.cleaned_data["username"]
-            image = form.cleaned_data["image"]
+    if request.method == 'POST':
+        form = EditProfileForm(request.POST, instance=request.user)
 
-            user = User.objects.get(id=request.user.id)
-            user.username = username
-            user.save()
-            profile.about_me = about_me
-            if image:
-                profile.image = image
-            profile.save()
-            return redirect("user_profile.html", username=user.username)
+        if form.is_valid():
+            user_form = form.save()
+            user_form.save()
+            return redirect('wongnork:user-profile')
     else:
-        form = EditProfileForm()
-    return render(request, "edit_profile.html", {'form': form})
+        form = EditProfileForm(instance=request.user)
+        args = {}
+        args['form'] = form
+        return render(request, 'edit_profile.html', args)

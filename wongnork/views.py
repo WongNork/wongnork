@@ -114,5 +114,5 @@ def edit_profile(request):
     else:
         form = EditProfileForm(instance=request.user)
         args = {}
-        args['form'] = form
+        args['edit_form'] = form
         return render(request, 'edit_profile.html', args)

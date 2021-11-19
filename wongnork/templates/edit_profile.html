@@ -1,15 +1,22 @@
-{% block head %}
-<title>Profile</title>
-{% endblock %} {% block body %}
-<div class="container">
-    <form method="post" enctype="multipart/form-data">
-        {% csrf_token %}
-        <table>
-            {{ form.as_table }}
-        </table>
-        <button type="submit">Submit</button>
-    </form>
-    <br>
-</div>
+{% block content %}
+
+{% load crispy_forms_tags %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+<!--Edit profile-->
+    <body>
+        <div class="hero">
+        <h1>Edit profile</h1>
+            <form method="POST">
+                <div class="login_field">
+                {% csrf_token %}
+                {{ edit_form|crispy }}
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+            <br>
+        </div>
+  </body>
 
 {% endblock %}

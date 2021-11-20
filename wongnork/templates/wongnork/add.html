@@ -2,8 +2,8 @@
 
 <div id="wrapper">
 
-    <!-- Back button-->
-    <a href="{% url 'wongnork:review' restaurant.pk %}" class="back-button">
+    <!-- Back span-->
+    <a href="{% url 'wongnork:review' restaurant.pk %}" class="back-span">
         <i class="fa fa-arrow-circle-left"></i>
     </a>
 
@@ -22,34 +22,21 @@
     <form action="{% url 'wongnork:reviewed' restaurant.pk %}" method="post">
         {% csrf_token %}
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <style>
-            .checked {
-                color: orange;
-            }
-        </style>
 
         <div>
             <h6>Your overall rating of the restaurant</h6>
             <label class="rate">
-                    <input type="radio" name="rate" value="1" checked>
-                    <i class=" fa fa-star text-warning checked"></i>
-                </label>
-            <label class="rate">
-                    <input type="radio" name="rate" value="2">
-                    <i class=" fa fa-star text-warning checked " ></i>
-                </label>
-            <label class="rate">
-                    <input type="radio" name="rate" value="3">
-                    <i class=" fa fa-star text-warning checked "></i>
-                </label>
-            <label class="rate">
-                    <input type="radio" name="rate" value="4">
-                    <i class=" fa fa-star text-warning checked "></i>
-                </label>
-            <label class="rate">
-                    <input type="radio" name="rate" value="5">
-                    <i class=" fa fa-star text-warning checked "></i>
-                </label>
+                <!-- <input type="radio" name="rate" value="1" checked> -->
+                <span type="submit" class=" fa fa-star checked" id="first"></span>
+                <!-- <input type="radio" name="rate" value="2"> -->
+                <span type="submit" class=" fa fa-star checked" id="second"></span>
+                <!-- <input type=" radio " name="rate " value="3 "> -->
+                <span type="submit" class=" fa fa-star checked" id="third"></span>
+                <!-- <input type="radio " name="rate " value="4 "> -->
+                <span type="submit" class=" fa fa-star checked" id="fourth"></span>
+                <!-- <input type="radio " name="rate " value="5 "> -->
+                <span type="submit" class=" fa fa-star checked" id="fifth"></span>
+            </label>
         </div>
         <br>
 

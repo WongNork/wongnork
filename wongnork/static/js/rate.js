@@ -5,8 +5,18 @@ const three = document.getElementById('third')
 const four = document.getElementById('forth')
 const five = document.getElementById('fifth')
 
+
+const form = document.querySelector('.rate')
+const confirmBox = document.querySelector('confirm-box')
+const csrf = document.getElementsByName('csrfmiddlewaretoken')
+
+console.log(csrf)
+console.log(form)
+console.log(confirmBox)
+
 console.log(one)
 
+// optimize the star 
 const handleSelect = (selection) => {
     switch (selection) {
         case 'first':

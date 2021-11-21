@@ -19,7 +19,6 @@ def profile(request):
 
 def index(request):
     """Views for home page"""
-    # get_restaurant_data()
     restaurants = Restaurant.objects.all()
     return render(request, 'home_page.html', {"restaurants": restaurants})
 

@@ -20,12 +20,12 @@ from django.urls import include, path
 from wongnork import views
 from wongnork.views import register_request
 
-
 urlpatterns = [
     path('wongnork/', include('wongnork.urls')),
     path('admin/', admin.site.urls),
     path('', views.index, name='index'),
     path('review/', views.review, name='review_page'),
+    path('', include('social_django.urls'), name='social'),
 ]
 
 # path('register/', register_request), to only use /register in the link

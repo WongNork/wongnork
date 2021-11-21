@@ -1,5 +1,5 @@
 from django import forms
-from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.forms import UserCreationForm, UserChangeForm
 from django.contrib.auth.models import User
 from django.forms import ModelForm, Textarea
 from .models import Review
@@ -30,3 +30,9 @@ class ReviewForm(ModelForm):
         widgets = {
             'review_description': Textarea(attrs={'cols': 80, 'rows': 8}),
         }
+
+
+class EditProfileForm(ModelForm):
+    class Meta:
+        model = User
+        fields = ("username",'email','first_name','last_name')

@@ -13,5 +13,6 @@ urlpatterns = [
     path('review/<int:restaurant_id>/add/', views.add, name="add"),
     path('review/<int:restaurant_id>/reviewed/', views.reviewed, name='reviewed'),
     path("user-profile/", views.user_profile, name="user-profile"),
-    path("logout/", views.logout_request, name="logout")
+    path("logout/", views.logout_request, name="logout"),
+    path("edit-profile/", views.edit_profile, name="edit-profile"),
 ]

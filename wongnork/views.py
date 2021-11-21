@@ -4,6 +4,8 @@ from django.contrib.auth import login, authenticate, logout
 from django.contrib import messages
 from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth.decorators import login_required
+from .forms import EditProfileForm
+from django.contrib.auth import update_session_auth_hash
 import datetime
 from .api import get_restaurant_data
 
@@ -37,6 +39,7 @@ def user_profile(request):
     else:
         messages.error(request, "You are not login!")
         return redirect('wongnork:login')
+
 
 
 def register_request(request):
@@ -96,3 +99,19 @@ def reviewed(request, restaurant_id):
 def add(request, restaurant_id):
     res = get_object_or_404(Restaurant, pk=restaurant_id)
     return render(request, 'wongnork/add.html', {'restaurant': res})
+
+
+@login_required
+def edit_profile(request):
+    if request.method == 'POST':
+        form = EditProfileForm(request.POST, instance=request.user)
+
+        if form.is_valid():
+            user_form = form.save()
+            user_form.save()
+            return redirect('wongnork:user-profile')
+    else:
+        form = EditProfileForm(instance=request.user)
+        args = {}
+        args['edit_form'] = form
+        return render(request, 'edit_profile.html', args)

@@ -4,7 +4,7 @@
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 
 <!--Login-->
-{#    <body>#}
+    <body>
         <div class="hero">
             <h1>Login</h1>
             <form method="POST">
@@ -15,7 +15,11 @@
                 <button type="submit">Login</button>
             </form>
             <p class="signup_link">Don't have an account? <a href="/wongnork/register">Create an account</a>.</p>
+            <p class="signup_link">Or
+            <a href="{% url "social:begin" "google-oauth2" %}">
+                <i class="fab fa-google" ></i><span></span> Sign in with Google</span></p>
+            </a>
         </div>
-{#    </body>#}
+    </body>
 
 {% endblock %}

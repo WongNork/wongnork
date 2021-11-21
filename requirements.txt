@@ -1,0 +1,10 @@
+coverage==5.3
+Django==3.1
+social-auth-app-django==4.0.0
+django-crispy-forms==1.9.2
+django-environ==0.4.5
+django-extensions==3.0.9
+environ==1.0
+requests==2.24.0
+virtualenv==20.1.0
+Pillow==2.6.1

@@ -14,5 +14,6 @@ urlpatterns = [
     path('review/<int:restaurant_id>/reviewed/', views.reviewed, name='reviewed'),
     path("user-profile/", views.user_profile, name="user-profile"),
     path("logout/", views.logout_request, name="logout"),
-    path('search-bar', views.search_bar, name="search-bar")
+    path('search-bar', views.search_bar, name="search-bar"),
+    path("edit-profile/", views.edit_profile, name="edit-profile"),
 ]

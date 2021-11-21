@@ -54,6 +54,7 @@ def user_profile(request):
         return redirect('wongnork:login')
 
 
+
 def register_request(request):
     restaurants = Restaurant.objects.all()
     if request.method == "POST":
@@ -115,6 +116,7 @@ def add(request, restaurant_id):
     else:
         return redirect('wongnork:login')
 
+
 @login_required
 def edit_profile(request):
     if request.method == 'POST':
@@ -129,3 +131,4 @@ def edit_profile(request):
         args = {}
         args['edit_form'] = form
         return render(request, 'edit_profile.html', args)
+

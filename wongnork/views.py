@@ -5,12 +5,23 @@ from django.contrib import messages
 from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth.decorators import login_required
 from .forms import EditProfileForm
-from django.contrib.auth import update_session_auth_hash
+
 import datetime
 from .api import get_restaurant_data
 
 # Create your views here.
-from .models import Restaurant,Review
+from .models import Restaurant, Review
+
+
+def search_bar(request):
+    if request.method == "POST":
+        searched = request.POST['searched']
+        restaurant = Restaurant.objects.filter(
+            restaurant_name__contains=searched)
+        return render(request, 'search_result.html',
+                      {'searched': searched, 'restaurant': restaurant})
+    else:
+        return render(request, 'search_result.html', {})
 
 
 def profile(request):
@@ -28,10 +39,12 @@ def review(request, restaurant_id):
     restaurant = Restaurant.objects.filter(pk=restaurant_id).first()
     return render(request, 'review_page.html', {"restaurant": restaurant})
 
+
 def restaurants(request):
     """Views for restaurants page"""
     restaurants = Restaurant.objects.all()
-    return render(request,'restaurants.html',{"restaurants": restaurants})
+    return render(request, 'restaurants.html', {"restaurants": restaurants})
+
 
 def user_profile(request):
     if request.user.is_authenticated:
@@ -43,13 +56,14 @@ def user_profile(request):
 
 
 def register_request(request):
+    restaurants = Restaurant.objects.all()
     if request.method == "POST":
         form = NewUserForm(request.POST)
         if form.is_valid():
             user = form.save()
             login(request, user)
             messages.success(request, "Registration successful.")
-            return redirect('wongnork:home-page')
+            return render(request, 'home_page.html', {"restaurants": restaurants})
         messages.error(
             request, "Unsuccessful registration. Invalid information.")
     form = NewUserForm()
@@ -78,7 +92,7 @@ def login_request(request):
 def logout_request(request):
     logout(request)
     messages.info(request, "You have successfully logged out.")
-    return redirect("wongnork:login")
+    return redirect("wongnork:home-page")
 
 
 @login_required
@@ -95,10 +109,12 @@ def reviewed(request, restaurant_id):
     return render(request, 'review_page.html', {'restaurant': res, 'user': request.user})
 
 
-@login_required
 def add(request, restaurant_id):
-    res = get_object_or_404(Restaurant, pk=restaurant_id)
-    return render(request, 'wongnork/add.html', {'restaurant': res})
+    if request.user.is_authenticated:
+        res = get_object_or_404(Restaurant, pk=restaurant_id)
+        return render(request, 'wongnork/add.html', {'restaurant': res})
+    else:
+        return redirect('wongnork:login')
 
 
 @login_required
@@ -115,3 +131,4 @@ def edit_profile(request):
         args = {}
         args['edit_form'] = form
         return render(request, 'edit_profile.html', args)
+

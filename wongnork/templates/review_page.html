@@ -9,7 +9,7 @@
 	<link rel="pingback" href="http://puzzles.themerex.net/xmlrpc.php" />
     <link rel="icon" type="image/x-icon" href="{% static 'images/favicon1.ico' %}" />
     	<!--[if lt IE 9]>
-		<script src="{% static 'js/html5.js" type="text/javascript"></script>
+		<script src="{% static 'js/html5.js" type="text/javascript"} ></script>
 		<![endif]-->
 	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Oxygen:400,700&amp;subset=latin,cyrillic-ext,latin-ext,cyrillic" type="text/css" media="all" />
 	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Cabin:400,500,400italic,500italic,700,700italic&amp;subset=latin,cyrillic-ext,latin-ext,cyrillic" type="text/css" media="all" />
@@ -40,6 +40,7 @@
 
 <body class="single-format-standard theme_blue puzzles_heavy reviews_5 puzzles_animations wide no-js" data-puzzlestyle="heavy">
 
+	<!-- #sidemenu -->
 	<!--[if lt IE 9]>
 	<div class="sc_infobox sc_infobox_style_error"><div class="lt_ie9_align">It looks like you're using an old version of Internet Explorer. For the best WordPress experience, please <a href="http://microsoft.com" class="lt_ie9_color1">update your browser</a> or learn how to <a href="http://browsehappy.com" class="lt_ie9_color2">browse happy</a>!</div></div>	<![endif]-->
 	<div id="page" class="theme_body">
@@ -69,17 +70,20 @@
 								<li class="blue">
 									<a href="{% url 'index' %}">Home</a>
 								</li>
-<!--								<li class="brown">-->
-<!--									<a href="{% url 'review_page' %}">Reviews</a>-->
-<!--								</li>-->
+
 								<li class="blue">
-									<a href="#">Restaurants</a></li>
-<!--								<li class="orange"><a href="excerpt-style3.html">Games</a></li>-->
-<!--								<li class="red"><a href="fullpost-style.html">Music</a></li>-->
-<!--								<li class="green"><a href="excerpt-style4.html">Video</a></li>-->
-<!--								<li class="black"><a href="excerpt-style2.html">Reviews</a></li>-->
+									<a href="{% url 'wongnork:restaurants_page' %}">Restaurants</a></li>
+
 							</ul>
-							<a href="#" class="search_link"><span class="icon-search"></span></a>
+							<form action="{% url 'wongnork:search-bar' %}" method='POST'>
+                            {% csrf_token %}
+                            <input class="form-control form-control-lg form-control-borderless" name="searched"
+                                       placeholder="Search for restaurants">
+                            <button href="{% url 'wongnork:search-bar' %}"
+                                    class="btn btn-lg bg-color2 text-white"
+                                    type="submit"><span class="icon-search"></span>
+                            </button>
+                        </form>
 							</nav>
 
 

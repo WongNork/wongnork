@@ -72,15 +72,8 @@
                             <li class="blue">
                                 <a href="{% url 'index' %}">Home</a>
                             </li>
-<!--                            <li class="brown">-->
-<!--                                <a href="{% url 'review_page' %}">Reviews</a>-->
-<!--                            </li>-->
                             <li class="blue">
-                                <a href="#">Restaurants</a></li>
-                            <!--								<li class="orange"><a href="excerpt-style3.html">Games</a></li>-->
-                            <!--								<li class="red"><a href="fullpost-style.html">Music</a></li>-->
-                            <!--								<li class="green"><a href="excerpt-style4.html">Video</a></li>-->
-                            <!--								<li class="black"><a href="excerpt-style2.html">Reviews</a></li>-->
+                                <a href="{% url 'wongnork:restaurants_page' %}">Restaurants</a></li>
                         </ul>
                         <form action="{% url 'wongnork:search-bar' %}" method='POST'>
                             {% csrf_token %}

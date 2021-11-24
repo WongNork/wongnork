@@ -49,10 +49,6 @@
 			<div id="header_top">
 				<div class="top_line theme_accent_bg"></div>
 				<div id="header_top_inner">
-					<div id="login_area">
-						<a href="#" class="link_login icon-login-1 theme_accent_bg" title="Login"></a>
-						<a href="#" class="link_register icon-key theme_accent_bg" title="Register"></a>
-					</div>
 					<div id="breadcrumbs_area"></div>
 					<div class="logo logo_text"><a href="{% url 'index' %}"><span class="logo_title theme_header">Won<span class="theme_accent">g</span>Nork</span><span class="logo_slogan theme_info">Food review blog</span></a></div>
 				</div>
@@ -75,10 +71,10 @@
 									<a href="{% url 'wongnork:restaurants_page' %}">Restaurants</a>
 								</li>
 								<li class="green">
-                                	<a href="#">Login</a>
+                                	<a href="/wongnork/user-profile">Login</a>
                             	</li>
                             	<li class="red">
-                                	<a href="#">Logout</a>
+                                	<a href="{% url 'wongnork:logout' %}">Logout</a>
                             	</li>
 
 							</ul>

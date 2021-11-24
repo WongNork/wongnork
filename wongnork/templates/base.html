@@ -46,13 +46,7 @@
             <div class="top_line theme_accent_bg"></div>
             <div id="header_top_inner">
                 <div id="login_area">
-				    {% if user.is_authenticated %}
-                    	<p>Hello, {{ user.username }}</p>
-					{% else %}
-						<p>Hello, Annonymous User</p>
-                    {% endif %}
-                    <a href="/wongnork/user-profile" class="link_login icon-login-1 theme_accent_bg" title="Login"></a>
-                    	<a href="/wongnork/register" class="link_register icon-key theme_accent_bg" title="Register"></a>
+
                 </div>
                 <div id="breadcrumbs_area"></div>
                 <div class="logo logo_text"><a href="{% url 'index' %}"><span class="logo_title theme_header"><span class="theme_accent">WongNork</span></span><span class="logo_slogan theme_info">Food review blog</span></a></div>
@@ -75,11 +69,12 @@
                                 <a href="{% url 'wongnork:restaurants_page' %}">Restaurants</a>
                             </li>
                             <li class="green">
-                                <a href="#">Login</a>
+                                <a href="/wongnork/user-profile">Login</a>
                             </li>
                             <li class="red">
-                                <a href="#">Logout</a>
+                                <a href="{% url 'wongnork:logout' %}">Logout</a>
                             </li>
+
                         </ul>
                         <form action="{% url 'wongnork:search-bar' %}" method='POST'>
                             {% csrf_token %}
@@ -90,6 +85,12 @@
                                     type="submit"><span class="icon-search"></span>
                             </button>
                         </form>
+                            {% if user.is_authenticated %}
+                    	        <p> Hello, {{ user.username }}</p>
+                            {% else %}
+						        <p></p>
+                            {% endif %}
+
 
                     <!-- #main menu -->
                 </div>

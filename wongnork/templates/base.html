@@ -74,8 +74,13 @@
                             <li class="red">
                                 <a href="{% url 'wongnork:logout' %}">Logout</a>
                             </li>
-
+                            {% if user.is_authenticated %}
+                    	        <p> Hello, {{ user.username }}</p>
+                            {% else %}
+						        <p></p>
+                            {% endif %}
                         </ul>
+
                         <form action="{% url 'wongnork:search-bar' %}" method='POST'>
                             {% csrf_token %}
                             <input class="form-control form-control-lg form-control-borderless" name="searched"
@@ -85,11 +90,8 @@
                                     type="submit"><span class="icon-search"></span>
                             </button>
                         </form>
-                            {% if user.is_authenticated %}
-                    	        <p> Hello, {{ user.username }}</p>
-                            {% else %}
-						        <p></p>
-                            {% endif %}
+
+
 
 
                     <!-- #main menu -->

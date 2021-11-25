@@ -123,7 +123,6 @@
 										<input type="hidden" name="marks_list" class="marks_list" value="4,5,4" />
 										<div class="reviews_data">
 											<div class="reviews_summary blog_reviews">
-<!--											<div class="criteria_summary_text criteria_row theme_field"><p>An interstellar teleportation device, found in Egypt, leads to a planet with humans resembling ancient Egyptians who worship the god Ra</p></div>-->
 											<div class="criteria_summary criteria_row theme_field">
 												<span class="criteria_label theme_strong">Summary</span>
 												<span itemscope itemprop="reviewRating" itemtype="http://schema.org/Rating"><meta itemprop="worstRating" content="0"><meta itemprop="bestRating" content="5"><meta itemprop="ratingValue" content="4.3"><span class="criteria_stars" title="4.3 from 5">
@@ -202,15 +201,7 @@
                                             <!--Likes-->
                                             <div id="rl{{ review.id }}" class="row">
                                                 <div class="col-1">
-                                                    {% if review.id in user_liked_reviews %}
-                                                        <span class="badge badge-primary">Liked! </span>
-                                                    {% else %}
-                                                    <form action="#" method="post" onsubmit="addLike(this); return false;">
-                                                        {% csrf_token %}
-                                                        <input type="submit" value="Like" class="btn btn-outline-primary btn-sm" style="height:20px;line-height: 0px;"></input>
-                                                        <input type="hidden" name="review_id" value="{{ review.id }}" />
-                                                    </form>
-                                                    {% endif %}
+<!--
                                                 </div>
                                                 <div class="col-1">
                                                     <span class="badge badge-danger">
@@ -221,15 +212,15 @@
                                             </div>
                                             <hr>
 
-                                            <!-- COMMENTS -->
+                                            <-- COMMENTS -->
                                             <div>
 
                                                 <!-- ADD COMMENT -->
                                                 <div class="row row-comment-reply">
                                                     <span class="user-icon-small col"><i class="fas fa-user-circle"></i></span>
-                                                    <form action="#" method="post" class="col-11 comment_form" onsubmit="addComment(this); return false;">
+                                                    <form action="{% url 'wongnork:comment' review.id %}" method="post" class="col-11 comment_form">
                                                         {% csrf_token %}
-                                                        <input type="text" class="form-control new-comment-reply" name="comment_description" placeholder="Write your comment for this review...">
+                                                        <input type="text" class="form-control new-comment-reply" name="comment_description" placeholder="Write your comment for this review... ">
                                                         <input type="hidden" name="review_id" value="{{ review.id }}" />
                                                     </form>
                                                 </div>
@@ -242,16 +233,22 @@
                                                                 <span class="user-icon-small col"><i class="fas fa-user-circle"></i></span>
                                                                 <div class="col-11">
                                                                     <div class="comment-reply-content">
-                                                                        <span class="comment-reply-username">{{comment.comment_user}}</span>
-                                                                        <span class="comment-reply-description">{{comment.comment_description}}</span>
+																		<br>
+																		<b><span class="comment-reply-username">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;{{comment.comment_user}} has reply :</span></b><br>
+																		<br>
+                                                                        <span class="comment-reply-description">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;{{comment.comment_description}}</span>
                                                                     </div>
                                                                 </div>
                                                             </div>
 
-                                                            <!-- OPTIONS -->
+                                                            <!-- ADD Reply -->
                                                             <div id="cc{{ comment.id }}" class="replies-with-comment-options">
                                                                 <div class="comment-options">
-                                                                    <a href="#" onclick="createAddReply({{ comment.id }}, this); return false;">Reply</a>
+                                                                    <form action="{% url 'wongnork:reply' comment.id %}" method="post" class="col-11 comment_form"><br>
+                                                                        {% csrf_token %}
+                                                                        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<input type="text" class="form-control new-comment-reply" name="reply_description" placeholder="Write your reply for this comment... ">
+                                                                        <input type="hidden" name="comment_id" value="{{ comment.id }}" />
+                                                                    </form>
                                                                 </div>
                                                             </div>
 
@@ -262,8 +259,11 @@
                                                                         <span class="user-icon-small col"><i class="fas fa-user-circle"></i></span>
                                                                         <div class="col-11">
                                                                             <div class="comment-reply-content">
-                                                                                <span class="comment-reply-username">{{reply.reply_user}}</span>
-                                                                                <span class="comment-reply-description">{{reply.reply_description}}</span>
+																				<br>
+                                                                                <b><span class="comment-reply-username">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;{{reply.reply_user}} has reply :</span></b><br>
+																				<br>
+                                                                                <span class="comment-reply-description">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;{{reply.reply_description}}</span>
+																				<br>
                                                                             </div>
                                                                         </div>
                                                                     </div>

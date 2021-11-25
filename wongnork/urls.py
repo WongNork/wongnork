@@ -15,5 +15,7 @@ urlpatterns = [
     path("user-profile/", views.user_profile, name="user-profile"),
     path("logout/", views.logout_request, name="logout"),
     path('search-bar', views.search_bar, name="search-bar"),
+    path('review/<int:review_id>/commented/', views.comment_add, name='comment'),
+    path('review/<int:comment_id>/replied/', views.reply, name='reply'),
     path("edit-profile/", views.edit_profile, name="edit-profile"),
 ]

@@ -3991,3 +3991,7 @@ input[type="submit"]:hover {
 .signup_link a:hover {
     text-decoration: underline;
 }
+
+.tab4 {
+        tab-size: 8;
+    }

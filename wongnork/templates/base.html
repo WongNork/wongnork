@@ -19,7 +19,6 @@
     <link rel="stylesheet" href="{% static 'css/shortcodes.css' %}" type="text/css" media="all" />
     <link rel="stylesheet" href="{% static 'css/color.css' %}" type="text/css" media="all" />
     <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css" media="all" id="main_style" />
-
     <link rel="stylesheet" href="{% static 'css/themes/regular.css' %}" type="text/css" media="all" id="regular" />
     <link rel="stylesheet" href="{% static 'css/themes/redlight.css' %}" type="text/css" media="all" id="redlight" />
     <link rel="stylesheet" href="{% static 'css/themes/red.css' %}" type="text/css" media="all" id="red" />
@@ -47,13 +46,7 @@
             <div class="top_line theme_accent_bg"></div>
             <div id="header_top_inner">
                 <div id="login_area">
-				    {% if user.is_authenticated %}
-                    	<p>Hello, {{ user.username }}</p>
-					{% else %}
-						<p>Hello, Annonymous User</p>
-                    {% endif %}
-                    <a href="/wongnork/user-profile" class="link_login icon-login-1 theme_accent_bg" title="Login"></a>
-                    	<a href="/wongnork/register" class="link_register icon-key theme_accent_bg" title="Register"></a>
+
                 </div>
                 <div id="breadcrumbs_area"></div>
                 <div class="logo logo_text"><a href="{% url 'index' %}"><span class="logo_title theme_header"><span class="theme_accent">WongNork</span></span><span class="logo_slogan theme_info">Food review blog</span></a></div>
@@ -72,16 +65,22 @@
                             <li class="blue">
                                 <a href="{% url 'index' %}">Home</a>
                             </li>
-<!--                            <li class="brown">-->
-<!--                                <a href="{% url 'review_page' %}">Reviews</a>-->
-<!--                            </li>-->
-                            <li class="blue">
-                                <a href="#">Restaurants</a></li>
-                            <!--								<li class="orange"><a href="excerpt-style3.html">Games</a></li>-->
-                            <!--								<li class="red"><a href="fullpost-style.html">Music</a></li>-->
-                            <!--								<li class="green"><a href="excerpt-style4.html">Video</a></li>-->
-                            <!--								<li class="black"><a href="excerpt-style2.html">Reviews</a></li>-->
+                            <li class="orange">
+                                <a href="{% url 'wongnork:restaurants_page' %}">Restaurants</a>
+                            </li>
+                            <li class="green">
+                                <a href="/wongnork/user-profile">Login</a>
+                            </li>
+                            <li class="red">
+                                <a href="{% url 'wongnork:logout' %}">Logout</a>
+                            </li>
+                            {% if user.is_authenticated %}
+                    	        <p> Hello, {{ user.username }}</p>
+                            {% else %}
+						        <p></p>
+                            {% endif %}
                         </ul>
+
                         <form action="{% url 'wongnork:search-bar' %}" method='POST'>
                             {% csrf_token %}
                             <input class="form-control form-control-lg form-control-borderless" name="searched"
@@ -91,6 +90,9 @@
                                     type="submit"><span class="icon-search"></span>
                             </button>
                         </form>
+
+
+
 
                     <!-- #main menu -->
                 </div>
@@ -114,7 +116,7 @@
                                     <!-- puzzle item -->
                                     <div class="sc_blogger_item sc_blogger_item_puzzles first">
                                         <div class="post_thumb image_wrapper left-1">
-                                            <a href="#"><img alt="" src={{restaurants.0.photo}}></a>
+                                            <a href="{% url 'wongnork:review' restaurants.0.id %}"><img alt="" src={{restaurants.0.photo}}></a>
                                             <span class="post_format theme_accent_bg icon-doc-text" data-categoryiconbg="00a0db"></span>
                                             <div class="post_content_wrapper theme_puzzles" data-puzzlecolor="0080af">
                                                 <h2 class="post_subtitle"><a href="{% url 'wongnork:review' restaurants.0.id %}">{{restaurants.0.restaurant_name}}</a></h2>
@@ -140,7 +142,7 @@
                                     <!-- puzzle item -->
                                     <div class="sc_blogger_item sc_blogger_item_puzzles">
                                         <div class="post_thumb image_wrapper down-1">
-                                            <a href="#"><img alt="" src={{restaurants.1.photo}}></a>
+                                            <a href="{% url 'wongnork:review' restaurants.1.id %}"><img alt="" src={{restaurants.1.photo}}></a>
                                             <span class="post_format theme_accent_bg icon-camera" data-categoryiconbg="00a0db"></span>
                                             <div class="post_content_wrapper theme_puzzles" data-puzzlecolor="111111">
                                                 <h2 class="post_subtitle"><a href="{% url 'wongnork:review' restaurants.1.id %}">{{restaurants.1.restaurant_name}}</a></h2>
@@ -166,7 +168,7 @@
                                     <!-- puzzle item -->
                                     <div class="sc_blogger_item sc_blogger_item_puzzles">
                                         <div class="post_thumb image_wrapper down-1">
-                                            <a href="#"><img alt="" src={{restaurants.2.photo}}></a>
+                                            <a href="{% url 'wongnork:review' restaurants.2.id %}"><img alt="" src={{restaurants.2.photo}}></a>
                                             <span class="post_format theme_accent_bg icon-camera" data-categoryiconbg="00a0db"></span>
                                             <div class="post_content_wrapper theme_puzzles" data-puzzlecolor="111111">
                                                 <h2 class="post_subtitle"><a href="{% url 'wongnork:review' restaurants.2.id %}">{{restaurants.2.restaurant_name}}</a></h2>
@@ -192,7 +194,7 @@
                                     <!-- puzzle item -->
                                     <div class="sc_blogger_item sc_blogger_item_puzzles last">
                                         <div class="post_thumb image_wrapper down-1">
-                                            <a href="#"><img alt="" src={{restaurants.3.photo}}></a>
+                                            <a href="{% url 'wongnork:review' restaurants.3.id %}"><img alt="" src={{restaurants.3.photo}}></a>
                                             <span class="post_format theme_accent_bg icon-doc-text" data-categoryiconbg="e99f00"></span>
                                             <div class="post_content_wrapper theme_puzzles" data-puzzlecolor="222222">
                                                 <h2 class="post_subtitle"><a href="{% url 'wongnork:review' restaurants.3.id %}">{{restaurants.3.restaurant_name}}</a></h2>
@@ -218,7 +220,7 @@
                                     <!-- puzzle item -->
                                     <div class="sc_blogger_item sc_blogger_item_puzzles first">
                                         <div class="post_thumb image_wrapper left-2">
-                                            <a href="#"><img alt="" src={{restaurants.4.photo}}></a>
+                                            <a href="{% url 'wongnork:review' restaurants.4.id %}"><img alt="" src={{restaurants.4.photo}}></a>
                                             <span class="post_format theme_accent_bg icon-doc-text" data-categoryiconbg="e99f00"></span>
                                             <div class="post_content_wrapper theme_puzzles" data-puzzlecolor="c95a00">
                                                 <h2 class="post_subtitle"><a href="{% url 'wongnork:review' restaurants.4.id %}">{{restaurants.4.restaurant_name}}</a></h2>
@@ -244,7 +246,7 @@
                                     <!-- puzzle item -->
                                     <div class="sc_blogger_item sc_blogger_item_puzzles">
                                         <div class="post_thumb image_wrapper down-2">
-                                            <a href="#"><img alt="" src={{restaurants.5.photo}}></a>
+                                            <a href="{% url 'wongnork:review' restaurants.5.id %}"><img alt="" src={{restaurants.5.photo}}></a>
                                             <span class="post_format theme_accent_bg icon-doc-text" data-categoryiconbg="e99f00"></span>
                                             <div class="post_content_wrapper theme_puzzles" data-puzzlecolor="111111">
                                                 <h2 class="post_subtitle"><a href="{% url 'wongnork:review' restaurants.5.id %}">{{restaurants.5.restaurant_name}}</a></h2>
@@ -260,7 +262,7 @@
                                     <!-- puzzle item -->
                                     <div class="sc_blogger_item sc_blogger_item_puzzles">
                                         <div class="post_thumb image_wrapper down-2">
-                                            <a href="#"><img alt="" src={{restaurants.6.photo}}></a>
+                                            <a href="{% url 'wongnork:review' restaurants.6.id %}"><img alt="" src={{restaurants.6.photo}}></a>
                                             <span class="post_format theme_accent_bg icon-doc-text" data-categoryiconbg="e99f00"></span>
                                             <div class="post_content_wrapper theme_puzzles" data-puzzlecolor="111111">
                                                 <h2 class="post_subtitle"><a href="{% url 'wongnork:review' restaurants.6.id %}">{{restaurants.6.restaurant_name}}</a></h2>
@@ -276,7 +278,7 @@
                                     <!-- puzzle item -->
                                     <div class="sc_blogger_item sc_blogger_item_puzzles">
                                         <div class="post_thumb image_wrapper down-2">
-                                            <a href="#"><img alt="" src={{restaurants.7.photo}}></a>
+                                            <a href="{% url 'wongnork:review' restaurants.7.id %}"><img alt="" src={{restaurants.7.photo}}></a>
                                             <span class="post_format theme_accent_bg icon-doc-text" data-categoryiconbg="e99f00"></span>
                                             <div class="post_content_wrapper theme_puzzles" data-puzzlecolor="111111">
                                                 <h2 class="post_subtitle"><a href="{% url 'wongnork:review' restaurants.7.id %}">{{restaurants.7.restaurant_name}}</a></h2>
@@ -292,7 +294,7 @@
                                     <!-- puzzle item -->
                                     <div class="sc_blogger_item sc_blogger_item_puzzles first">
                                         <div class="post_thumb image_wrapper right-1">
-                                            <a href="#"><img alt="" src={{restaurants.8.photo}}></a>
+                                            <a href="{% url 'wongnork:review' restaurants.8.id %}"><img alt="" src={{restaurants.8.photo}}></a>
                                             <span class="post_format theme_accent_bg icon-doc-text" data-categoryiconbg="96d400"></span>
                                             <div class="post_content_wrapper theme_puzzles" data-puzzlecolor="222222">
                                                 <h2 class="post_subtitle"><a href="{% url 'wongnork:review' restaurants.8.id %}">{{restaurants.8.restaurant_name}}</a></h2>
@@ -308,7 +310,7 @@
                                     <!-- puzzle item -->
                                     <div class="sc_blogger_item sc_blogger_item_puzzles">
                                         <div class="post_thumb image_wrapper left-1">
-                                            <a href="#"><img alt="" src={{restaurants.9.photo}}></a>
+                                            <a href="{% url 'wongnork:review' restaurants.9.id %}"><img alt="" src={{restaurants.9.photo}}></a>
                                             <span class="post_format theme_accent_bg icon-doc-text" data-categoryiconbg="96d400"></span>
                                             <div class="post_content_wrapper theme_puzzles" data-puzzlecolor="00a569">
                                                 <h2 class="post_subtitle"><a href="{% url 'wongnork:review' restaurants.9.id %}">{{restaurants.9.restaurant_name}}</a></h2>
@@ -324,7 +326,7 @@
                                     <!-- puzzle item -->
                                     <div class="sc_blogger_item sc_blogger_item_puzzles">
                                         <div class="post_thumb image_wrapper down-3">
-                                            <a href="#"><img alt="" src={{restaurants.10.photo}}></a>
+                                            <a href="{% url 'wongnork:review' restaurants.10.id %}"><img alt="" src={{restaurants.10.photo}}></a>
                                             <span class="post_format theme_accent_bg icon-note" data-categoryiconbg="f03232"></span>
                                             <div class="post_content_wrapper theme_puzzles" data-puzzlecolor="a01c43">
                                                 <h2 class="post_subtitle"><a href="{% url 'wongnork:review' restaurants.10.id %}">{{restaurants.10.restaurant_name}}</a></h2>
@@ -351,7 +353,7 @@
                                     <!-- puzzle item -->
                                     <div class="sc_blogger_item sc_blogger_item_puzzles last">
                                         <div class="post_format_audio post_thumb image_wrapper left-2">
-                                            <a href="#"><img alt="" src={{restaurants.11.photo}}></a>
+                                            <a href="{% url 'wongnork:review' restaurants.11.id %}"><img alt="" src={{restaurants.11.photo}}></a>
                                             <span class="post_format theme_accent_bg icon-note" data-categoryiconbg="f03232"></span>
                                             <div class="post_content_wrapper theme_puzzles" data-puzzlecolor="941952">
                                                 <h2 class="post_subtitle"><a href="{% url 'wongnork:review' restaurants.11.id %}">{{restaurants.11.restaurant_name}}</a></h2>

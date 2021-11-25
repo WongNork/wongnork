@@ -9,7 +9,7 @@
 	<link rel="pingback" href="http://puzzles.themerex.net/xmlrpc.php" />
     <link rel="icon" type="image/x-icon" href="{% static 'images/favicon1.ico' %}" />
     	<!--[if lt IE 9]>
-		<script src="{% static 'js/html5.js" type="text/javascript"></script>
+		<script src="{% static 'js/html5.js" type="text/javascript"} ></script>
 		<![endif]-->
 	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Oxygen:400,700&amp;subset=latin,cyrillic-ext,latin-ext,cyrillic" type="text/css" media="all" />
 	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Cabin:400,500,400italic,500italic,700,700italic&amp;subset=latin,cyrillic-ext,latin-ext,cyrillic" type="text/css" media="all" />
@@ -40,6 +40,7 @@
 
 <body class="single-format-standard theme_blue puzzles_heavy reviews_5 puzzles_animations wide no-js" data-puzzlestyle="heavy">
 
+	<!-- #sidemenu -->
 	<!--[if lt IE 9]>
 	<div class="sc_infobox sc_infobox_style_error"><div class="lt_ie9_align">It looks like you're using an old version of Internet Explorer. For the best WordPress experience, please <a href="http://microsoft.com" class="lt_ie9_color1">update your browser</a> or learn how to <a href="http://browsehappy.com" class="lt_ie9_color2">browse happy</a>!</div></div>	<![endif]-->
 	<div id="page" class="theme_body">
@@ -48,10 +49,7 @@
 			<div id="header_top">
 				<div class="top_line theme_accent_bg"></div>
 				<div id="header_top_inner">
-					<div id="login_area">
-						<a href="#" class="link_login icon-login-1 theme_accent_bg" title="Login"></a>
-						<a href="#" class="link_register icon-key theme_accent_bg" title="Register"></a>
-					</div>
+
 					<div id="breadcrumbs_area"></div>
 					<div class="logo logo_text"><a href="{% url 'index' %}"><span class="logo_title theme_header">Won<span class="theme_accent">g</span>Nork</span><span class="logo_slogan theme_info">Food review blog</span></a></div>
 				</div>
@@ -69,17 +67,27 @@
 								<li class="blue">
 									<a href="{% url 'index' %}">Home</a>
 								</li>
-<!--								<li class="brown">-->
-<!--									<a href="{% url 'review_page' %}">Reviews</a>-->
-<!--								</li>-->
+
 								<li class="blue">
-									<a href="#">Restaurants</a></li>
-<!--								<li class="orange"><a href="excerpt-style3.html">Games</a></li>-->
-<!--								<li class="red"><a href="fullpost-style.html">Music</a></li>-->
-<!--								<li class="green"><a href="excerpt-style4.html">Video</a></li>-->
-<!--								<li class="black"><a href="excerpt-style2.html">Reviews</a></li>-->
+									<a href="{% url 'wongnork:restaurants_page' %}">Restaurants</a>
+								</li>
+								<li class="green">
+                                	<a href="/wongnork/user-profile">Login</a>
+                            	</li>
+                            	<li class="red">
+                                	<a href="{% url 'wongnork:logout' %}">Logout</a>
+                            	</li>
+
 							</ul>
-							<a href="#" class="search_link"><span class="icon-search"></span></a>
+							<form action="{% url 'wongnork:search-bar' %}" method='POST'>
+                            {% csrf_token %}
+                            <input class="form-control form-control-lg form-control-borderless" name="searched"
+                                       placeholder="Search for restaurants">
+                            <button href="{% url 'wongnork:search-bar' %}"
+                                    class="btn btn-lg bg-color2 text-white"
+                                    type="submit"><span class="icon-search"></span>
+                            </button>
+                        </form>
 							</nav>
 
 
@@ -100,10 +108,7 @@
 
 								<!-- Post info -->
 								<div class="post_info post_info_top theme_info">
-									Posted <span class="post_date theme_text date updated" itemprop="datePublished" content="2014-05-10">May 10, 2014</span>
-									<span class="post_author">by <span class="vcard author" itemprop="author"><a href="excerpt-style1.html" class="post_author fn" rel="author">John Doe</a></span></span>
-									<span class="post_cats">in <a class="cat_link" href="excerpt-style4.html">Actions,</a> <a class="cat_link" href="excerpt-style3.html">Adventure,</a> <a class="cat_link" href="excerpt-style1.html">Movies</a> </span>
-									<span class="post_comments"><a href="single-format-standard.html"><span class="comments_icon theme_info icon-eye"></span><span class="comments_number">1611</span></a></span><meta itemprop="interactionCount" content="UserPageVisits:1611" />
+									<span class="post_date theme_text date updated" itemprop="datePublished" content="2014-05-10">{{restaurant.location}}</span>
 								</div>
 								<!-- /Post info -->
 
@@ -118,7 +123,6 @@
 										<input type="hidden" name="marks_list" class="marks_list" value="4,5,4" />
 										<div class="reviews_data">
 											<div class="reviews_summary blog_reviews">
-<!--											<div class="criteria_summary_text criteria_row theme_field"><p>An interstellar teleportation device, found in Egypt, leads to a planet with humans resembling ancient Egyptians who worship the god Ra</p></div>-->
 											<div class="criteria_summary criteria_row theme_field">
 												<span class="criteria_label theme_strong">Summary</span>
 												<span itemscope itemprop="reviewRating" itemtype="http://schema.org/Rating"><meta itemprop="worstRating" content="0"><meta itemprop="bestRating" content="5"><meta itemprop="ratingValue" content="4.3"><span class="criteria_stars" title="4.3 from 5">
@@ -148,14 +152,7 @@
 							<!-- #Post content -->
 						</article>
 						<div class="post_author_details theme_article">
-							<h3 class="post_author_title theme_subtitle">About author</h3>
 							<div class="post_author_info vcard author" itemprop="author" itemscope itemtype="http://schema.org/Person">
-								<div class="post_author_avatar image_wrapper">
-									<a href="excerpt-style1.html" itemprop="image"><img src="http://0.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=50" class="avatar" alt="Avatar of John Doe" /></a>
-								</div>
-								<h5 class="post_author_name" itemprop="name"><a href="excerpt-style1.html" class="theme_strong fn">John Doe</a></h5>
-								<div class="post_author_description" itemprop="description">I'm an admin of the best web design company "Theme REX". Also I'm author some articles on corporate website. WebDesign is my job, my hobby and my love.</div>
-								<div class="post_author_socials"><a class="social_icons social_facebook" href="http://themeforest.net/user/themerex/portfolio" target="_blank"><img src="images/socials/facebook.png" alt="" /></a><a class="social_icons social_twitter" href="http://themeforest.net/user/themerex/portfolio" target="_blank"><img src="images/socials/twitter.png" alt="" /></a><a class="social_icons social_gplus" href="http://themeforest.net/user/themerex/portfolio" target="_blank"><img src="images/socials/gplus.png" alt="" /></a><a class="social_icons social_pinterest" href="http://themeforest.net/user/themerex/portfolio" target="_blank"><img src="images/socials/pinterest.png" alt="" /></a><a class="social_icons social_youtube" href="http://themeforest.net/user/themerex/portfolio" target="_blank"><img src="images/socials/youtube.png" alt="" /></a><a href="http://themeforest.net/user/themerex/portfolio" class="social_icons social_rss" target="_blank"><img src="images/socials/rss.png" alt="" /></a>
 								</div>
 							</div>
 						</div>
@@ -204,15 +201,7 @@
                                             <!--Likes-->
                                             <div id="rl{{ review.id }}" class="row">
                                                 <div class="col-1">
-                                                    {% if review.id in user_liked_reviews %}
-                                                        <span class="badge badge-primary">Liked! </span>
-                                                    {% else %}
-                                                    <form action="#" method="post" onsubmit="addLike(this); return false;">
-                                                        {% csrf_token %}
-                                                        <input type="submit" value="Like" class="btn btn-outline-primary btn-sm" style="height:20px;line-height: 0px;"></input>
-                                                        <input type="hidden" name="review_id" value="{{ review.id }}" />
-                                                    </form>
-                                                    {% endif %}
+<!--
                                                 </div>
                                                 <div class="col-1">
                                                     <span class="badge badge-danger">
@@ -223,15 +212,15 @@
                                             </div>
                                             <hr>
 
-                                            <!-- COMMENTS -->
+                                            <-- COMMENTS -->
                                             <div>
 
                                                 <!-- ADD COMMENT -->
                                                 <div class="row row-comment-reply">
                                                     <span class="user-icon-small col"><i class="fas fa-user-circle"></i></span>
-                                                    <form action="#" method="post" class="col-11 comment_form" onsubmit="addComment(this); return false;">
+                                                    <form action="{% url 'wongnork:comment' review.id %}" method="post" class="col-11 comment_form">
                                                         {% csrf_token %}
-                                                        <input type="text" class="form-control new-comment-reply" name="comment_description" placeholder="Write your comment for this review...">
+                                                        <input type="text" class="form-control new-comment-reply" name="comment_description" placeholder="Write your comment for this review... ">
                                                         <input type="hidden" name="review_id" value="{{ review.id }}" />
                                                     </form>
                                                 </div>
@@ -244,16 +233,22 @@
                                                                 <span class="user-icon-small col"><i class="fas fa-user-circle"></i></span>
                                                                 <div class="col-11">
                                                                     <div class="comment-reply-content">
-                                                                        <span class="comment-reply-username">{{comment.comment_user}}</span>
-                                                                        <span class="comment-reply-description">{{comment.comment_description}}</span>
+																		<br>
+																		<b><span class="comment-reply-username">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;{{comment.comment_user}} has reply :</span></b><br>
+																		<br>
+                                                                        <span class="comment-reply-description">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;{{comment.comment_description}}</span>
                                                                     </div>
                                                                 </div>
                                                             </div>
 
-                                                            <!-- OPTIONS -->
+                                                            <!-- ADD Reply -->
                                                             <div id="cc{{ comment.id }}" class="replies-with-comment-options">
                                                                 <div class="comment-options">
-                                                                    <a href="#" onclick="createAddReply({{ comment.id }}, this); return false;">Reply</a>
+                                                                    <form action="{% url 'wongnork:reply' comment.id %}" method="post" class="col-11 comment_form"><br>
+                                                                        {% csrf_token %}
+                                                                        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<input type="text" class="form-control new-comment-reply" name="reply_description" placeholder="Write your reply for this comment... ">
+                                                                        <input type="hidden" name="comment_id" value="{{ comment.id }}" />
+                                                                    </form>
                                                                 </div>
                                                             </div>
 
@@ -264,8 +259,11 @@
                                                                         <span class="user-icon-small col"><i class="fas fa-user-circle"></i></span>
                                                                         <div class="col-11">
                                                                             <div class="comment-reply-content">
-                                                                                <span class="comment-reply-username">{{reply.reply_user}}</span>
-                                                                                <span class="comment-reply-description">{{reply.reply_description}}</span>
+																				<br>
+                                                                                <b><span class="comment-reply-username">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;{{reply.reply_user}} has reply :</span></b><br>
+																				<br>
+                                                                                <span class="comment-reply-description">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;{{reply.reply_description}}</span>
+																				<br>
                                                                             </div>
                                                                         </div>
                                                                     </div>

@@ -10,7 +10,7 @@ import datetime
 from .api import get_restaurant_data
 
 # Create your views here.
-from .models import Restaurant, Review
+from .models import *
 
 
 def search_bar(request):
@@ -131,4 +131,25 @@ def edit_profile(request):
         args = {}
         args['edit_form'] = form
         return render(request, 'edit_profile.html', args)
+
+@login_required
+def comment_add(request, review_id):
+    review = get_object_or_404(Review, pk=review_id)
+    if review:
+        review.comment_set.create(comment_user=request.user, comment_description=request.POST.get('comment_description'))
+    else:
+        print("Invalid fields for comment. Required: review id, username and comment description.")
+
+    return render(request, 'review_page.html', {'restaurant': review.restaurant, 'user': request.user})
+
+
+@login_required
+def reply(request, comment_id):
+    comment = get_object_or_404(Comment, pk=comment_id)
+    if comment:
+        comment.reply_set.create(reply_user=request.user, reply_description=request.POST.get('reply_description'))
+    else:
+        print("Invalid fields for reply. Required: comment id, username and reply description.")
+
+    return render(request, 'review_page.html', {'restaurant': comment.review.restaurant, 'user': request.user})
 

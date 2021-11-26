@@ -25,8 +25,8 @@ def createProfile(sender, **kwargs):
 
 
 class Restaurant(models.Model):
-    restaurant_name = models.CharField(max_length=30)
-    location = models.CharField(max_length=30)
+    restaurant_name = models.CharField(max_length=100)
+    location = models.CharField(max_length=100)
     photo = models.ImageField(upload_to='images/')
     detail = models.CharField(max_length=1000000)
 

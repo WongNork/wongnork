@@ -9,3 +9,4 @@ requests==2.24.0
 virtualenv==20.1.0
 social-auth-app-django==4.0.0
 social-auth-core==3.3.3
+gunicorn

@@ -1,83 +1,104 @@
 {% block content %} {% load static %}
 
-<div id="wrapper">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Ripd | Puzzles</title>
+    <link rel="profile" href="http://gmpg.org/xfn/11" />
+    <link rel="pingback" href="http://puzzles.themerex.net/xmlrpc.php" />
+    <link rel="icon" type="image/x-icon" href="{% static 'images/favicon1.ico' %}" />
+    <!--[if lt IE 9]>
+		<script src="{% static 'js/html5.js" type="text/javascript"} ></script>
+		<![endif]-->
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Oxygen:400,700&amp;subset=latin,cyrillic-ext,latin-ext,cyrillic" type="text/css" media="all" />
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Cabin:400,500,400italic,500italic,700,700italic&amp;subset=latin,cyrillic-ext,latin-ext,cyrillic" type="text/css" media="all" />
+    <link rel="stylesheet" href="{% static 'icon/fontello/css/fontello.css' %}" type="text/css" media="all" />
+    <link rel="stylesheet" href="{% static 'icon/fontello/css/animation.css' %}" type="text/css" media="all" />
+    <link rel="stylesheet" href="{% static 'css/shortcodes.css' %}" type="text/css" media="all" />
+    <link rel="stylesheet" href="{% static 'css/color.css' %}" type="text/css" media="all" />
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css" media="all" id="main_style" />
 
-    <!-- Back span-->
-    <a href="{% url 'wongnork:review' restaurant.pk %}" class="back-span">
-        <i class="fa fa-arrow-circle-left"></i>
-    </a>
+    <link rel="stylesheet" href="{% static 'css/themes/regular.css' %}" type="text/css" media="all" id="regular" />
+    <link rel="stylesheet" href="{% static 'css/themes/redlight.css' %}" type="text/css" media="all" id="redlight" />
+    <link rel="stylesheet" href="{% static 'css/themes/red.css' %}" type="text/css" media="all" id="red" />
+    <link rel="stylesheet" href="{% static 'css/themes/dark.css' %}" type="text/css" media="all" id="dark" />
+    <link rel="stylesheet" href="{% static 'css/themes/blue.css' %}" type="text/css" media="all" id="blue" />
+    <link rel="stylesheet" href="{% static 'css/themes/green.css' %}" type="text/css" media="all" id="green" />
+    <link rel="stylesheet" href="{% static 'css/themes/yellowdark.css' %}" type="text/css" media="all" id="yellowdark" />
+    <link rel="stylesheet" href="{% static 'css/themes/yellowlight.css' %}" type="text/css" media="all" id="yellowlight" />
+    <link rel="stylesheet" href="{% static 'css/themes/orange.css' %}" type="text/css" media="all" id="orange" />
+    <link rel="stylesheet" href="{% static 'css/responsive.css' %}" type="text/css" media="all" />
 
-    <!--Contents-->
-    <div>
-        <h1>{{restaurant.restaurant_name}}</h1>
-        <br>
+    <!--[if lt IE 10]>
+		<link rel="stylesheet" href="{% static 'css/ie.css' %}" type="text/css" media="all" />
+		<![endif]-->
+    <link rel="stylesheet" href="{% static 'js/prettyphoto/css/prettyPhoto.css' %}" type="text/css" media="all" />
+    <link rel="stylesheet" href="{% static 'js/mediaplayer/mediaelementplayer.css' %}" type="text/css" media="all" />
+
+</head>
+
+<body class="single-format-standard theme_blue puzzles_heavy reviews_5 puzzles_animations wide no-js" data-puzzlestyle="heavy">
+    <div id="page" class="theme_body">
+        <header role="banner">
+            <div id="header_top">
+                <div id="header_top_inner">
+                    <!-- Back span-->
+                    <a href="{% url 'wongnork:review' restaurant.pk %}" class="back-span">
+                        <i class="fa fa-arrow-circle-left fa-2x">BACK</i>
+                    </a>
+
+                    <!--Contents-->
+                    <div>
+                        <h1>{{restaurant.restaurant_name}}</h1>
+                        <br>
+                    </div>
+                    <br>
+
+                    <h3>Your first hand experiences would really help other foodies. Thank you!</h3>
+                    <hr>
+
+                    <form action="{% url 'wongnork:reviewed' restaurant.pk %}" method="post">
+                        {% csrf_token %}
+                        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+                        <br>
+                        <div>
+                            <h4>Your overall rating of the restaurant</h4>
+                            <label class="rate">
+                                <input type="radio" name="rate" value="1" checked>1
+                                <span type="submit" class=" fa fa-star checked" id="first">&ensp;&ensp;</span>
+                                <input type="radio" name="rate" value="2">2
+                                <span type="submit" class=" fa fa-star checked" id="second">&ensp;&ensp;</span> 
+                                <input type="radio" name="rate" value="3">3
+                                <span type="submit" class=" fa fa-star checked" id="third">&ensp;&ensp;</span>  
+                                <input type="radio" name="rate" value="4">4
+                                <span type="submit" class=" fa fa-star checked" id="fourth">&ensp;&ensp;</span>  
+                                <input type="radio" name="rate" value="5">5
+                                <span type="submit" class=" fa fa-star checked" id="fifth">&ensp;&ensp;</span>  
+                            </label>
+                        </div>
+                        <br>
+                        <div class="fieldWrapper">
+                            <h4>Title of your review</h4>
+                            <p class="comment-form-comment">
+                                <label for="comment"></label><textarea id="comment" cols="45" rows="8" aria-required="true" name="review_title"></textarea>
+                            </p>
+                        </div>
+                        <br>
+                        <div class="fieldWrapper">
+                            <h4>Your review</h4>
+                            <p class="comment-form-comment">
+                                <label for="comment"></label><textarea id="comment" cols="45" rows="8" aria-required="true" name="review_des"></textarea>
+                            </p>
+                        </div>
+                        <br>
+
+                        <input type="submit" value="Submit your review" class="btn btn-success" style="font-weight: 500; margin-bottom: 50px">
+                        <br>
+
+                    </form>
+                </div>
+            </div>
+        </header>
     </div>
-    <br>
-
-
-
-    <h5>Your first hand experiences would really help other foodies. Thank you!</h5>
-    <hr>
-
-    <form action="{% url 'wongnork:reviewed' restaurant.pk %}" method="post">
-        {% csrf_token %}
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-        <div>
-            <h6>Your overall rating of the restaurant</h6>
-            <label class="rate">
-                 <input type="radio" name="rate" value="1" checked>1
-                <span type="submit" class=" fa fa-star checked" id="first"></span>
-                 <input type="radio" name="rate" value="2">2
-                <span type="submit" class=" fa fa-star checked" id="second"></span>
-                 <input type="radio" name="rate" value="3">3
-                <span type="submit" class=" fa fa-star checked" id="third"></span>
-                 <input type="radio" name="rate" value="4">4
-                <span type="submit" class=" fa fa-star checked" id="fourth"></span>
-                 <input type="radio" name="rate" value="5">5
-                <span type="submit" class=" fa fa-star checked" id="fifth"></span>
-            </label>
-        </div>
-        <br>
-
-        <div>
-            <h6>How expensive is this restaurant?</h6>
-            <label>
-                    <input type="radio" name="price" value="1" checked>Low
-                    <div class="price">
-                    </div>
-                </label>
-            <label>
-                    <input type="radio" name="price" value="2">Medium
-                    <div class="price">
-                    </div>
-                </label>
-            <label>
-                    <input type="radio" name="price" value="3">High
-                    <div class="price">
-
-                    </div>
-                </label>
-            <br><br>
-        </div>
-
-        <div class="fieldWrapper">
-            <h6>Title of your review</h6>
-            <p class="comment-form-comment">
-                <label for="comment"></label><textarea id="comment" cols="45" rows="8" aria-required="true" name="review_title"></textarea>
-            </p>
-        </div><br>
-        <div class="fieldWrapper">
-            <h6>Your review</h6>
-            <p class="comment-form-comment">
-                <label for="comment"></label><textarea id="comment" cols="45" rows="8" aria-required="true" name="review_des"></textarea>
-            </p>
-        </div><br>
-
-        <input type="submit" value="Submit your review" class="btn btn-success" style="font-weight: 500; margin-bottom: 50px">
-        <br>
-
-    </form>
-</div>
-</div>
+</body>
 {% endblock %}

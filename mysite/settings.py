@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 import os
 from pathlib import Path
+import django_heroku
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -147,3 +148,6 @@ STATIC_URL = '/static/'
 
 SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = '347786101381-fskgfc0972gv28r6frs8r27bovj2dvl0.apps.googleusercontent.com'
 SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = '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'
+
+# Heroku Setting
+django_heroku.settings(locals())

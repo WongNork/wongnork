@@ -1,1 +1,1 @@
-web: gunicorn wongnork.wsgi
+web: gunicorn wongnork.wsgi:application --log-file - --log-level debug

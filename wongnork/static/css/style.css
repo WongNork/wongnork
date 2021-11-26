@@ -3633,15 +3633,6 @@ article ul li:before,
     vertical-align: middle;
 }
 
-.iColorPicker_moreColors {
-    display: inline-block;
-    width: 14px;
-    height: 14px;
-    margin-left: 2px;
-    background: url(../images/colorpicker_morecolors.png);
-    vertical-align: middle;
-}
-
 .boxed.bg_pattern_1 {
     background: url(../images/bg/pattern_1.png) 0 0 repeat fixed;
 }

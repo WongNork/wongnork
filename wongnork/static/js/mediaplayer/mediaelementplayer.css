@@ -123,12 +123,12 @@
 	background: linear-gradient(rgba(50,50,50,0.9), rgba(0,0,0,0.9));
 }
 
-.mejs-overlay-loading span {
+/* .mejs-overlay-loading span {
 	display: block;
 	width: 80px;
 	height: 80px;
 	background: transparent url(loading.gif) 50% 50% no-repeat;
-}
+} */
 
 /* End: LAYERS */
 

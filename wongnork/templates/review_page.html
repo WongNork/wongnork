@@ -64,21 +64,38 @@
 						<!-- main menu -->
 						<nav id="mainmenu_area" class="mainmenu_area theme_menu" role="navigation">
 							<ul id="mainmenu">
-								<li class="blue">
-									<a href="{% url 'index' %}">Home</a>
-								</li>
-
-								<li class="blue">
-									<a href="{% url 'wongnork:restaurants_page' %}">Restaurants</a>
-								</li>
-								<li class="green">
-                                	<a href="/wongnork/user-profile">Login</a>
-                            	</li>
-                            	<li class="red">
-                                	<a href="{% url 'wongnork:logout' %}">Logout</a>
-                            	</li>
-
-							</ul>
+								{% if user.is_authenticated %}
+                            <li class="blue">
+                                <a href="{% url 'index' %}">Home</a>
+                            </li>
+                            <li class="orange">
+                                <a href="{% url 'wongnork:restaurants_page' %}">Restaurants</a>
+                            </li>
+                            <li class="green">
+                                <a href="/wongnork/user-profile">User Profile</a>
+                            </li>
+                            <li class="red">
+                                <a href="{% url 'wongnork:logout' %}">Logout</a>
+                            </li>
+                            {% else %}
+                            <li class="blue">
+                                <a href="{% url 'index' %}">Home</a>
+                            </li>
+                            <li class="orange">
+                                <a href="{% url 'wongnork:restaurants_page' %}">Restaurants</a>
+                            </li>
+                            <li class="green">
+                                <a href="/wongnork/user-profile">Login</a>
+                            </li>
+                            <li class="red">
+                                <a href="{% url 'wongnork:logout' %}">Logout</a>
+                            {% endif %}
+                            {% if user.is_authenticated %}
+                    	        <p> Hello, {{ user.username }}</p>
+                            {% else %}
+						        <p></p>
+                            {% endif %}
+                        </ul>
 							<form action="{% url 'wongnork:search-bar' %}" method='POST'>
                             {% csrf_token %}
                             <input class="form-control form-control-lg form-control-borderless" name="searched"
@@ -280,8 +297,13 @@
 
                         {% else %}
                             <div id="no-reviews-yet-message" class="alert alert-success" role="alert">
+								{% if request.user.is_authenticated %}
                                 <p>There are no reviews for {{ restaurant.restaurant_text }} yet.</p>
                                 <p>Would you like to start writing a review?</p>
+								{% else %}
+								<p>There are no reviews for {{ restaurant.restaurant_text }} yet.</p>
+                                <p>Would you like to start writing a review? <a href="/wongnork/user-profile">Login</a></p>
+								{% endif %}
                             </div>
                         {% endif %}
                     </div>

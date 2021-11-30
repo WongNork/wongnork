@@ -62,6 +62,20 @@
                     <!-- main menu -->
                     <nav id="mainmenu_area" class="mainmenu_area theme_menu" role="navigation">
                         <ul id="mainmenu">
+                            {% if user.is_authenticated %}
+                            <li class="blue">
+                                <a href="{% url 'index' %}">Home</a>
+                            </li>
+                            <li class="orange">
+                                <a href="{% url 'wongnork:restaurants_page' %}">Restaurants</a>
+                            </li>
+                            <li class="green">
+                                <a href="/wongnork/user-profile">User Profile</a>
+                            </li>
+                            <li class="red">
+                                <a href="{% url 'wongnork:logout' %}">Logout</a>
+                            </li>
+                            {% else %}
                             <li class="blue">
                                 <a href="{% url 'index' %}">Home</a>
                             </li>
@@ -73,7 +87,7 @@
                             </li>
                             <li class="red">
                                 <a href="{% url 'wongnork:logout' %}">Logout</a>
-                            </li>
+                            {% endif %}
                             {% if user.is_authenticated %}
                     	        <p> Hello, {{ user.username }}</p>
                             {% else %}
